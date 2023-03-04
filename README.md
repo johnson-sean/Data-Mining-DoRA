@@ -1,4 +1,4 @@
-# Data-Mining-DoC
+# Data-Mining-DoRA
 
 Data mining Michigan's Department of Licensing and Regulatory Affairs for particular healthcare institution information.
 
