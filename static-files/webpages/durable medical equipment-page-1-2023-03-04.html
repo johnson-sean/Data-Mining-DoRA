@@ -1,0 +1,1291 @@
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head>
+                   <meta charset="utf-8">
+                   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                   <title>Corporations Division - Search for a business entity</title>
+                   <link href="/SearchApi/Content/css?v=KiO0qS_xVc0isaa8VdvXtEaEbxUiZyETqr7uIZP95MY1" rel="stylesheet">
+
+                   <script src="/SearchApi/bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1"></script>
+
+                   <script src="/SearchApi/bundles/jquery?v=8Oos0avDZyPg-cbyVzvkIfERIE1DGSe3sRQdCSYrgEQ1"></script>
+
+                   <script src="/SearchApi/bundles/bootstrap?v=lescQEuG5u4jd-GcVDBcbpUOSyTDIg0Kk9zHDX55GCw1"></script>
+
+                   <script src="/SearchApi/bundles/search?v=Pe4y4Xm5__Mskq2I3NY-8GCWQ2MSXUAtR--8nCR__dE1"></script>
+
+                   
+
+                   
+                   <script type="text/javascript">
+                   </script>
+               </head>
+<body id="body" class="body">
+    <div id="skip" role="banner">
+        <a href="#wrapper" class="link">skip to main content</a>
+    </div>
+    <div id="outer" class="container">
+        <div class="navbar-header" role="navigation">
+            <div id="lblADAnavigation" style="display: none">navigation</div>
+            <div id="lblADAnavigationLaraHome" style="display: none">LARA Home</div>
+            <div id="lblADAnavigationContactLARA" style="display: none">Contact LARA</div>
+            <div id="lblADAnavigationOnlineServices" style="display: none">Online Services</div>
+            <div id="lblADAnavigationNews" style="display: none">News</div>
+            <div id="lblADAnavigationMIgov" style="display: none">MI.gov</div>
+            <div class="navbar-header" role="navigation">
+                <div class="navbar">
+                    <ul class="nav">
+                        <li><a href="http://www.michigan.gov/lara" target="_blank" aria-labelledby="lblADAnavigation lblADAnavigationLaraHome" tabindex="0">LARA Home</a></li>
+                        <li><a href="http://www.michigan.gov/lara/0,4601,7-154-76106-42245--,00.html" target="_blank" aria-labelledby="lblADAnavigation lblADAnavigationContactLARA" tabindex="0">Contact LARA</a></li>
+                        <li><a href="http://www.michigan.gov/lara/0,4601,7-154--22352--,00.html" target="_blank" aria-labelledby="lblADAnavigation lblADAnavigationOnlineServices" tabindex="0">Online Services</a></li>
+                        <li><a href="http://www.michigan.gov/lara/0,4601,7-154-10573_11472---,00.html" target="_blank" aria-labelledby="lblADAnavigation lblADAnavigationNews" tabindex="0">News</a></li>
+                        <li><a title="Michigan's Official Web Site" id="miGovHome" href="http://www.michigan.gov/som" target="_blank" aria-labelledby="lblADAnavigation lblADAnavigationMIgov" tabindex="0">MI.gov</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="siteBanner" role="banner">
+            <a class="siteBanner" accesskey="1" href="http://www.michigan.gov/lara" target="_blank">
+                <img width="100%" alt="LARA - MI Department of Licensing and Regulatory Affairs" src="/SearchApi/Images/LaraBanner.jpg">
+            </a>
+        </div>
+        <div id="wrapper">
+            <div>
+                
+
+
+
+<br>
+
+<div id="broadcastMessages" style="margin-left: 15px; margin-right: 15px; display: none;">
+    <div>
+            <div id="broadcastMessages" class="TableBroadCastMessage100" cellspacing="0" cellpadding="4">
+
+                <div class="redBroadCastMessage">
+                    It may take up to 10 business days for the Corporations Division to review a document submitted with standard service. Expedited service may be requested for an additional fee when completing an online form.;
+                </div>
+                                            </div>
+</div>
+
+
+</div>
+<div id="loader"></div>
+<form defaultbutton="SearchSubmit" action="/SearchApi/Search/Search/GetSearchResults" id="SearchForm" method="post"><div id="searchform" class="form-horizontal" role="presentation" tabindex="0" style="display: none;">
+    <div class="form-group p1 searchHeaderRow">
+        <div class="col-sm-9">
+            <h2 style="margin-left: 0pt">
+                Search for a business entity
+            </h2>
+        </div>
+        <div class="col-sm-3">
+            <h2>
+                <a href="https://cofs.lara.state.mi.us/corpweb/HelpPages/BusinessEntitySearchHelp.aspx" class="helpLink" target="_blank">FAQ or Help</a>
+            </h2>
+        </div>
+    </div>
+    <div style="display: none;">
+        <input type="text" id="hiddenPageNumber" value="0">
+        <input type="text" id="hiddenSortColumn">
+        <input type="text" id="hiddenSortDirection" value="None">
+        <input type="text" id="hiddenSearchType" value="E">
+        <input type="text" id="hiddenSearchValue">
+    </div>
+    <div id="loadingPanel" class="loader" style="display: none;"></div>
+    <div class="form-group p1 searchRow">
+        <div class="col-sm-12">
+            <input id="searchByEntityName" name="searchTypeRadio" title="EntityName" type="radio" value="E">
+            <label for="searchEntityNameRadio">Search by Entity Name</label>
+        </div>
+    </div>
+    <div class="form-group row p1 searchControlRow fontNormal">
+        <div class="col-sm-2">
+            <label id="EntityNameValidation" name="validationMessage" title="EntityName" class="fontNormal errorMessage width100" style="display: none;">Required: You must enter an entity name.</label>
+            <label id="lblEntityName" for="txtEntityName" class="fontNormal width100">Entity name:</label>
+        </div>
+        <div class="col-sm-6">
+            <input class="searchTextbox width100" id="txtEntityName" name="EntityName" onkeyup="javascript: selectSearchType(this);" onmousedown="javascript: selectSearchType(this);" title="EntityName" type="text" value="">
+        </div>
+        <div class="col-sm-4">
+            <label for="ddlEntitySearchType" aria-label="Search Type for Entity Name" class="fontNormal">Search type:</label>
+            <select class="searchDropdown" id="ddlEntitySearchType" name="SearchMethod" title="EntityName"><option value="B">Begins With</option>
+<option value="M">Exact Match</option>
+<option value="F">Keyword</option>
+<option value="S">Soundex</option>
+</select>
+        </div>
+    </div>
+    
+    <div class="form-group p1 searchRow">
+        <div class="col-sm-12">
+            <input id="searchByIndividualName" name="searchTypeRadio" title="IndividualName" type="radio" value="I">
+            <label for="searchIndividualNameRadio">Search by an Individual Name</label>
+        </div>
+    </div>
+    <div class="form-group row p1 searchControlRow fontNormal">
+        <div class="col-sm-2">
+            <label id="IndividualNameValidation" name="validationMessage" title="IndividualName" class="fontNormal errorMessage width100" style="display: none;">Required: You must enter a individual name.</label>
+            <label id="lblIndividualName" for="txtIndividualName" class="fontNormal width100">Individual name:</label>
+        </div>
+        <div class="col-sm-6">
+            <input class="searchTextbox width100" id="txtIndividualName" name="IndividualName" onkeyup="javascript: selectSearchType(this);" onmousedown="javascript: selectSearchType(this);" title="IndividualName" type="text" value="">
+        </div>
+        <div class="col-sm-4">
+            <label for="ddlIndividualSearchType" aria-label="Search Type for Individual Name" class="fontNormal">Search type:</label>
+            <select class="searchDropdown" id="ddlIndividualSearchType" name="SearchMethod" title="IndividualName"><option value="B">Begins With</option>
+<option value="M">Exact Match</option>
+<option value="F">Keyword</option>
+<option value="S">Soundex</option>
+</select>
+        </div>
+    </div>
+
+    <div class="form-group p1 searchRow">
+        <div class="col-sm-12">
+            <input id="searchByIdNumber" name="searchTypeRadio" title="EntityId" type="radio" value="N">
+            <label id="lblIdentificationNumber" for="searchIdNumberRadio">Search by Identification Number</label>
+        </div>
+    </div>
+    <div class="form-group row p1 searchControlRow fontNormal">
+        <div class="col-sm-2">
+            <label id="EntityIdValidation" name="validationMessage" title="EntityId" class="fontNormal errorMessage width100" style="display: none;">The ID number must be 6 or 9 digits in length.</label>
+            <label for="txtIdentificationNumber" aria-label="ID Number Must be 6 or 9 characters" class="fontNormal width100">ID number:</label>
+        </div>
+        <div class="col-sm-10">
+            <input class="searchTextbox" id="txtIdentificationNumber" name="EntityId" onkeyup="javascript: selectSearchType(this);" onmousedown="javascript: selectSearchType(this);" title="EntityId" type="text" value="" maxlength="9">
+        </div>
+    </div>
+
+    <div class="form-group p1 searchRow">
+        <div class="col-sm-12">
+            <input id="searchByFilingNumber" name="searchTypeRadio" title="FilingNumber" type="radio" value="F">
+            <label id="lblFilingNumber" for="searchFilingNumber">Search by Filing Number</label>
+        </div>
+    </div>
+    <div class="form-group row p1 searchControlRow fontNormal">
+        <div class="col-sm-2">
+            <label id="FilingNumberValidation" name="validationMessage" title="FilingNumber" class="fontNormal errorMessage width100" style="display: none;">Required: You must enter a filing number.</label>
+            <label for="txtFilingNumber" class="fontNormal width100">Filing number:</label>
+        </div>
+        <div class="col-sm-10">
+            <input class="searchTextbox" id="txtFilingNumber" name="FilingNumber" onkeyup="javascript: selectSearchType(this);" onmousedown="javascript: selectSearchType(this);" title="FilingNumber" type="text" value="">
+        </div>
+    </div>
+
+    <div class="form-group p1 searchRow">
+        <div class="col-sm-12">
+            <label for="pagesizeSelection">Display number of items to view:</label>
+            <select class="searchDropdown" id="pagesizeSelection" name="PageSize"><option value="25">25 Pages</option>
+<option value="50">50 Pages</option>
+<option value="100">100 Pages</option>
+</select> per page
+        </div>
+    </div>
+
+    <div class="form-group" id="errorSummary" style="display: none;">
+        <div class="col-sm-12">
+            <label id="errorMessage" class="fontNormal errorMessage">
+                * No records found; try a new search using different criteria
+            </label>
+        </div>
+    </div>
+
+    <div class="form-group submit-button-row">
+        <div class="col-sm-12">
+            <input type="button" class="linkButton" name="Clear" onclick="ClearForm();" value="Clear search fields">
+            <input type="button" class="linkButton" name="Search" id="SearchSubmit" onclick="GetSearchResultsData(0);" value="Search">
+        </div>
+    </div>
+</div>
+</form><div id="gridData">
+    
+<div id="searchResultsContainer" style="vertical-align: top;">
+<div id="searchResultsContainer" style="vertical-align: top;">
+        <h2 style="vertical-align: top;height:50px;margin-top: 0px;">Business Entity Results</h2>
+        <div class="form-group p1 marginBottom30">
+            <div class="col-sm-4">
+                <label id="TotalRecords">Number of Records: 41</label>
+            </div>
+            <div class="col-sm-6">
+                    <label id="TotalPages">Number of Pages: 1</label>
+            </div>
+            <div class="col-sm-2">
+                <input type="button" class="linkButton" name="printResults" value="Print Results" onclick="printSearchResults();">
+            </div>
+        </div>
+        <div style="margin-left: 20px;margin-right: 20px;margin-top:25px;border: 1pt solid gray;">
+            <table id="entityData" class="grid width100" cellspacing="0" cellpadding="6">
+                <thead>
+                    <tr class="GridHeader GridEven">
+                        <th id="searchNameHeader" name="SearchName" style="width: 5%;display: none;">
+                            Search Name
+                        </th>
+                        <th id="entityNameHeader" style="width: 35%;">
+                            <a name="EntityName" class="GridHeaderColumn" title="None">Entity Name</a>
+                        </th>
+                        <th id="entityIdHeader" name="FEIN" style="width: 15%">
+                            <a name="FEIN" class="GridHeaderColumn" title="None">ID Number</a>
+                        </th>
+                        <th id="oldIdHeader" name="OldFEIN" style="width: 15%">
+                            <a name="OldFEIN" class="GridHeaderColumn" title="None">Old ID Number</a>
+                        </th>
+                        <th id="addressHeader" name="Addr1" style="width: 30%">
+                            <a name="Addr1" class="GridHeaderColumn" title="None">Address</a>
+                        </th>
+                        <th id="rowNumberHeader" style="width: 5%;display: none;">RowNumber</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1FGWLPiXnbDoXL645pAdwNTTDcg8Aczog+uuPn1Ee3bd/r/C8vkkklIUe5FzJLI3NbgC4Fd39wf7LwxGtDZN7WNEObuonNeLfg1AmZTA8YQIRRRqpyuhTi5QGKcyzZ6R4v83dSFei3Z0fKSFXMHmQiE3aUt5+0ObM8zfZxKvtNe+OjVXQCdBGnfUGeydO7a80CXfLVc0AhdyagNJUt5F5cVGcwS19T9I5/BS13xfc/TotxV9kR7tC3hFIsJh44mn0hFvn36cste37UofQZF4584w7xUkZj1kO2xFWTudH4Q7" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    ADDY MEDICAL DURABLE EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800677729</td>
+                            <td> 23153E</td>
+                            <td> STE. 100, 8163 GRAND RIVER RD. <br> BRIGHTON, MI 48114 USA</td>
+                            <td style="display: none;"> 1</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1BZixe+BWGjk7nh/zMeqiDQELNPBH6Wh98lysc0CEseTOP141EHZ+rtwWlQhyX48YF01A0T/3k+sZgcXmIbVbUNw4PnX51+O/VhtKI6Uk13VJHIBMZwMeXVg6qHrDsC+fVkeTXxmQack0hYKN1GxEsH+dMzNtFCb7Q3PdROtvyvXplsaoyBFHjpYA+eDBEeqDctzQ9sp3RTbJabuDAPFcrHIzdyFWfRJH+5cBycGV3tmK9K6XyLy4PQ7YCaURV9XpsEF6ZW60+axT4vB8yJTp+55Tahrz4AbAGIr+uvM0ROt" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    AMERICAN DURABLE MEDICAL EQUIPMENT &amp; SUPPLIES, L.L.C.
+                                </a>
+                            </td>
+                            <td> 801232614</td>
+                            <td> B8387H</td>
+                            <td> 21901 HARPER AVE <br> ST CLAIR SHORES, MI 48080 USA</td>
+                            <td style="display: none;"> 2</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1Lbbeu02FxBiu9UfErAwUNhDCJ4gB4/2rBk4I9G5TmepSMB2NVccB90cnTtFHrb7jSwkGPJVBvCq6CU2bUa3YipwT+/UuBzyn5wTMki6TygnRc1rsnYNCBiTUKuhoVbG0Syo71y+65+2ZYdjYGCsTmCInqE2/vVtzfQ32U/VfAO9CdIDWx2f5JiSUhF7OMVLOWbl6QenwN3u8Y6dxm8uHlRX+rgbZUmy7vVVg7k0ZqtKcRfyDk9bXzXj+LLqLHVh8kNmZj8rc2tX95ZHmCLQpKYqvvCFFLLk7bWCvElu/FNL" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    ATLAS DURABLE MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800285034</td>
+                            <td> 28161A</td>
+                            <td> 21500 NORTHWESTERN HWY #825 <br> SOUTHFIELD, MI 48075 USA</td>
+                            <td style="display: none;"> 3</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1AsoRSI5doiH45D/RSXmU0Vga4aS9WIvNamij5LY1jb9njdJRjYNLGn6bDw2WoL0y4+nYpfjEJo5j+lyKLfKRugQxnhJb1HzJmFdyiPy4/fo0ucvUVznO0xTpf1+0oJ+DiCIFK6bXLzww9LUxQsS54x/n0ULddVie6xMVmHO5qny74QNpdpcTepe2P8Wo2yYkINHY9SctvEHdB9bZxrWOKOcuUO+3BQKrzd2jdnbAAA6ePfGjJU6gjaQBTatT9MXSTZp/O2f0gpP928Bo0IzT452xwVKXY3sndEAd77tSVTy" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    BETHHAROLD DURABLE MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800623784</td>
+                            <td> 00850D</td>
+                            <td> 15565 NORTHLAND DR STE 403 E <br> SOUTHFIELD, MI 48075 USA</td>
+                            <td style="display: none;"> 4</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1K9Ced0y3ScJE0Xe4mNF8ak3K8btZuzuFxYvg7midNxm9AljVjhsIc0Rc/PNlxZKNYc8jobO+LcJlSLdAG0XPzoz6xoHzPcikNqOqYoNl/ltUIi1nbKPDErGNM6PphVfr70FHGf7qMHepyOgbW9kDwaA/ZwfJyow+xLMzGsnVw1MaY/hBnCchSXPDiLt3Tkem6tRhuq0N5AocZRLeYLdhRoClkx7SS2bAx77FXmhl+3myORGDWCR/hit5SWCYG5oH+UijaT2jXpUgzydDfCr2coRPZao3JInlH8UD6ZEe34n" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    CHAMPION DURABLE MEDICAL EQUIPMENT
+                                </a>
+                            </td>
+                            <td> 801417788</td>
+                            <td> D20452</td>
+                            <td> 515 EAST DIVISION ST SUITE 125<br> ROCKFORD, MI 49341 USA</td>
+                            <td style="display: none;"> 5</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1F+Q6T7vDfl0h9w5li0LEJecX3MQVhKsjBNSiH404ynbz58qTVRm2a6wJrV9uhQ4MefURB7BL782Mg8hXx3LY5hydgYg1WhjCzt8jdvo+GZDcpMCFhDWqk5RLIlCEq41Hiu/lFxodzLDgLLW7BjJHpNCLVhlkAq7N2iTizoIff52LKEN3wsY4s78gReXxMEAaaW6XVhK4oxKuYHpV37s8BENK88M2FGTWHgRPnmt9nHLPeNRaKyjd8aQsldSB0DAeesGCKahzXWVAcNS1CWOx40SVJrEewWWXltKsutibxAn" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    CONTINUING SENIOR CARE DURABLE MEDICAL EQUIPMENT CO. INC.
+                                </a>
+                            </td>
+                            <td> 800632126</td>
+                            <td> 12453D</td>
+                            <td> 11000 W MCNICHOLS STE B <br> DETROIT, MI 48221 USA</td>
+                            <td style="display: none;"> 6</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1Hj6LNa9vkcizGlZnAT6o89Q4VvMbP/ciMDNbhldLsSIpPtCNVWQfH/rHAZXwleXQH23tKtIap4SgbXhlGMcOVqLo8+oRgFQV/4F6UoaG7F3ntTPlrBuVGOEL/wyMtXXfh69F9LlecirnXnWpAhytKM3ShK8nmsbkj237VaB1dAWX5ie/cToa77w7bSekz/M9IV/yQxRuQWdoED0LcC2ZcQ7PRwXX3fEVwFrHPGPuSeq67WlKFFY77L1R0WEBVweTcxubprko6qHKKUdlpcR/Zqfli/1DeUNgFjrjogR37h+" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    DEVINE DURABLE MEDICAL EQUIPMENT COMPANY
+                                </a>
+                            </td>
+                            <td> 800606078</td>
+                            <td> 51171C</td>
+                            <td> 15565 NORTHLAND DR., STE. 401 <br> SOUTHFIELD, MI 48975 USA</td>
+                            <td style="display: none;"> 7</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1DUhIhsKBvNPEGTMK4bH1SdkYJ7OVPvHXVVXrTzQ0Mo9jZ0hJ68Lxp0ypFoSXo2CM7ijjfpVTQeYhTtFbCThz/2G4cl0L4icd2REsdp6zX4KDp9MORiDM+OEUoaB6pyApU0GqFobM7ZYxREw8dC9HKyCsZjpw86Mb2l64GKDKs2UuNQPZO0EYff/Eyg6D0Qzl9OlD7ivZ39rBkZKj9VStpCvzY6Drj7nx6rt2Ha4735gJsZVzn2eKo78rOg8ghjVCVo4CXgzs2m4BFkEW8apwQvGWUMQVF9xsdnjbxiP4VWq" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    DURABLE MEDICAL EQUIPMENT &amp; SPECIALTY SUPPLIES, INC.
+                                </a>
+                            </td>
+                            <td> 800687694</td>
+                            <td> 00596P</td>
+                            <td> 10645 W WARREN AVE #250 <br> DEARBORN, MI 48126 USA</td>
+                            <td style="display: none;"> 8</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1KLOCqlY9KqP8no4+7Jktfs/2R2mwnSK9q4fi9YXKxu8+0BH0Sh80YVU3xP8JTHc8Yz5q1+R++sX1zjU5Vr4fGY7Y1nLUce/AzXgY9WyX92LKk0SDEVWJKvdtgoUfFY9s/Trn2MXCulv8vaglPTn4ttEAydW4+FFUC367UJDyVBzy2smxmRB0K90+hnxbOGzwPUJSyMOXe3C7RT3M+qT15nyhM8nqRnyuPl/nb4F6Pau7tPvrmdsvJUvaNDSZuzNSiD33qG1AfKthmX9oAWf1Lp74UqMHefbfymFLFaVruO4" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    DURABLE MEDICAL EQUIPMENT AND SUPPLIES LLC
+                                </a>
+                            </td>
+                            <td> 801389784</td>
+                            <td> D10791</td>
+                            <td> 6771 TORYBROOKE CIRCLE <br> WEST BLOOMFIELD, MI 48323 USA</td>
+                            <td style="display: none;"> 9</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1J6Awwv1t4dkKQ5bvUmBbLREJen0FJU6DZqhIe+I0+zlDfO+jVov+hjoKXroxZlVcq2mk6xWdG/weNDdIiteh6b0glwGqrGniNKuHs0rA1e4p9P+pCt3zKYVzj1kmdzMn0QDEGrK46Yh8A+EnUxj+75O+3eyloSzhg6r/H/hyzrfcD0+XIlQqfxzp/n6fV9aPd6/Z8w9H6BdrlRNY9s5LMRb18bD8LUcY0wo2+iv65t2PvJ+cg78C+XC29dwaLxJAQdLcl5dIefAQJNkvEJAFKyqDxy+8805N1lCUA8fUjOs" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    DURABLE MEDICAL EQUIPMENT SALES AND RENTAL COMPANY
+                                </a>
+                            </td>
+                            <td> 800647763</td>
+                            <td> 50133D</td>
+                            <td> 100 BLOOMFIELD PARKWAY SUITE 191 <br> BLOOMFIELD HILLS, MI 48304 USA</td>
+                            <td style="display: none;"> 10</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1PSpG5tKLLDnMvcPbCUuaZE8HQxtK3+3/9Kl/PCwRlouXOjSMVfmKq+iwn+O2LIo/UUMmPxAUP0bKi4qL2InZHs/rByYck7QCgTzP8Fakpek9Sl/uBA1brUxpTecdnoAZlQ0JhdFa7AFe5hFTw8FmEoc7K8iX0FTWas6kx+ITZgUHTbLn5/cKughBcG4vkeC4cYIg7hu+wYg5eGh8nVmcIxeLiWDvODbKnPNSNG+J1BWIXUMCNec1r1177JB297dEDj0uWXfZj/TackLSvfblGT9eO9QxxadCvaxE37P7S9Z" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    DURABLE MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800722282</td>
+                            <td> 02645M</td>
+                            <td> 25411 W. WARREN AVE SUITE B <br> DEARBORN HEIGHTS, MI 48127 USA</td>
+                            <td style="display: none;"> 11</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1KjFYP95m/iM0FTus0qxLeun0N2TaeaQb72DcIZldaamhKSnuNQEi40BXkB9wO80n3o7Ud2naOkl8UEvbnECSyFSk1X5pNtoONue/tm5sybg0hrMneSDdR72IxDqpfGE6X4Y/dBo/ua2y71ONn2Sj4OCSz6mRHQX2g719hc+LZCkckpOIym+KbvXb0AELVs3Q/kEjAOYnixvC8BN3VeyX1bz3HFMDjdXCyjQwrU5Xrv5pEqZMN4i+m5I0knhm8lCpCBMVVeskp63AOCp4sBCwNvbdRV+GDbDD04JEE1akCmO" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    DURABLE MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800457418</td>
+                            <td> 432335</td>
+                            <td> 29256 RYAN RD. <br> WARREN, MI 48092 USA</td>
+                            <td style="display: none;"> 12</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1F5c/K0wkLOkDvGWhHq1h+Zj7Xaa8DIAWUUEczKFjfKGlp+6jToSZVc5ehcNjkU43OuJghJhLly5Zov6QS9vdMjcxpWwqjoS4hl84bEqlvckTVv23BTgLA/2xsDTPyZjUldi7qs5KaRmD4/SqXWlHwPP+kVsDiXB1wEQcgieAsjQ7kQ4UNxCPRusr3DBGpFgjp9VHZTGBuxZP719rhPP9xHqmFZrJzr8oq1N0L+vMeQ/MoQdmELWO/PPAxDHKi7e9iU/+jCiZQ2a5dZk919Lcl2Zt5AupiA9xvjPNi+lSrpO" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    ECLIPSE DURABLE MEDICAL EQUIPMENT LLC
+                                </a>
+                            </td>
+                            <td> 801370402</td>
+                            <td> D0520J</td>
+                            <td> 21468 MACARTHUR BLVD <br> WARREN, MI 48089 USA</td>
+                            <td style="display: none;"> 13</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1DlYSLfUtEnadntWJ66GFqpbsk4RIJYEVPzI1UO/mMRwcUqrupukXE3OBw9VQesJPN9pCSOXvHiLAXh/x9Og3xzO7Wnn5F4Qm4vpamUbejFBPlXbWbmF3oR+q0EjEaELhH9sI29/Gt6/jghKwEg3oMoMjnL8LJNQpYvc+tUCMdBnkcwstPDU+S+nZgZEByjumHV7Z5UU/v5wec8/8z5+aalqZ6DdD4Q0rMKIOzNKYAE5mTf9mkLBChMvhMeR+fdtL8D79SXV1nq0U9v2a6GEIZazQKQpp0Lbm/FebcjNJmHD" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    EVERGREEN DURABLE MEDICAL EQUIPMENT LLC
+                                </a>
+                            </td>
+                            <td> 801365963</td>
+                            <td> D01675</td>
+                            <td> 2051 ROSA PARKS BLVD <br> DETROIT, MI 48216 USA</td>
+                            <td style="display: none;"> 14</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1A3vRnZAU5c4DHolPV4Zck6ty8qFAvIdoj4eRFvpglNvSro0De6Iss4OS1ucQfVaoKqTNoKJJp4iL9u7TKLSc/dXXZkgP0+jBZEAlp2W0+zv8mLUbkKTjGb8AFO++sEzISsxLZGyDuSNlyjjhHH1Yu/q7e0t3WzNgUOdIWsx4wSbP9F+JiMRyPeVGVizorrsLKbwMzFZJDBgNH0spuBrcAj92hn/3LkmovyAPlUR6Mj+oubUV5xwC+OwajOkzsbl+9Dfnhw1/RmYQZbd6UzpM4w4SjyyvPA+NvTouNX1ei56" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    EXCELLACARE DURABLE MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800422919</td>
+                            <td> 405211</td>
+                            <td> SUITE 205 20853 FARMINGTON RD.<br> FARMINGTON HILLS, MI 48336 USA</td>
+                            <td style="display: none;"> 15</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1GY6aC+iGXbuU2BaQy4iuChexuCXHIDm2hwhDJ3VbORsGgXExcS+tiy8o+5vkKs/3rc+U23bwnoXWJTuwaaqnbhSY/XTlbFRsRwnu7JrTBUS2vVkcgLg1GHS1ws9xK/s1L0rtq/+zWAKzAV/Q1jQWevkksIXloC0OKUp1g8iPXMsICcVOrfw/EQNdhuJHTVxn4tp6MXOMH3MeKazpwseEC/jPckelpNv/ha7zDybnMO3G2C6vSuL0ROd5AGTJSfzUCq7IJUjPhwXNiKQbtWcOFk85gTbtLh87DjnYgMbUPYw" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    EXCELLACARE DURABLE MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800423768</td>
+                            <td> 409470</td>
+                            <td> 20853 FARMINGTON RD STE 205 <br> FARMINGTON HILLS, MI 48336 USA</td>
+                            <td style="display: none;"> 16</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1MmSn6bZVGem3W4DyZnTFKnFWT/c0ZoJKwHhKakmZ+apy0WuH5TtZNLGfIFyVsaBJ1Rp9PIsaRNVe59tpNNtj1W0kDw5C8E0X8fzkQgwraRf8M4FPLHboNQjZxBSPc4wRek68fxED7DNw8T7wdb7gt/JgkcsSXdoDUiHbtYLNCrFZXKeb4t8MMp4hlj6xdboCpZ2AnKOsGB0AtDOlFhnn1laS9FWdxvXedYtgQ1RdO6erqfGahtZXBOnJOYQfWgG0zyYayzWNcjOKkM5zuj+CJykwFPb3npoecgZDpLY0EFO" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    FRIENDLY DURABLE MEDICAL EQUIPMENT, SUPPLIES &amp; SERVICES, INC.
+                                </a>
+                            </td>
+                            <td> 800452538</td>
+                            <td> 434159</td>
+                            <td> 16904 W WARREN <br> DETROIT, MI 48228 USA</td>
+                            <td style="display: none;"> 17</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1NYhe0HpVhiQB9quxrAE5SNNL/sSv/iP2Gd0Cts7vFWw22OB0HEKjFjVT4O563RIe0q6Zcjj3kFsnBoIiBUGseRsRaHM2qfOjsZXOeERRz4UKxA2vy3gCSc6KlYvqHCwXeaGD9ERE4SmbXuOc3/dglqS9cnJVprCG4mfwEEaLjlvf7GtWLIKc5iHgjPvYVehOusFRm3s6PfGcj5N5oq8ToYGU4TghtprUNVpQx7HEnBFHooCFbuk3rQZgQTBpS31Ggi+Feql3gSAdZkE4qriDRSC2zcWKHv9phaE3q/s6u0y" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    HAMTRAMCK DURABLE MEDICAL EQUIPMENT INC.
+                                </a>
+                            </td>
+                            <td> 800652128</td>
+                            <td> 41948D</td>
+                            <td> 3611 CARPENTER ST <br> DETROIT, MI 48212 USA</td>
+                            <td style="display: none;"> 18</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1LGwdBum789TBrqW2USnj+Vc8Zh51OwHa/hmkX12fbca5xkjEhdyBmG30pVcj+jkGKobjng67xfylyV4leeMOKXqzm+B9rINOZznoJPoQZRYxjimQZW2R0QfBM0RBbnKJ0tcKa+5gfQrzIdblDcL5jm8RMeM74Wsb3q4yTL3EVBpGW89IgayJOnMd85RRtEeOjqzZ3yqNKdWbhQQ9DlVQobR/uICFKfv+FOLnawC3IORDm1JKIBO937tKPWSGarTi/ownIpxnkLxJQMhNFigqkWRrU+drgQkm5OgXmF6d8Pj" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    HAMTRAMCK DURABLE MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800727593</td>
+                            <td> 03359M</td>
+                            <td> 11653 JOS CAMPAU <br> HAMTRAMCK, MI 48212 USA</td>
+                            <td style="display: none;"> 19</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1Ftq9bIvCSKYmkVVAWGmgX0tcOpcKu0swG/jE0PA1cJZSEHVy+ibbBNBkwJxVMBxuDlz18dKbbT7KVwl75+SfDdqa6oOBASohrRZtpuDoGkFd32oMVfNVQobS6l2RQUMrwCnWbAHMgN9aYGOkzuGj01WRBYGm3qBaPBq7o7Jq7PGIg6nYZC2K3kvAf7SQuS9IGNYjDXO4J/AATpn2JK1uAuZ7GcN3laDUx0ImTJsdCL2fxc+QkN5EDkYMUspSwjxVSnHwsgnbFya4zRyBkNV2xLrW9LEPhbs4HJ+b04NsB0F" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    HURON MEDICAL D.M.E. (DURABLE MEDICAL EQUIPMENT)
+                                </a>
+                            </td>
+                            <td> 800296320</td>
+                            <td> 284944</td>
+                            <td> 2900 WEST ROAD STE 500 <br> EAST LANSING, MI 48823 USA</td>
+                            <td style="display: none;"> 20</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1HM0nLyXf9w+eFVpLNgr8mLTw5/IX5+CCLknrLrr39q7Yt0RVJc/OzUoX/6hIXo6OE1AJ+fENmyNWxqX+T6GIpIuikqDDb0NRkg0sb7PZ2aXANmdvIVKpqduG2D/+CVubT1A/yrOm4UjeOIhh3/Tc/3NuftkJuIyiE87tkONMTKfjTiEE6OEeriuLFByUB1+/2IsZ5FfBmQbojIlNnS5N4N6ts9QRjjkdI8JEEJ34y5tp3qPahW8EkzPDd7Kk+zH7B9xER1AagGpN1qox8G3ga5KUywwJiZBvoZZ5VRKuSG8" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    LEEWAY DURABLE MEDICAL EQUIPMENT LLC
+                                </a>
+                            </td>
+                            <td> 801143309</td>
+                            <td> B66583</td>
+                            <td> 5820 N CANTON CENTER RD STE 140 <br> CANTON, MI 48187 USA</td>
+                            <td style="display: none;"> 21</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1IPUANOME2qr5mnjbGAA8hg+EAmIi5oJ45AtaSsg8g0FjdMUbQYmc9vFs9qz55CEUlUP3pQf487i40XFYoy1yKuFaxjDClgQ5K3XBFT6Jv7SN+BxROItzN970D7fBKsBH7Yb/cL+jkeJCkmTne8Q82nw9cssn7ZXEuzIa/XRgqvHAq8XEjBUNtuhSBmKNOz/utjmKlTzjN0wNVGwkIq3T19/DBRL2OuS2tvQvBD/FNcPYMvKZ+cAZcqtHUMd2TeVZ7PX97OTIMypeQO8A3Mf3T/VirIvWzsyQGYK7mRHwpWD" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    LIBERTY DURABLE MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800670282</td>
+                            <td> 03370E</td>
+                            <td> 6949 HEATHER HEATH LANE <br> WEST BLOOMFIELD, MI 48322 USA</td>
+                            <td style="display: none;"> 22</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1GPUbE2kLiGpJfxaIqIxUg75UyJBC4AKcyGlmaAmXWyW/jYtv/qzgrNYau0WgEuhbN3mPaPZfIRfdhIEbYr4hSdtPAMYJo0TJ0Eimst9v51Xq5pjg7savGA24CFD2CnCV+5EpY2mDWWcOjiDGU4HVk8I2qNrQXgJYEYlObkxcR+s8toga/qA/qpHD1wi6aYOgU6hGQemrDL05niUvqAHpX44C3FjTvB05II76gQS28w02cppmf05uBf8Y6eB+jq3CiN6h1VWeG8eL0jWPDdmYFmkDc2ORH0hcE+iyZpf35QM" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    MARSHALL DURABLE MEDICAL EQUIPMENT COMPANY, INC.
+                                </a>
+                            </td>
+                            <td> 800293532</td>
+                            <td> 293727</td>
+                            <td> 26400 LAHSER #202 <br> SOUTHFIELD, MI 48034 USA</td>
+                            <td style="display: none;"> 23</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1PQ9AisfmKkgmb/XFmCVk3EmvJAGnO3XtEgI6TYV1DgQbfZNwEOsxWlUnV72a6PDqDALc9HHjMZzuoza697I9bi5T+hmC7GCpQydbiSZNrvBn4g1dkQEBRV/Q5zCtiOGxk/Ddhb3b22zTMDkaCKDsxg/u82yhG0eKYzWSHszHzbbSgmHaHudUPkxyfmEpGRznqcWVYqNcB9GSZmJDnwdN5rTRzzhWRaT6qiKOyafro2tITFYgKvUSYjN3kgCDOfxattJNIkHK7YbCcrFZ7JzlWmFedxNscDTgrY8IwjYAJrf" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    MICHIGAN ASSOCIATION OF DURABLE MEDICAL EQUIPMENT COMPANIES
+                                </a>
+                            </td>
+                            <td> 800861162</td>
+                            <td> 793152</td>
+                            <td> 209 SEYMOUR AVE. SUITE 2<br> LANSING, MI 48933 USA</td>
+                            <td style="display: none;"> 24</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1GNNxLdrgeALHZmDqXh9BJnVaNlkhjtUk5UdbpDnyW0QzNz5r8dkYKW7XuhbSJNeX+jTykVgJoBSXDtzduwh16tnFMko0SAgfeil7x/4GuM2KEnsVwaii2pOnH5+H+t5Lr2gr+Pd84UzfKoHV5d1U1b3g4lcK7ajUGmz+gjS9f7o2rkP4V3UHVpgI2TURHWCnG7L6xSdnPlygT79s1RRI4t0FagQ6kWCepO3VrIzsMFJgNmn0MFlVcYeRjtmU578W+diCgOxjgwL1kBwebRiP1yaFFIRVlnHo0+oCS07olI6" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    MICHIGAN ASSOCIATION OF DURABLE MEDICAL EQUIPMENT COMPANIES
+                                </a>
+                            </td>
+                            <td> 800877243</td>
+                            <td> 890391</td>
+                            <td> 2140 UNIVERSITY PK, STE. 220 <br> OKEMOS, MI 48864 USA</td>
+                            <td style="display: none;"> 25</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1KlddWgSlq0LKyMSSOaIQnA6klJ4vcJI04s13Wsy+coNQuX3kh2RFa6J9eAfY7RcrdA/vtMk1dstZ2ZG7E2GrjSCFUIKSmRbyoRbO5Rgz2z5xzfPZ7mZi9jjAWpDPUTwC4FBAn+EWCFfCfvfWu9zitNjSp0h1uI6yLnJCIWWW02s+yobOmC+uAnEzq7pt8mTd2GZ79WbCkE6PutGLy7ppKhJnUKb3cya3r3yvobTHkxnwQmOwIETvGqfF9ARLhEp1pS00Y9eYXfRe6XETrf50SKQ7gnNFTAw/uZt9UF88DNZ" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    MICHIGAN DURABLE MEDICAL EQUIPMENT INC.
+                                </a>
+                            </td>
+                            <td> 800613433</td>
+                            <td> 02504D</td>
+                            <td> 901 MACOMB ST STE 1 <br> MONROE, MI 48162 USA</td>
+                            <td style="display: none;"> 26</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1NT2meCOrLHQVhn/fBB7c4ackm/cJq6yhXPjLmsCU5u6j2Co0ud0GAeEESkkM3nPmtV5D3sQYdfPJcSb8mo7NNMOE5ay+Cgn+fTwTpqvDxzWYCPBMd0nCZQcjTCNb1A464FxYsLzPqLgC6BNcToMoi/iDu6qYArgQiS56lrqMpB0VXZJeKXqY2IrJD24bCefsW0Km8nEmAzYz/RKTCpyoogr3zpkvuYIuqfPWkqV5l3uDVDr/EEjCAMasngjpiXe1fIamwZ4GbZMCZ+Yhp/9fIwWTu0sKpF+YLhkMo5uwt3F" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    NATIONAL DURABLE MEDICAL EQUIPMENT CORPORATION
+                                </a>
+                            </td>
+                            <td> 800031040</td>
+                            <td> 021659</td>
+                            <td> 25725 COOLIDGE HIGHWAY <br> OAK PARK, MI 48237 USA</td>
+                            <td style="display: none;"> 27</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1DD30lHuU9Hd1YMZrtCOqrgYtV5xgBrv3ckdbB0NGoCOvz7TKfsi0cgJzWodRkUogeWpUuC0BlPFvVXZkE75Cjgb98BpUS/Ja3WK7ZTIpLwXNvsWbCsV5j3L2haU0+y+sl8F/R2PqMXONkP4S/vhSziR8XjRPkfpVMTQnZvMxC6e3qXuImmTREJUqDxloGu0HAaQ/4DmkhHHZ149U5awCYawxW1l+e91K3pyS7kCu0R84ixp86ttuRv6ff4VOUehUdkBsxZMpBdDpxfuFw+Ldf7AjHtNVkXDRzKnHh9Xo6jd" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    ORTHOPAEDIC COMPRHENSIVE DURABLE MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800387373</td>
+                            <td> 378908</td>
+                            <td> 19785 W 12 MILE RD STE 535 <br> SOUTHFIELD, MI 48076 USA</td>
+                            <td style="display: none;"> 28</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1MOw7IFMcMm1AvI233OGEn1Ynz9kPf/z7mvwNj9YHGjBKqHGHf0XHfCYmxW5WLDWMicLfaiEzXbJ7CKCRHRo+RsWWV71T29k/1CdDeV9nLekTFvGTN6y9zQU5vyaJPbHhcm6AIEJARXA8+FWXc+V9hppVvwTHUmFBKfUKsaYiS6d2FVdatP91sQzOnMJBZWaBvlsEuJgLt1slSdgPO5HstsEcgVPUxXgD0gNmSGtIWLa9iuJKxMlC86new8UC3fjmSpOUNoUZe2QTXuVOGQ4NAcLf6zlt1xEembT1REuqJZZ" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    PLYMOUTH DURABLE MEDICAL EQUIPMENT, INC
+                                </a>
+                            </td>
+                            <td> 802808298</td>
+                            <td> </td>
+                            <td> 39475 ANN ARBOR RD <br> PLYMOUTH, MI 48170 USA</td>
+                            <td style="display: none;"> 29</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1MbsSWpyBGZ2wPnm60I3JwtAJS0Eq9pH3rnupOkMENe/O+kkyB1VR6LdL/RYRYZ+Z6Be4naa3T1QZKoPUAHjKPEqa2oDQEpWXRI0tuUpEm8fV+GMns+YN5mPDhmITouj7cXUcwi7fJdcAnD4TDrtJnVo/Do/mt1Ymt8HBhANfMkVr2p6huHCNkYCzc2iPHnd0kXox8BMUuxoqjwrY4jgFItkDPuFrVQjbFIrvXX4XRbECrvzhQ5iZUkO5sExwMtSEBCj2BP/1hh0UAoisnJAU3J+MJGEQs1ar3juuPDunHsl" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    PREMIER DURABLE MEDICAL EQUIPMENT LLC
+                                </a>
+                            </td>
+                            <td> 801504596</td>
+                            <td> D2790Q</td>
+                            <td> PO BOX 885 <br> JACKSON, MI 49204 USA</td>
+                            <td style="display: none;"> 30</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1LzhAHqkgcndLKvYpWeAklr1gMOCZR3c7N6/HQrfZRaDOyR1Mc5AsWGREnfQyit/M0NcuMMELMCtZlCa1/64I5FhvgDcXRtL5TpHZEvH61qoEzhb8wwf1iCveiRw7nFIIEaF6toPcwnqUk0gJKiCTEJKnQ9THw8l9lAsSoNBVyWwKYtPhBKNslkaxqTQHUVum+Yt5Oudl6uZPO0T7LGis6Bm/st/sZu8yphbjFXIjvt1YfIqkobo5wwD3q7cK8zXXl5H8BSubVSTAIFMkoxYWN/iYNLQ9xdpjXFBC3XtYUIS" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    PREMIER DURABLE MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800584682</td>
+                            <td> 20297C</td>
+                            <td> PO BOX 4234 <br> DEARBORN, MI 48126 USA</td>
+                            <td style="display: none;"> 31</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1ON5xNFTCTly1eTe8lSJEpGEeUhgGyli0nVweDitUUPi2Aa6XBUuO2d6INYLnhdHDGSG3QN3QyapBStbKWB2f9ZoysnIiOHf5HPKpgPTA94yrntbMnqfnATfWXuBnR//M7O7mx9Wt2Is1bRbp9UENEkru5xHv5Zk67Wlo3hB7XXt+OVt4h0HQ+nPA6lbFQXBKqh/wmVHElvePLb58ZCd4HZJ+RYsFftNxFM2vviNPY+kTBraDMnf7Egrsa8cl+BCElidxart6f4/qlNq8HsFqjlYyupXgRgdpHd5bhRVFT4T" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    PREMIERE DURABLE MEDICAL EQUIPMENT, LLC
+                                </a>
+                            </td>
+                            <td> 801809693</td>
+                            <td> E5456G</td>
+                            <td> 22243 W WARREN AVE STE B <br> DEARBORN HTS, MI 48127 USA</td>
+                            <td style="display: none;"> 32</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1O2dEqj6j3sDr1Yes/VP9y1BxP3KmOLiyTyzln2NqNClGJKR/H7UIgDNBpFrIo4QkhzyeDgnsHzIgWngJ2ZSGNlO4ktW4dLFNFVybgKu3HU9m7yUEFDB180EZUPWl8C82JkmSLPJMXjr6qEJhexBneip9sCFkmXPohfwg5BZZ1koyApUWLNr+CE+eBVbe2vJ4433FY4uKwTm1Yb8MXELIp/SKu66NoI8sUPGGH2wYWsFu7JxlmJBPJNKF2yI5oiYqwHWZu0Jo0ksYO3XpYBqMPwaU3GE4LGbxXSIWQdrI+vD" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    PREMIUM DURABLE MEDICAL EQUIPMENT, LLC
+                                </a>
+                            </td>
+                            <td> 802396511</td>
+                            <td> </td>
+                            <td> 5310 PRENTIS ROAD <br> WATERFORD, MI 48327 USA</td>
+                            <td style="display: none;"> 33</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1CIdgS81bVsS8wKUVGafbisQpAfw63QLc4NiYXQ7o5hct6kNPby+PNumcwYjvOlBgeQEx54Sfz66NefOnePbNy5pYLEjovRUYuxrv0Pxi1Ku2+x9CaFY67KCuSMGtQsx+DAlUaXu3XjSgp1zbEzShw+EbbN4dtnnQZh5SoW49w0AJpULRLIwtg/Z+ttPLNB3iTmR+6sgkjO3eALFSdWNvgw3nh64AsBu4ULkxovEDttwmvAlr1+2ocBwB/rdKqORJ2kbdGJuHqN0asjdQFVbaemmYiVoSFNH2n4l9tZGIbXc" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    SOUTHEAST MICHIGAN DURABLE MEDICAL EQUIPMENT CO.
+                                </a>
+                            </td>
+                            <td> 800141003</td>
+                            <td> 134719</td>
+                            <td> SUITE 294 6230 ORCHARD LAKE ROAD<br> WEST BLOOMFIELD, MI 48322 USA</td>
+                            <td style="display: none;"> 34</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1NXVVfJ5bzPklzacKHeQe2J5qzKc8dOhkMuWk13UvNlUHBGyLBfYLcIJodBeQrVVWXy+OcExNtzEbkiaN4n+xZLbt+yvPpakourCJgzLsVO8Fm6XVxbSKClztnucO2nIOX6oTufmU6CmGvWIvUytP5VpaXqPC/zzdq2kCl5cjt4426TSDF8siMQt8cU7tEfQWxSDdyoBwnbv+R6Jo9GSfq7n2eWZzpvuvHS8iAU0Ry0K4KU/Gc1UiJWbTvrjSvVZvt1uaEbGdr3NYBHFNIwFaLdWAhXwWrr2F1v954JH9HQF" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    ST. JOSEPH DURABLE MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800013245</td>
+                            <td> 00536C</td>
+                            <td> 186 TIMBER VIEW DR <br> TROY, MI 48084 USA</td>
+                            <td style="display: none;"> 35</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1M4koldZcCqv5UUdUuYjrbfHXiZ/W93z6KLukzHhmI05VM2v1/x3md/RXBi9vw3KAgOQtpFWiuho2pC9t5J4IMf89gYYETthin+Qd2lzKtcuV7X5BIkXNSx+n/bI/bdXs13z768r+OAXSKwHqKeNa8qAuKzoOEnbhL0m0V0r+dCZ2gdOogqmqN2Fv6tFcaUpCs14611e0DUv97KpTun21roCEuQm56zVl/8fsWpHwmv9paZAf1qGxVt4KhIFkICiZXio1+hJknYhTzQs49b+lqha3OMMATi04xNRQ+MWUIH7" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    SUPERIOR DURABLE MEDICAL EQUIPMENT, LLC
+                                </a>
+                            </td>
+                            <td> 801399660</td>
+                            <td> D1534J</td>
+                            <td> 83 E AVON <br> ROCHESTER HILLS, MI 48307 USA</td>
+                            <td style="display: none;"> 36</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1CG3ZFlhvSsDxtwR6O0riSLbWQaofjmiLjw4ax8pmS3Mij7j25Z7ZqC0kY0AHZztNTJz/FUlTjhaC65c4ZqNBqwzE/57Sy2YC7LNrPf1nFlD5lTis65NUpLiDdEmtecMK3RxApk+v0WQ1hZUSaL946bQ8P22B3RRD56dKkbe0626krT/9+4S2/QjosFqS1/z1Rr47JxhYD+Etbpbe9EZsfKzz/+z57HJM6nbTrUMA7V1R2lSKUe+cmBsgExQSRlSGDY5w5X1wDJ5ouoqEdivDsjQ7WmuNgg/B2J/KlreF/IP" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    THE HOME DURABLE MEDICAL EQUIPMENT COMPANY, INC.
+                                </a>
+                            </td>
+                            <td> 800697450</td>
+                            <td> 01231G</td>
+                            <td> 2131 SILVERWOOD DR PO BOX 475<br> PRUDENVILLE, MI 48651 USA</td>
+                            <td style="display: none;"> 37</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1CKFCynlVl5edP3Mlvk/nEr4q0yE+K0MtEaC1pNCIf6U3FrkDZSazy/i0Dq/5L0idG24xgwRtxF+DiAeuCxkHYp3DQsjlyJ+CJ8Bb+0EjsQTEAqYACcbvrb5LjfnOestqw6FAjkbQ8pj7RszpFkQdREAQLPwHJdJNShpfahs5x0iE2H9cYYgtMCLdcSVUMPab3Le/HAfP95lCDDq74zgTvhiUJGdeFmVfaDErbRftMsCtXzisBHe9RSe3nTgW6YeSltvhy1SQOxYD82ZcTBy8qYGF3dJrU1/58l2CMdakicW" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    UNIVERSAL DURABLE MEDICAL EQUIPMENT, LLC
+                                </a>
+                            </td>
+                            <td> 801364379</td>
+                            <td> D0169M</td>
+                            <td> 26555 JOHN R RD <br> MADISON HEIGHTS, MI 48071 USA</td>
+                            <td style="display: none;"> 38</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1OTtxSCKKApm1joFfw5is3ndUduAahVFnwwijNH1zF3WfETZGM9YHT080qdsEErmU6udQGXSXBUl/FNPaPH4EGv1q6dt0UfizanL8BY2mQ6p1xfQzsxXjySK4W2m9K9Sh+Ma0NpwaFg5zBm9fMK3bba/LmU60PgrYMD08kSi19M3S4I6h1O0sxSPByhWCMSeEyQLDjZbaCWYjEt67gI0G1hHe/PWpwPF3vDLtVxqaEyKUZhOEFXOauRH+JNdRHfCnf4rg0CK7koE8MSxYG7oxrpysUrnvLHQFUGLQT9IY05P" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    UPPER PENINSULA HOME HEALTH &amp; HOSPICE'S DURABLE MEDICAL EQUIPMENT  COMPANY, INC.
+                                </a>
+                            </td>
+                            <td> 800515924</td>
+                            <td> 505990</td>
+                            <td> 1414 W FAIR AVE  STE 44 <br> MARQUETTE, MI 49855 USA</td>
+                            <td style="display: none;"> 39</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1DgmwYq6bG24Z/2bnicdkRtBTNEmxZnwQ6VWqc//LQeJaUtObRW+XH/qRxiwcTcTmsbB+rEj5Vq+mV47OCA6RUk0VCGdwynn7/8MKYcSam3XU/JocprL3dAYAixMTzCPqdHJXs2ncygZNid5OVhnBibCIUrygCEu+NpHchhQX6r4SlQsLfHIgPOhpzO9RJ3Hzu42SArCAvryaGtBBoSLs1THgwWaRe6KM3gQf+LFQAmmsOi4HqR6TTCtHq88rBrZI8pfrCWoHJ+KmBbTsAqexVbKO0IJrFIr0m5Rv3zYMsxG" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    VNA DURABLE MEDICAL EQUIPMENT
+                                </a>
+                            </td>
+                            <td> 800810254</td>
+                            <td> 718387</td>
+                            <td> 25900 GREENFIELD RD  STE 600 <br> OAK PARK, MI 48237 USA</td>
+                            <td style="display: none;"> 40</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1BmTU6p+3Ta2q4TRr9yoYJKbzvUGsLd1pO3GT7tsY6cyFLU0A+XR0BnuybqQG/ulQv99sBzTIZRgTnXifXN0tvysQ9L8IgZaq4w8UbjfHtlXuJslNLJ9nqmJLj40b5V6J13xSZ59Ihk4JCXuBpqmhMWqK66s/saqJoZvxGJCrQ6bAHCj1Z7qph6SuP7L3IgJjYZ4XuK6Z21cleDiSIjvxp6NRJbF1SQ7x03muQa+rZcYGtkXRovrxGO7Iw3jWOtSwWKncg1jHL3tQCKoZQqixSfCG7ZNJQNDaPvfmzT9JMXw" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    WINDMILL POINTE DURABLE MEDICAL EQUIPMENT
+                                </a>
+                            </td>
+                            <td> 800684686</td>
+                            <td> 00093X</td>
+                            <td> 2820 W MAPLE RD  STE 235 <br> TROY, MI 48084 USA</td>
+                            <td style="display: none;"> 41</td>
+                        </tr>
+                </tbody>
+            </table>
+            <table id="individualData" class="grid" cellspacing="0" cellpadding="6" style="overflow-x: auto; display: none;">
+                <thead>
+                    <tr class="GridHeader GridEven">
+                        <th id="individualNameHeader" style="width: 15%">
+                            <a name="IndividualName" class="GridHeaderColumn" title="None">Name</a>
+                        </th>
+                        <th id="individualTitleHeader" class="gridHeaderCol" style="width: 14%">
+                            <a name="IndividualTitle" class="GridHeaderColumn" title="None">Position</a>
+                        </th>
+                        <th id="individualAddressHeader" class="gridHeaderCol" style="width: 20%">
+                            <a name="IndividualAddr" class="GridHeaderColumn" title="None">Individual's Address</a>
+                        </th>
+                        <th id="individualEntityNameHeader" class="gridHeaderCol" style="width: 25%">
+                            <a name="IndividualEntityName" class="GridHeaderColumn" title="None">Entity Name</a>
+                        </th>
+                        <th id="individualIdNumberHeader" class="gridHeaderCol" style="width: 13%">
+                            <a name="IndividualFEIN" class="GridHeaderColumn" title="None">ID No.</a>
+                        </th>
+                        <th id="individualOldIdNumberHeader" class="gridHeaderCol" style="width: 13%">
+                            <a name="IndividualOldFEIN" class="GridHeaderColumn" title="None">Old ID No.</a>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>STE. 100, 8163 GRAND RIVER RD. <br> BRIGHTON, MI 48114 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1FGWLPiXnbDoXL645pAdwNTTDcg8Aczog+uuPn1Ee3bd/r/C8vkkklIUe5FzJLI3NbgC4Fd39wf7LwxGtDZN7WNEObuonNeLfg1AmZTA8YQIRRRqpyuhTi5QGKcyzZ6R4v83dSFei3Z0fKSFXMHmQiE3aUt5+0ObM8zfZxKvtNe+OjVXQCdBGnfUGeydO7a80CXfLVc0AhdyagNJUt5F5cVGcwS19T9I5/BS13xfc/TotxV9kR7tC3hFIsJh44mn0hFvn36cste37UofQZF4584w7xUkZj1kO2xFWTudH4Q7" target="_self">
+                                    ADDY MEDICAL DURABLE EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800677729</td>
+                            <td>23153E</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>21901 HARPER AVE <br> ST CLAIR SHORES, MI 48080 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1BZixe+BWGjk7nh/zMeqiDQELNPBH6Wh98lysc0CEseTOP141EHZ+rtwWlQhyX48YF01A0T/3k+sZgcXmIbVbUNw4PnX51+O/VhtKI6Uk13VJHIBMZwMeXVg6qHrDsC+fVkeTXxmQack0hYKN1GxEsH+dMzNtFCb7Q3PdROtvyvXplsaoyBFHjpYA+eDBEeqDctzQ9sp3RTbJabuDAPFcrHIzdyFWfRJH+5cBycGV3tmK9K6XyLy4PQ7YCaURV9XpsEF6ZW60+axT4vB8yJTp+55Tahrz4AbAGIr+uvM0ROt" target="_self">
+                                    AMERICAN DURABLE MEDICAL EQUIPMENT &amp; SUPPLIES, L.L.C.
+                                </a>
+                            </td>
+                            <td> 801232614</td>
+                            <td>B8387H</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>21500 NORTHWESTERN HWY #825 <br> SOUTHFIELD, MI 48075 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1Lbbeu02FxBiu9UfErAwUNhDCJ4gB4/2rBk4I9G5TmepSMB2NVccB90cnTtFHrb7jSwkGPJVBvCq6CU2bUa3YipwT+/UuBzyn5wTMki6TygnRc1rsnYNCBiTUKuhoVbG0Syo71y+65+2ZYdjYGCsTmCInqE2/vVtzfQ32U/VfAO9CdIDWx2f5JiSUhF7OMVLOWbl6QenwN3u8Y6dxm8uHlRX+rgbZUmy7vVVg7k0ZqtKcRfyDk9bXzXj+LLqLHVh8kNmZj8rc2tX95ZHmCLQpKYqvvCFFLLk7bWCvElu/FNL" target="_self">
+                                    ATLAS DURABLE MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800285034</td>
+                            <td>28161A</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>15565 NORTHLAND DR STE 403 E <br> SOUTHFIELD, MI 48075 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1AsoRSI5doiH45D/RSXmU0Vga4aS9WIvNamij5LY1jb9njdJRjYNLGn6bDw2WoL0y4+nYpfjEJo5j+lyKLfKRugQxnhJb1HzJmFdyiPy4/fo0ucvUVznO0xTpf1+0oJ+DiCIFK6bXLzww9LUxQsS54x/n0ULddVie6xMVmHO5qny74QNpdpcTepe2P8Wo2yYkINHY9SctvEHdB9bZxrWOKOcuUO+3BQKrzd2jdnbAAA6ePfGjJU6gjaQBTatT9MXSTZp/O2f0gpP928Bo0IzT452xwVKXY3sndEAd77tSVTy" target="_self">
+                                    BETHHAROLD DURABLE MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800623784</td>
+                            <td>00850D</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>515 EAST DIVISION ST SUITE 125<br> ROCKFORD, MI 49341 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1K9Ced0y3ScJE0Xe4mNF8ak3K8btZuzuFxYvg7midNxm9AljVjhsIc0Rc/PNlxZKNYc8jobO+LcJlSLdAG0XPzoz6xoHzPcikNqOqYoNl/ltUIi1nbKPDErGNM6PphVfr70FHGf7qMHepyOgbW9kDwaA/ZwfJyow+xLMzGsnVw1MaY/hBnCchSXPDiLt3Tkem6tRhuq0N5AocZRLeYLdhRoClkx7SS2bAx77FXmhl+3myORGDWCR/hit5SWCYG5oH+UijaT2jXpUgzydDfCr2coRPZao3JInlH8UD6ZEe34n" target="_self">
+                                    CHAMPION DURABLE MEDICAL EQUIPMENT
+                                </a>
+                            </td>
+                            <td> 801417788</td>
+                            <td>D20452</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>11000 W MCNICHOLS STE B <br> DETROIT, MI 48221 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1F+Q6T7vDfl0h9w5li0LEJecX3MQVhKsjBNSiH404ynbz58qTVRm2a6wJrV9uhQ4MefURB7BL782Mg8hXx3LY5hydgYg1WhjCzt8jdvo+GZDcpMCFhDWqk5RLIlCEq41Hiu/lFxodzLDgLLW7BjJHpNCLVhlkAq7N2iTizoIff52LKEN3wsY4s78gReXxMEAaaW6XVhK4oxKuYHpV37s8BENK88M2FGTWHgRPnmt9nHLPeNRaKyjd8aQsldSB0DAeesGCKahzXWVAcNS1CWOx40SVJrEewWWXltKsutibxAn" target="_self">
+                                    CONTINUING SENIOR CARE DURABLE MEDICAL EQUIPMENT CO. INC.
+                                </a>
+                            </td>
+                            <td> 800632126</td>
+                            <td>12453D</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>15565 NORTHLAND DR., STE. 401 <br> SOUTHFIELD, MI 48975 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1Hj6LNa9vkcizGlZnAT6o89Q4VvMbP/ciMDNbhldLsSIpPtCNVWQfH/rHAZXwleXQH23tKtIap4SgbXhlGMcOVqLo8+oRgFQV/4F6UoaG7F3ntTPlrBuVGOEL/wyMtXXfh69F9LlecirnXnWpAhytKM3ShK8nmsbkj237VaB1dAWX5ie/cToa77w7bSekz/M9IV/yQxRuQWdoED0LcC2ZcQ7PRwXX3fEVwFrHPGPuSeq67WlKFFY77L1R0WEBVweTcxubprko6qHKKUdlpcR/Zqfli/1DeUNgFjrjogR37h+" target="_self">
+                                    DEVINE DURABLE MEDICAL EQUIPMENT COMPANY
+                                </a>
+                            </td>
+                            <td> 800606078</td>
+                            <td>51171C</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>10645 W WARREN AVE #250 <br> DEARBORN, MI 48126 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1DUhIhsKBvNPEGTMK4bH1SdkYJ7OVPvHXVVXrTzQ0Mo9jZ0hJ68Lxp0ypFoSXo2CM7ijjfpVTQeYhTtFbCThz/2G4cl0L4icd2REsdp6zX4KDp9MORiDM+OEUoaB6pyApU0GqFobM7ZYxREw8dC9HKyCsZjpw86Mb2l64GKDKs2UuNQPZO0EYff/Eyg6D0Qzl9OlD7ivZ39rBkZKj9VStpCvzY6Drj7nx6rt2Ha4735gJsZVzn2eKo78rOg8ghjVCVo4CXgzs2m4BFkEW8apwQvGWUMQVF9xsdnjbxiP4VWq" target="_self">
+                                    DURABLE MEDICAL EQUIPMENT &amp; SPECIALTY SUPPLIES, INC.
+                                </a>
+                            </td>
+                            <td> 800687694</td>
+                            <td>00596P</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>6771 TORYBROOKE CIRCLE <br> WEST BLOOMFIELD, MI 48323 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1KLOCqlY9KqP8no4+7Jktfs/2R2mwnSK9q4fi9YXKxu8+0BH0Sh80YVU3xP8JTHc8Yz5q1+R++sX1zjU5Vr4fGY7Y1nLUce/AzXgY9WyX92LKk0SDEVWJKvdtgoUfFY9s/Trn2MXCulv8vaglPTn4ttEAydW4+FFUC367UJDyVBzy2smxmRB0K90+hnxbOGzwPUJSyMOXe3C7RT3M+qT15nyhM8nqRnyuPl/nb4F6Pau7tPvrmdsvJUvaNDSZuzNSiD33qG1AfKthmX9oAWf1Lp74UqMHefbfymFLFaVruO4" target="_self">
+                                    DURABLE MEDICAL EQUIPMENT AND SUPPLIES LLC
+                                </a>
+                            </td>
+                            <td> 801389784</td>
+                            <td>D10791</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>100 BLOOMFIELD PARKWAY SUITE 191 <br> BLOOMFIELD HILLS, MI 48304 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1J6Awwv1t4dkKQ5bvUmBbLREJen0FJU6DZqhIe+I0+zlDfO+jVov+hjoKXroxZlVcq2mk6xWdG/weNDdIiteh6b0glwGqrGniNKuHs0rA1e4p9P+pCt3zKYVzj1kmdzMn0QDEGrK46Yh8A+EnUxj+75O+3eyloSzhg6r/H/hyzrfcD0+XIlQqfxzp/n6fV9aPd6/Z8w9H6BdrlRNY9s5LMRb18bD8LUcY0wo2+iv65t2PvJ+cg78C+XC29dwaLxJAQdLcl5dIefAQJNkvEJAFKyqDxy+8805N1lCUA8fUjOs" target="_self">
+                                    DURABLE MEDICAL EQUIPMENT SALES AND RENTAL COMPANY
+                                </a>
+                            </td>
+                            <td> 800647763</td>
+                            <td>50133D</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>25411 W. WARREN AVE SUITE B <br> DEARBORN HEIGHTS, MI 48127 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1PSpG5tKLLDnMvcPbCUuaZE8HQxtK3+3/9Kl/PCwRlouXOjSMVfmKq+iwn+O2LIo/UUMmPxAUP0bKi4qL2InZHs/rByYck7QCgTzP8Fakpek9Sl/uBA1brUxpTecdnoAZlQ0JhdFa7AFe5hFTw8FmEoc7K8iX0FTWas6kx+ITZgUHTbLn5/cKughBcG4vkeC4cYIg7hu+wYg5eGh8nVmcIxeLiWDvODbKnPNSNG+J1BWIXUMCNec1r1177JB297dEDj0uWXfZj/TackLSvfblGT9eO9QxxadCvaxE37P7S9Z" target="_self">
+                                    DURABLE MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800722282</td>
+                            <td>02645M</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>29256 RYAN RD. <br> WARREN, MI 48092 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1KjFYP95m/iM0FTus0qxLeun0N2TaeaQb72DcIZldaamhKSnuNQEi40BXkB9wO80n3o7Ud2naOkl8UEvbnECSyFSk1X5pNtoONue/tm5sybg0hrMneSDdR72IxDqpfGE6X4Y/dBo/ua2y71ONn2Sj4OCSz6mRHQX2g719hc+LZCkckpOIym+KbvXb0AELVs3Q/kEjAOYnixvC8BN3VeyX1bz3HFMDjdXCyjQwrU5Xrv5pEqZMN4i+m5I0knhm8lCpCBMVVeskp63AOCp4sBCwNvbdRV+GDbDD04JEE1akCmO" target="_self">
+                                    DURABLE MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800457418</td>
+                            <td>432335</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>21468 MACARTHUR BLVD <br> WARREN, MI 48089 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1F5c/K0wkLOkDvGWhHq1h+Zj7Xaa8DIAWUUEczKFjfKGlp+6jToSZVc5ehcNjkU43OuJghJhLly5Zov6QS9vdMjcxpWwqjoS4hl84bEqlvckTVv23BTgLA/2xsDTPyZjUldi7qs5KaRmD4/SqXWlHwPP+kVsDiXB1wEQcgieAsjQ7kQ4UNxCPRusr3DBGpFgjp9VHZTGBuxZP719rhPP9xHqmFZrJzr8oq1N0L+vMeQ/MoQdmELWO/PPAxDHKi7e9iU/+jCiZQ2a5dZk919Lcl2Zt5AupiA9xvjPNi+lSrpO" target="_self">
+                                    ECLIPSE DURABLE MEDICAL EQUIPMENT LLC
+                                </a>
+                            </td>
+                            <td> 801370402</td>
+                            <td>D0520J</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>2051 ROSA PARKS BLVD <br> DETROIT, MI 48216 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1DlYSLfUtEnadntWJ66GFqpbsk4RIJYEVPzI1UO/mMRwcUqrupukXE3OBw9VQesJPN9pCSOXvHiLAXh/x9Og3xzO7Wnn5F4Qm4vpamUbejFBPlXbWbmF3oR+q0EjEaELhH9sI29/Gt6/jghKwEg3oMoMjnL8LJNQpYvc+tUCMdBnkcwstPDU+S+nZgZEByjumHV7Z5UU/v5wec8/8z5+aalqZ6DdD4Q0rMKIOzNKYAE5mTf9mkLBChMvhMeR+fdtL8D79SXV1nq0U9v2a6GEIZazQKQpp0Lbm/FebcjNJmHD" target="_self">
+                                    EVERGREEN DURABLE MEDICAL EQUIPMENT LLC
+                                </a>
+                            </td>
+                            <td> 801365963</td>
+                            <td>D01675</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>SUITE 205 20853 FARMINGTON RD.<br> FARMINGTON HILLS, MI 48336 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1A3vRnZAU5c4DHolPV4Zck6ty8qFAvIdoj4eRFvpglNvSro0De6Iss4OS1ucQfVaoKqTNoKJJp4iL9u7TKLSc/dXXZkgP0+jBZEAlp2W0+zv8mLUbkKTjGb8AFO++sEzISsxLZGyDuSNlyjjhHH1Yu/q7e0t3WzNgUOdIWsx4wSbP9F+JiMRyPeVGVizorrsLKbwMzFZJDBgNH0spuBrcAj92hn/3LkmovyAPlUR6Mj+oubUV5xwC+OwajOkzsbl+9Dfnhw1/RmYQZbd6UzpM4w4SjyyvPA+NvTouNX1ei56" target="_self">
+                                    EXCELLACARE DURABLE MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800422919</td>
+                            <td>405211</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>20853 FARMINGTON RD STE 205 <br> FARMINGTON HILLS, MI 48336 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1GY6aC+iGXbuU2BaQy4iuChexuCXHIDm2hwhDJ3VbORsGgXExcS+tiy8o+5vkKs/3rc+U23bwnoXWJTuwaaqnbhSY/XTlbFRsRwnu7JrTBUS2vVkcgLg1GHS1ws9xK/s1L0rtq/+zWAKzAV/Q1jQWevkksIXloC0OKUp1g8iPXMsICcVOrfw/EQNdhuJHTVxn4tp6MXOMH3MeKazpwseEC/jPckelpNv/ha7zDybnMO3G2C6vSuL0ROd5AGTJSfzUCq7IJUjPhwXNiKQbtWcOFk85gTbtLh87DjnYgMbUPYw" target="_self">
+                                    EXCELLACARE DURABLE MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800423768</td>
+                            <td>409470</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>16904 W WARREN <br> DETROIT, MI 48228 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1MmSn6bZVGem3W4DyZnTFKnFWT/c0ZoJKwHhKakmZ+apy0WuH5TtZNLGfIFyVsaBJ1Rp9PIsaRNVe59tpNNtj1W0kDw5C8E0X8fzkQgwraRf8M4FPLHboNQjZxBSPc4wRek68fxED7DNw8T7wdb7gt/JgkcsSXdoDUiHbtYLNCrFZXKeb4t8MMp4hlj6xdboCpZ2AnKOsGB0AtDOlFhnn1laS9FWdxvXedYtgQ1RdO6erqfGahtZXBOnJOYQfWgG0zyYayzWNcjOKkM5zuj+CJykwFPb3npoecgZDpLY0EFO" target="_self">
+                                    FRIENDLY DURABLE MEDICAL EQUIPMENT, SUPPLIES &amp; SERVICES, INC.
+                                </a>
+                            </td>
+                            <td> 800452538</td>
+                            <td>434159</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>3611 CARPENTER ST <br> DETROIT, MI 48212 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1NYhe0HpVhiQB9quxrAE5SNNL/sSv/iP2Gd0Cts7vFWw22OB0HEKjFjVT4O563RIe0q6Zcjj3kFsnBoIiBUGseRsRaHM2qfOjsZXOeERRz4UKxA2vy3gCSc6KlYvqHCwXeaGD9ERE4SmbXuOc3/dglqS9cnJVprCG4mfwEEaLjlvf7GtWLIKc5iHgjPvYVehOusFRm3s6PfGcj5N5oq8ToYGU4TghtprUNVpQx7HEnBFHooCFbuk3rQZgQTBpS31Ggi+Feql3gSAdZkE4qriDRSC2zcWKHv9phaE3q/s6u0y" target="_self">
+                                    HAMTRAMCK DURABLE MEDICAL EQUIPMENT INC.
+                                </a>
+                            </td>
+                            <td> 800652128</td>
+                            <td>41948D</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>11653 JOS CAMPAU <br> HAMTRAMCK, MI 48212 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1LGwdBum789TBrqW2USnj+Vc8Zh51OwHa/hmkX12fbca5xkjEhdyBmG30pVcj+jkGKobjng67xfylyV4leeMOKXqzm+B9rINOZznoJPoQZRYxjimQZW2R0QfBM0RBbnKJ0tcKa+5gfQrzIdblDcL5jm8RMeM74Wsb3q4yTL3EVBpGW89IgayJOnMd85RRtEeOjqzZ3yqNKdWbhQQ9DlVQobR/uICFKfv+FOLnawC3IORDm1JKIBO937tKPWSGarTi/ownIpxnkLxJQMhNFigqkWRrU+drgQkm5OgXmF6d8Pj" target="_self">
+                                    HAMTRAMCK DURABLE MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800727593</td>
+                            <td>03359M</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>2900 WEST ROAD STE 500 <br> EAST LANSING, MI 48823 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1Ftq9bIvCSKYmkVVAWGmgX0tcOpcKu0swG/jE0PA1cJZSEHVy+ibbBNBkwJxVMBxuDlz18dKbbT7KVwl75+SfDdqa6oOBASohrRZtpuDoGkFd32oMVfNVQobS6l2RQUMrwCnWbAHMgN9aYGOkzuGj01WRBYGm3qBaPBq7o7Jq7PGIg6nYZC2K3kvAf7SQuS9IGNYjDXO4J/AATpn2JK1uAuZ7GcN3laDUx0ImTJsdCL2fxc+QkN5EDkYMUspSwjxVSnHwsgnbFya4zRyBkNV2xLrW9LEPhbs4HJ+b04NsB0F" target="_self">
+                                    HURON MEDICAL D.M.E. (DURABLE MEDICAL EQUIPMENT)
+                                </a>
+                            </td>
+                            <td> 800296320</td>
+                            <td>284944</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>5820 N CANTON CENTER RD STE 140 <br> CANTON, MI 48187 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1HM0nLyXf9w+eFVpLNgr8mLTw5/IX5+CCLknrLrr39q7Yt0RVJc/OzUoX/6hIXo6OE1AJ+fENmyNWxqX+T6GIpIuikqDDb0NRkg0sb7PZ2aXANmdvIVKpqduG2D/+CVubT1A/yrOm4UjeOIhh3/Tc/3NuftkJuIyiE87tkONMTKfjTiEE6OEeriuLFByUB1+/2IsZ5FfBmQbojIlNnS5N4N6ts9QRjjkdI8JEEJ34y5tp3qPahW8EkzPDd7Kk+zH7B9xER1AagGpN1qox8G3ga5KUywwJiZBvoZZ5VRKuSG8" target="_self">
+                                    LEEWAY DURABLE MEDICAL EQUIPMENT LLC
+                                </a>
+                            </td>
+                            <td> 801143309</td>
+                            <td>B66583</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>6949 HEATHER HEATH LANE <br> WEST BLOOMFIELD, MI 48322 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1IPUANOME2qr5mnjbGAA8hg+EAmIi5oJ45AtaSsg8g0FjdMUbQYmc9vFs9qz55CEUlUP3pQf487i40XFYoy1yKuFaxjDClgQ5K3XBFT6Jv7SN+BxROItzN970D7fBKsBH7Yb/cL+jkeJCkmTne8Q82nw9cssn7ZXEuzIa/XRgqvHAq8XEjBUNtuhSBmKNOz/utjmKlTzjN0wNVGwkIq3T19/DBRL2OuS2tvQvBD/FNcPYMvKZ+cAZcqtHUMd2TeVZ7PX97OTIMypeQO8A3Mf3T/VirIvWzsyQGYK7mRHwpWD" target="_self">
+                                    LIBERTY DURABLE MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800670282</td>
+                            <td>03370E</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>26400 LAHSER #202 <br> SOUTHFIELD, MI 48034 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1GPUbE2kLiGpJfxaIqIxUg75UyJBC4AKcyGlmaAmXWyW/jYtv/qzgrNYau0WgEuhbN3mPaPZfIRfdhIEbYr4hSdtPAMYJo0TJ0Eimst9v51Xq5pjg7savGA24CFD2CnCV+5EpY2mDWWcOjiDGU4HVk8I2qNrQXgJYEYlObkxcR+s8toga/qA/qpHD1wi6aYOgU6hGQemrDL05niUvqAHpX44C3FjTvB05II76gQS28w02cppmf05uBf8Y6eB+jq3CiN6h1VWeG8eL0jWPDdmYFmkDc2ORH0hcE+iyZpf35QM" target="_self">
+                                    MARSHALL DURABLE MEDICAL EQUIPMENT COMPANY, INC.
+                                </a>
+                            </td>
+                            <td> 800293532</td>
+                            <td>293727</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>209 SEYMOUR AVE. SUITE 2<br> LANSING, MI 48933 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1PQ9AisfmKkgmb/XFmCVk3EmvJAGnO3XtEgI6TYV1DgQbfZNwEOsxWlUnV72a6PDqDALc9HHjMZzuoza697I9bi5T+hmC7GCpQydbiSZNrvBn4g1dkQEBRV/Q5zCtiOGxk/Ddhb3b22zTMDkaCKDsxg/u82yhG0eKYzWSHszHzbbSgmHaHudUPkxyfmEpGRznqcWVYqNcB9GSZmJDnwdN5rTRzzhWRaT6qiKOyafro2tITFYgKvUSYjN3kgCDOfxattJNIkHK7YbCcrFZ7JzlWmFedxNscDTgrY8IwjYAJrf" target="_self">
+                                    MICHIGAN ASSOCIATION OF DURABLE MEDICAL EQUIPMENT COMPANIES
+                                </a>
+                            </td>
+                            <td> 800861162</td>
+                            <td>793152</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>2140 UNIVERSITY PK, STE. 220 <br> OKEMOS, MI 48864 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1GNNxLdrgeALHZmDqXh9BJnVaNlkhjtUk5UdbpDnyW0QzNz5r8dkYKW7XuhbSJNeX+jTykVgJoBSXDtzduwh16tnFMko0SAgfeil7x/4GuM2KEnsVwaii2pOnH5+H+t5Lr2gr+Pd84UzfKoHV5d1U1b3g4lcK7ajUGmz+gjS9f7o2rkP4V3UHVpgI2TURHWCnG7L6xSdnPlygT79s1RRI4t0FagQ6kWCepO3VrIzsMFJgNmn0MFlVcYeRjtmU578W+diCgOxjgwL1kBwebRiP1yaFFIRVlnHo0+oCS07olI6" target="_self">
+                                    MICHIGAN ASSOCIATION OF DURABLE MEDICAL EQUIPMENT COMPANIES
+                                </a>
+                            </td>
+                            <td> 800877243</td>
+                            <td>890391</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>901 MACOMB ST STE 1 <br> MONROE, MI 48162 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1KlddWgSlq0LKyMSSOaIQnA6klJ4vcJI04s13Wsy+coNQuX3kh2RFa6J9eAfY7RcrdA/vtMk1dstZ2ZG7E2GrjSCFUIKSmRbyoRbO5Rgz2z5xzfPZ7mZi9jjAWpDPUTwC4FBAn+EWCFfCfvfWu9zitNjSp0h1uI6yLnJCIWWW02s+yobOmC+uAnEzq7pt8mTd2GZ79WbCkE6PutGLy7ppKhJnUKb3cya3r3yvobTHkxnwQmOwIETvGqfF9ARLhEp1pS00Y9eYXfRe6XETrf50SKQ7gnNFTAw/uZt9UF88DNZ" target="_self">
+                                    MICHIGAN DURABLE MEDICAL EQUIPMENT INC.
+                                </a>
+                            </td>
+                            <td> 800613433</td>
+                            <td>02504D</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>25725 COOLIDGE HIGHWAY <br> OAK PARK, MI 48237 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1NT2meCOrLHQVhn/fBB7c4ackm/cJq6yhXPjLmsCU5u6j2Co0ud0GAeEESkkM3nPmtV5D3sQYdfPJcSb8mo7NNMOE5ay+Cgn+fTwTpqvDxzWYCPBMd0nCZQcjTCNb1A464FxYsLzPqLgC6BNcToMoi/iDu6qYArgQiS56lrqMpB0VXZJeKXqY2IrJD24bCefsW0Km8nEmAzYz/RKTCpyoogr3zpkvuYIuqfPWkqV5l3uDVDr/EEjCAMasngjpiXe1fIamwZ4GbZMCZ+Yhp/9fIwWTu0sKpF+YLhkMo5uwt3F" target="_self">
+                                    NATIONAL DURABLE MEDICAL EQUIPMENT CORPORATION
+                                </a>
+                            </td>
+                            <td> 800031040</td>
+                            <td>021659</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>19785 W 12 MILE RD STE 535 <br> SOUTHFIELD, MI 48076 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1DD30lHuU9Hd1YMZrtCOqrgYtV5xgBrv3ckdbB0NGoCOvz7TKfsi0cgJzWodRkUogeWpUuC0BlPFvVXZkE75Cjgb98BpUS/Ja3WK7ZTIpLwXNvsWbCsV5j3L2haU0+y+sl8F/R2PqMXONkP4S/vhSziR8XjRPkfpVMTQnZvMxC6e3qXuImmTREJUqDxloGu0HAaQ/4DmkhHHZ149U5awCYawxW1l+e91K3pyS7kCu0R84ixp86ttuRv6ff4VOUehUdkBsxZMpBdDpxfuFw+Ldf7AjHtNVkXDRzKnHh9Xo6jd" target="_self">
+                                    ORTHOPAEDIC COMPRHENSIVE DURABLE MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800387373</td>
+                            <td>378908</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>39475 ANN ARBOR RD <br> PLYMOUTH, MI 48170 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1MOw7IFMcMm1AvI233OGEn1Ynz9kPf/z7mvwNj9YHGjBKqHGHf0XHfCYmxW5WLDWMicLfaiEzXbJ7CKCRHRo+RsWWV71T29k/1CdDeV9nLekTFvGTN6y9zQU5vyaJPbHhcm6AIEJARXA8+FWXc+V9hppVvwTHUmFBKfUKsaYiS6d2FVdatP91sQzOnMJBZWaBvlsEuJgLt1slSdgPO5HstsEcgVPUxXgD0gNmSGtIWLa9iuJKxMlC86new8UC3fjmSpOUNoUZe2QTXuVOGQ4NAcLf6zlt1xEembT1REuqJZZ" target="_self">
+                                    PLYMOUTH DURABLE MEDICAL EQUIPMENT, INC
+                                </a>
+                            </td>
+                            <td> 802808298</td>
+                            <td></td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>PO BOX 885 <br> JACKSON, MI 49204 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1MbsSWpyBGZ2wPnm60I3JwtAJS0Eq9pH3rnupOkMENe/O+kkyB1VR6LdL/RYRYZ+Z6Be4naa3T1QZKoPUAHjKPEqa2oDQEpWXRI0tuUpEm8fV+GMns+YN5mPDhmITouj7cXUcwi7fJdcAnD4TDrtJnVo/Do/mt1Ymt8HBhANfMkVr2p6huHCNkYCzc2iPHnd0kXox8BMUuxoqjwrY4jgFItkDPuFrVQjbFIrvXX4XRbECrvzhQ5iZUkO5sExwMtSEBCj2BP/1hh0UAoisnJAU3J+MJGEQs1ar3juuPDunHsl" target="_self">
+                                    PREMIER DURABLE MEDICAL EQUIPMENT LLC
+                                </a>
+                            </td>
+                            <td> 801504596</td>
+                            <td>D2790Q</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>PO BOX 4234 <br> DEARBORN, MI 48126 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1LzhAHqkgcndLKvYpWeAklr1gMOCZR3c7N6/HQrfZRaDOyR1Mc5AsWGREnfQyit/M0NcuMMELMCtZlCa1/64I5FhvgDcXRtL5TpHZEvH61qoEzhb8wwf1iCveiRw7nFIIEaF6toPcwnqUk0gJKiCTEJKnQ9THw8l9lAsSoNBVyWwKYtPhBKNslkaxqTQHUVum+Yt5Oudl6uZPO0T7LGis6Bm/st/sZu8yphbjFXIjvt1YfIqkobo5wwD3q7cK8zXXl5H8BSubVSTAIFMkoxYWN/iYNLQ9xdpjXFBC3XtYUIS" target="_self">
+                                    PREMIER DURABLE MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800584682</td>
+                            <td>20297C</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>22243 W WARREN AVE STE B <br> DEARBORN HTS, MI 48127 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1ON5xNFTCTly1eTe8lSJEpGEeUhgGyli0nVweDitUUPi2Aa6XBUuO2d6INYLnhdHDGSG3QN3QyapBStbKWB2f9ZoysnIiOHf5HPKpgPTA94yrntbMnqfnATfWXuBnR//M7O7mx9Wt2Is1bRbp9UENEkru5xHv5Zk67Wlo3hB7XXt+OVt4h0HQ+nPA6lbFQXBKqh/wmVHElvePLb58ZCd4HZJ+RYsFftNxFM2vviNPY+kTBraDMnf7Egrsa8cl+BCElidxart6f4/qlNq8HsFqjlYyupXgRgdpHd5bhRVFT4T" target="_self">
+                                    PREMIERE DURABLE MEDICAL EQUIPMENT, LLC
+                                </a>
+                            </td>
+                            <td> 801809693</td>
+                            <td>E5456G</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>5310 PRENTIS ROAD <br> WATERFORD, MI 48327 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1O2dEqj6j3sDr1Yes/VP9y1BxP3KmOLiyTyzln2NqNClGJKR/H7UIgDNBpFrIo4QkhzyeDgnsHzIgWngJ2ZSGNlO4ktW4dLFNFVybgKu3HU9m7yUEFDB180EZUPWl8C82JkmSLPJMXjr6qEJhexBneip9sCFkmXPohfwg5BZZ1koyApUWLNr+CE+eBVbe2vJ4433FY4uKwTm1Yb8MXELIp/SKu66NoI8sUPGGH2wYWsFu7JxlmJBPJNKF2yI5oiYqwHWZu0Jo0ksYO3XpYBqMPwaU3GE4LGbxXSIWQdrI+vD" target="_self">
+                                    PREMIUM DURABLE MEDICAL EQUIPMENT, LLC
+                                </a>
+                            </td>
+                            <td> 802396511</td>
+                            <td></td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>SUITE 294 6230 ORCHARD LAKE ROAD<br> WEST BLOOMFIELD, MI 48322 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1CIdgS81bVsS8wKUVGafbisQpAfw63QLc4NiYXQ7o5hct6kNPby+PNumcwYjvOlBgeQEx54Sfz66NefOnePbNy5pYLEjovRUYuxrv0Pxi1Ku2+x9CaFY67KCuSMGtQsx+DAlUaXu3XjSgp1zbEzShw+EbbN4dtnnQZh5SoW49w0AJpULRLIwtg/Z+ttPLNB3iTmR+6sgkjO3eALFSdWNvgw3nh64AsBu4ULkxovEDttwmvAlr1+2ocBwB/rdKqORJ2kbdGJuHqN0asjdQFVbaemmYiVoSFNH2n4l9tZGIbXc" target="_self">
+                                    SOUTHEAST MICHIGAN DURABLE MEDICAL EQUIPMENT CO.
+                                </a>
+                            </td>
+                            <td> 800141003</td>
+                            <td>134719</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>186 TIMBER VIEW DR <br> TROY, MI 48084 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1NXVVfJ5bzPklzacKHeQe2J5qzKc8dOhkMuWk13UvNlUHBGyLBfYLcIJodBeQrVVWXy+OcExNtzEbkiaN4n+xZLbt+yvPpakourCJgzLsVO8Fm6XVxbSKClztnucO2nIOX6oTufmU6CmGvWIvUytP5VpaXqPC/zzdq2kCl5cjt4426TSDF8siMQt8cU7tEfQWxSDdyoBwnbv+R6Jo9GSfq7n2eWZzpvuvHS8iAU0Ry0K4KU/Gc1UiJWbTvrjSvVZvt1uaEbGdr3NYBHFNIwFaLdWAhXwWrr2F1v954JH9HQF" target="_self">
+                                    ST. JOSEPH DURABLE MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800013245</td>
+                            <td>00536C</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>83 E AVON <br> ROCHESTER HILLS, MI 48307 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1M4koldZcCqv5UUdUuYjrbfHXiZ/W93z6KLukzHhmI05VM2v1/x3md/RXBi9vw3KAgOQtpFWiuho2pC9t5J4IMf89gYYETthin+Qd2lzKtcuV7X5BIkXNSx+n/bI/bdXs13z768r+OAXSKwHqKeNa8qAuKzoOEnbhL0m0V0r+dCZ2gdOogqmqN2Fv6tFcaUpCs14611e0DUv97KpTun21roCEuQm56zVl/8fsWpHwmv9paZAf1qGxVt4KhIFkICiZXio1+hJknYhTzQs49b+lqha3OMMATi04xNRQ+MWUIH7" target="_self">
+                                    SUPERIOR DURABLE MEDICAL EQUIPMENT, LLC
+                                </a>
+                            </td>
+                            <td> 801399660</td>
+                            <td>D1534J</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>2131 SILVERWOOD DR PO BOX 475<br> PRUDENVILLE, MI 48651 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1CG3ZFlhvSsDxtwR6O0riSLbWQaofjmiLjw4ax8pmS3Mij7j25Z7ZqC0kY0AHZztNTJz/FUlTjhaC65c4ZqNBqwzE/57Sy2YC7LNrPf1nFlD5lTis65NUpLiDdEmtecMK3RxApk+v0WQ1hZUSaL946bQ8P22B3RRD56dKkbe0626krT/9+4S2/QjosFqS1/z1Rr47JxhYD+Etbpbe9EZsfKzz/+z57HJM6nbTrUMA7V1R2lSKUe+cmBsgExQSRlSGDY5w5X1wDJ5ouoqEdivDsjQ7WmuNgg/B2J/KlreF/IP" target="_self">
+                                    THE HOME DURABLE MEDICAL EQUIPMENT COMPANY, INC.
+                                </a>
+                            </td>
+                            <td> 800697450</td>
+                            <td>01231G</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>26555 JOHN R RD <br> MADISON HEIGHTS, MI 48071 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1CKFCynlVl5edP3Mlvk/nEr4q0yE+K0MtEaC1pNCIf6U3FrkDZSazy/i0Dq/5L0idG24xgwRtxF+DiAeuCxkHYp3DQsjlyJ+CJ8Bb+0EjsQTEAqYACcbvrb5LjfnOestqw6FAjkbQ8pj7RszpFkQdREAQLPwHJdJNShpfahs5x0iE2H9cYYgtMCLdcSVUMPab3Le/HAfP95lCDDq74zgTvhiUJGdeFmVfaDErbRftMsCtXzisBHe9RSe3nTgW6YeSltvhy1SQOxYD82ZcTBy8qYGF3dJrU1/58l2CMdakicW" target="_self">
+                                    UNIVERSAL DURABLE MEDICAL EQUIPMENT, LLC
+                                </a>
+                            </td>
+                            <td> 801364379</td>
+                            <td>D0169M</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>1414 W FAIR AVE  STE 44 <br> MARQUETTE, MI 49855 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1OTtxSCKKApm1joFfw5is3ndUduAahVFnwwijNH1zF3WfETZGM9YHT080qdsEErmU6udQGXSXBUl/FNPaPH4EGv1q6dt0UfizanL8BY2mQ6p1xfQzsxXjySK4W2m9K9Sh+Ma0NpwaFg5zBm9fMK3bba/LmU60PgrYMD08kSi19M3S4I6h1O0sxSPByhWCMSeEyQLDjZbaCWYjEt67gI0G1hHe/PWpwPF3vDLtVxqaEyKUZhOEFXOauRH+JNdRHfCnf4rg0CK7koE8MSxYG7oxrpysUrnvLHQFUGLQT9IY05P" target="_self">
+                                    UPPER PENINSULA HOME HEALTH &amp; HOSPICE'S DURABLE MEDICAL EQUIPMENT  COMPANY, INC.
+                                </a>
+                            </td>
+                            <td> 800515924</td>
+                            <td>505990</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>25900 GREENFIELD RD  STE 600 <br> OAK PARK, MI 48237 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1DgmwYq6bG24Z/2bnicdkRtBTNEmxZnwQ6VWqc//LQeJaUtObRW+XH/qRxiwcTcTmsbB+rEj5Vq+mV47OCA6RUk0VCGdwynn7/8MKYcSam3XU/JocprL3dAYAixMTzCPqdHJXs2ncygZNid5OVhnBibCIUrygCEu+NpHchhQX6r4SlQsLfHIgPOhpzO9RJ3Hzu42SArCAvryaGtBBoSLs1THgwWaRe6KM3gQf+LFQAmmsOi4HqR6TTCtHq88rBrZI8pfrCWoHJ+KmBbTsAqexVbKO0IJrFIr0m5Rv3zYMsxG" target="_self">
+                                    VNA DURABLE MEDICAL EQUIPMENT
+                                </a>
+                            </td>
+                            <td> 800810254</td>
+                            <td>718387</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>2820 W MAPLE RD  STE 235 <br> TROY, MI 48084 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1BmTU6p+3Ta2q4TRr9yoYJKbzvUGsLd1pO3GT7tsY6cyFLU0A+XR0BnuybqQG/ulQv99sBzTIZRgTnXifXN0tvysQ9L8IgZaq4w8UbjfHtlXuJslNLJ9nqmJLj40b5V6J13xSZ59Ihk4JCXuBpqmhMWqK66s/saqJoZvxGJCrQ6bAHCj1Z7qph6SuP7L3IgJjYZ4XuK6Z21cleDiSIjvxp6NRJbF1SQ7x03muQa+rZcYGtkXRovrxGO7Iw3jWOtSwWKncg1jHL3tQCKoZQqixSfCG7ZNJQNDaPvfmzT9JMXw" target="_self">
+                                    WINDMILL POINTE DURABLE MEDICAL EQUIPMENT
+                                </a>
+                            </td>
+                            <td> 800684686</td>
+                            <td>00093X</td>
+                        </tr>
+                </tbody>
+            </table>
+            <div id="navigator">
+            </div>
+        </div>
+    <div align="center" style="height: 50px;">
+        <br>
+        <a class="linkButton" id="newSearch" name="RedirectSearch" href="../../SearchApi/Search/Search">New Search</a>
+    </div>
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+            </div>
+            <footer class="footer" role="contentinfo">
+                <div class="footerNav" id="agencylinks">
+                    <ul>
+                        <li><a href="http://www.michigan.gov/lara/0,4601,7-154--357923--,00.html">LARA FOIA Process</a></li>
+                        <li><a href="http://www.michigan.gov/openmichigan/0,4648,7-266-58520---,00.html">Transparency</a></li>
+                        <li><a href="http://www.michigan.gov/orr">Office of Regulatory Reinvention</a></li>
+                        <li><a href="http://www.michigan.gov/statewebsites">State Web Sites</a></li>
+                    </ul>
+                </div>
+                <div class="footerNav" id="policylinks">
+                    <ul>
+                        <li><a href="http://www.michigan.gov/">Michigan.gov Home</a></li>
+                        <li><a href="http://www.michigan.gov/adaform">ADA</a></li>
+                        <li><a href="http://www.michigan.gov/minewswire">Michigan News</a></li>
+                        <li><a href="http://www.michigan.gov/lara/0,4601,7-154--281460--,00.html">Policies</a></li>
+                    </ul>
+                </div>
+                <p class="copyright">Copyright 2023 State of Michigan</p>
+            </footer>
+
+        </div>
+    </div>
+
+
+</body></html>

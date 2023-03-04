@@ -1,0 +1,1421 @@
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head>
+                   <meta charset="utf-8">
+                   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                   <title>Corporations Division - Search for a business entity</title>
+                   <link href="/SearchApi/Content/css?v=KiO0qS_xVc0isaa8VdvXtEaEbxUiZyETqr7uIZP95MY1" rel="stylesheet">
+
+                   <script src="/SearchApi/bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1"></script>
+
+                   <script src="/SearchApi/bundles/jquery?v=8Oos0avDZyPg-cbyVzvkIfERIE1DGSe3sRQdCSYrgEQ1"></script>
+
+                   <script src="/SearchApi/bundles/bootstrap?v=lescQEuG5u4jd-GcVDBcbpUOSyTDIg0Kk9zHDX55GCw1"></script>
+
+                   <script src="/SearchApi/bundles/search?v=Pe4y4Xm5__Mskq2I3NY-8GCWQ2MSXUAtR--8nCR__dE1"></script>
+
+                   
+
+                   
+                   <script type="text/javascript">
+                   </script>
+               </head>
+<body id="body" class="body">
+    <div id="skip" role="banner">
+        <a href="#wrapper" class="link">skip to main content</a>
+    </div>
+    <div id="outer" class="container">
+        <div class="navbar-header" role="navigation">
+            <div id="lblADAnavigation" style="display: none">navigation</div>
+            <div id="lblADAnavigationLaraHome" style="display: none">LARA Home</div>
+            <div id="lblADAnavigationContactLARA" style="display: none">Contact LARA</div>
+            <div id="lblADAnavigationOnlineServices" style="display: none">Online Services</div>
+            <div id="lblADAnavigationNews" style="display: none">News</div>
+            <div id="lblADAnavigationMIgov" style="display: none">MI.gov</div>
+            <div class="navbar-header" role="navigation">
+                <div class="navbar">
+                    <ul class="nav">
+                        <li><a href="http://www.michigan.gov/lara" target="_blank" aria-labelledby="lblADAnavigation lblADAnavigationLaraHome" tabindex="0">LARA Home</a></li>
+                        <li><a href="http://www.michigan.gov/lara/0,4601,7-154-76106-42245--,00.html" target="_blank" aria-labelledby="lblADAnavigation lblADAnavigationContactLARA" tabindex="0">Contact LARA</a></li>
+                        <li><a href="http://www.michigan.gov/lara/0,4601,7-154--22352--,00.html" target="_blank" aria-labelledby="lblADAnavigation lblADAnavigationOnlineServices" tabindex="0">Online Services</a></li>
+                        <li><a href="http://www.michigan.gov/lara/0,4601,7-154-10573_11472---,00.html" target="_blank" aria-labelledby="lblADAnavigation lblADAnavigationNews" tabindex="0">News</a></li>
+                        <li><a title="Michigan's Official Web Site" id="miGovHome" href="http://www.michigan.gov/som" target="_blank" aria-labelledby="lblADAnavigation lblADAnavigationMIgov" tabindex="0">MI.gov</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="siteBanner" role="banner">
+            <a class="siteBanner" accesskey="1" href="http://www.michigan.gov/lara" target="_blank">
+                <img width="100%" alt="LARA - MI Department of Licensing and Regulatory Affairs" src="/SearchApi/Images/LaraBanner.jpg">
+            </a>
+        </div>
+        <div id="wrapper">
+            <div>
+                
+
+
+
+<br>
+
+<div id="broadcastMessages" style="margin-left: 15px; margin-right: 15px; display: none;">
+    <div>
+            <div id="broadcastMessages" class="TableBroadCastMessage100" cellspacing="0" cellpadding="4">
+
+                <div class="redBroadCastMessage">
+                    It may take up to 10 business days for the Corporations Division to review a document submitted with standard service. Expedited service may be requested for an additional fee when completing an online form.;
+                </div>
+                                            </div>
+</div>
+
+
+</div>
+<div id="loader"></div>
+<form defaultbutton="SearchSubmit" action="/SearchApi/Search/Search/GetSearchResults" id="SearchForm" method="post"><div id="searchform" class="form-horizontal" role="presentation" tabindex="0" style="display: none;">
+    <div class="form-group p1 searchHeaderRow">
+        <div class="col-sm-9">
+            <h2 style="margin-left: 0pt">
+                Search for a business entity
+            </h2>
+        </div>
+        <div class="col-sm-3">
+            <h2>
+                <a href="https://cofs.lara.state.mi.us/corpweb/HelpPages/BusinessEntitySearchHelp.aspx" class="helpLink" target="_blank">FAQ or Help</a>
+            </h2>
+        </div>
+    </div>
+    <div style="display: none;">
+        <input type="text" id="hiddenPageNumber" value="0">
+        <input type="text" id="hiddenSortColumn">
+        <input type="text" id="hiddenSortDirection" value="None">
+        <input type="text" id="hiddenSearchType" value="E">
+        <input type="text" id="hiddenSearchValue">
+    </div>
+    <div id="loadingPanel" class="loader" style="display: none;"></div>
+    <div class="form-group p1 searchRow">
+        <div class="col-sm-12">
+            <input id="searchByEntityName" name="searchTypeRadio" title="EntityName" type="radio" value="E">
+            <label for="searchEntityNameRadio">Search by Entity Name</label>
+        </div>
+    </div>
+    <div class="form-group row p1 searchControlRow fontNormal">
+        <div class="col-sm-2">
+            <label id="EntityNameValidation" name="validationMessage" title="EntityName" class="fontNormal errorMessage width100" style="display: none;">Required: You must enter an entity name.</label>
+            <label id="lblEntityName" for="txtEntityName" class="fontNormal width100">Entity name:</label>
+        </div>
+        <div class="col-sm-6">
+            <input class="searchTextbox width100" id="txtEntityName" name="EntityName" onkeyup="javascript: selectSearchType(this);" onmousedown="javascript: selectSearchType(this);" title="EntityName" type="text" value="">
+        </div>
+        <div class="col-sm-4">
+            <label for="ddlEntitySearchType" aria-label="Search Type for Entity Name" class="fontNormal">Search type:</label>
+            <select class="searchDropdown" id="ddlEntitySearchType" name="SearchMethod" title="EntityName"><option value="B">Begins With</option>
+<option value="M">Exact Match</option>
+<option value="F">Keyword</option>
+<option value="S">Soundex</option>
+</select>
+        </div>
+    </div>
+    
+    <div class="form-group p1 searchRow">
+        <div class="col-sm-12">
+            <input id="searchByIndividualName" name="searchTypeRadio" title="IndividualName" type="radio" value="I">
+            <label for="searchIndividualNameRadio">Search by an Individual Name</label>
+        </div>
+    </div>
+    <div class="form-group row p1 searchControlRow fontNormal">
+        <div class="col-sm-2">
+            <label id="IndividualNameValidation" name="validationMessage" title="IndividualName" class="fontNormal errorMessage width100" style="display: none;">Required: You must enter a individual name.</label>
+            <label id="lblIndividualName" for="txtIndividualName" class="fontNormal width100">Individual name:</label>
+        </div>
+        <div class="col-sm-6">
+            <input class="searchTextbox width100" id="txtIndividualName" name="IndividualName" onkeyup="javascript: selectSearchType(this);" onmousedown="javascript: selectSearchType(this);" title="IndividualName" type="text" value="">
+        </div>
+        <div class="col-sm-4">
+            <label for="ddlIndividualSearchType" aria-label="Search Type for Individual Name" class="fontNormal">Search type:</label>
+            <select class="searchDropdown" id="ddlIndividualSearchType" name="SearchMethod" title="IndividualName"><option value="B">Begins With</option>
+<option value="M">Exact Match</option>
+<option value="F">Keyword</option>
+<option value="S">Soundex</option>
+</select>
+        </div>
+    </div>
+
+    <div class="form-group p1 searchRow">
+        <div class="col-sm-12">
+            <input id="searchByIdNumber" name="searchTypeRadio" title="EntityId" type="radio" value="N">
+            <label id="lblIdentificationNumber" for="searchIdNumberRadio">Search by Identification Number</label>
+        </div>
+    </div>
+    <div class="form-group row p1 searchControlRow fontNormal">
+        <div class="col-sm-2">
+            <label id="EntityIdValidation" name="validationMessage" title="EntityId" class="fontNormal errorMessage width100" style="display: none;">The ID number must be 6 or 9 digits in length.</label>
+            <label for="txtIdentificationNumber" aria-label="ID Number Must be 6 or 9 characters" class="fontNormal width100">ID number:</label>
+        </div>
+        <div class="col-sm-10">
+            <input class="searchTextbox" id="txtIdentificationNumber" name="EntityId" onkeyup="javascript: selectSearchType(this);" onmousedown="javascript: selectSearchType(this);" title="EntityId" type="text" value="" maxlength="9">
+        </div>
+    </div>
+
+    <div class="form-group p1 searchRow">
+        <div class="col-sm-12">
+            <input id="searchByFilingNumber" name="searchTypeRadio" title="FilingNumber" type="radio" value="F">
+            <label id="lblFilingNumber" for="searchFilingNumber">Search by Filing Number</label>
+        </div>
+    </div>
+    <div class="form-group row p1 searchControlRow fontNormal">
+        <div class="col-sm-2">
+            <label id="FilingNumberValidation" name="validationMessage" title="FilingNumber" class="fontNormal errorMessage width100" style="display: none;">Required: You must enter a filing number.</label>
+            <label for="txtFilingNumber" class="fontNormal width100">Filing number:</label>
+        </div>
+        <div class="col-sm-10">
+            <input class="searchTextbox" id="txtFilingNumber" name="FilingNumber" onkeyup="javascript: selectSearchType(this);" onmousedown="javascript: selectSearchType(this);" title="FilingNumber" type="text" value="">
+        </div>
+    </div>
+
+    <div class="form-group p1 searchRow">
+        <div class="col-sm-12">
+            <label for="pagesizeSelection">Display number of items to view:</label>
+            <select class="searchDropdown" id="pagesizeSelection" name="PageSize"><option value="25">25 Pages</option>
+<option value="50">50 Pages</option>
+<option value="100">100 Pages</option>
+</select> per page
+        </div>
+    </div>
+
+    <div class="form-group" id="errorSummary" style="display: none;">
+        <div class="col-sm-12">
+            <label id="errorMessage" class="fontNormal errorMessage">
+                * No records found; try a new search using different criteria
+            </label>
+        </div>
+    </div>
+
+    <div class="form-group submit-button-row">
+        <div class="col-sm-12">
+            <input type="button" class="linkButton" name="Clear" onclick="ClearForm();" value="Clear search fields">
+            <input type="button" class="linkButton" name="Search" id="SearchSubmit" onclick="GetSearchResultsData(0);" value="Search">
+        </div>
+    </div>
+</div>
+</form><div id="gridData">
+    
+<div id="searchResultsContainer" style="vertical-align: top;">
+<div id="searchResultsContainer" style="vertical-align: top;">
+        <h2 style="vertical-align: top;height:50px;margin-top: 0px;">Business Entity Results</h2>
+        <div class="form-group p1 marginBottom30">
+            <div class="col-sm-4">
+                <label id="TotalRecords">Number of Records: 946</label>
+            </div>
+            <div class="col-sm-6">
+                    <label id="TotalPages">Number of Pages: 10</label>
+            </div>
+            <div class="col-sm-2">
+                <input type="button" class="linkButton" name="printResults" value="Print Results" onclick="printSearchResults();">
+            </div>
+        </div>
+        <div style="margin-left: 20px;margin-right: 20px;margin-top:25px;border: 1pt solid gray;">
+            <table id="entityData" class="grid width100" cellspacing="0" cellpadding="6">
+                <thead>
+                    <tr class="GridHeader GridEven">
+                        <th id="searchNameHeader" name="SearchName" style="width: 5%;display: none;">
+                            Search Name
+                        </th>
+                        <th id="entityNameHeader" style="width: 35%;">
+                            <a name="EntityName" class="GridHeaderColumn" title="None">Entity Name</a>
+                        </th>
+                        <th id="entityIdHeader" name="FEIN" style="width: 15%">
+                            <a name="FEIN" class="GridHeaderColumn" title="None">ID Number</a>
+                        </th>
+                        <th id="oldIdHeader" name="OldFEIN" style="width: 15%">
+                            <a name="OldFEIN" class="GridHeaderColumn" title="None">Old ID Number</a>
+                        </th>
+                        <th id="addressHeader" name="Addr1" style="width: 30%">
+                            <a name="Addr1" class="GridHeaderColumn" title="None">Address</a>
+                        </th>
+                        <th id="rowNumberHeader" style="width: 5%;display: none;">RowNumber</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1CKFCynlVl5edP3Mlvk/nEr4q0yE+K0MtEaC1pNCIf6U3FrkDZSazy/i0Dq/5L0idG24xgwRtxF+DiAeuCxkHYp3DQsjlyJ+CJ8Bb+0EjsQTEAqYACcbvrb5LjfnOestqw6FAjkbQ8pj7RszpFkQdREAQLPwHJdJNShpfahs5x0iE2H9cYYgtMCLdcSVUMPab3Le/HAfP95lCDDq74zgTvhiUJGdeFmVfaDErbRftMsCtXzisBHe9RSe3nTgW6YeSltvhy1SQOxYD82ZcTBy8qYGF3dJrU1/58l2CMdakicW" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    UNIVERSAL DURABLE MEDICAL EQUIPMENT, LLC
+                                </a>
+                            </td>
+                            <td> 801364379</td>
+                            <td> D0169M</td>
+                            <td> 26555 JOHN R RD <br> MADISON HEIGHTS, MI 48071 USA</td>
+                            <td style="display: none;"> 901</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1G5CbyruMEeSS307LxDNkqgOAH+99QFVFRtaAoC+cd7spAY0NwmDOVrxjdFJwXSVs2pwXOrgzjUycECSpSUkH9UJqFGAoWXehunPeGpYJRXmMVQLfmxTLxtDgZXt5GQSwXlp2/3kJYlREZIoVNigY3yJ6BkwCyVj2muFCMzpSwP/U7en6HdtVb2a4H+aIilllE2Bd/sxebpiGO70uWVQKuW+w21PW5bg3sesCGZkRjuzAezfo4r36C6Mw7ykWnrDIysS5PovUF6XqWj9AJzW/80E0HQDrXiTa1F/9CFWV8eY" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    UNIVERSAL HOME MEDICAL EQUIPMENT &amp; SUPPLIES, LLC
+                                </a>
+                            </td>
+                            <td> 801477302</td>
+                            <td> E12862</td>
+                            <td> MOHAMMAD NUMAN ALAM 29200 VASSAR STE 530<br> LIVONIA, MI 48152 USA</td>
+                            <td style="display: none;"> 902</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1LyWDMdMg3nrKuNQZ3jNg+Us41JRulSqe/b550fXEk5tZz3eL3Z1nFFgwmv2wVLFOyvWuBXEeYIylt08tfMqvNM35PeoCUQbm50lc71ZsLfs9ZO9RINEWJQqU2qlgk7P5jONCbIXY8qItNKpdRgyyFU2RaM0YRl1vTSs1enX3D4toFNy9MH0KzC5LBWwY57xCUBn+tfM7JiT7zShOhjjUf2Fwd/9fhKywdAtvqRUqsxzJjY7+aFbdJNg0wKcWpBDh6JhdyvjS65VA1aTW4eytU0F/Mgzy654bF0DZAz3h5JV" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    UNIVERSAL MEDICAL EQUIPMENT &amp; SUPPLY INC.
+                                </a>
+                            </td>
+                            <td> 800689095</td>
+                            <td> 00657U</td>
+                            <td> PO BOX 47546 <br> OAK PARK, MI 48237 USA</td>
+                            <td style="display: none;"> 903</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1H5sTZQbvHX6lVcnRtAzP3gTNKGzzTak+HdJbaC+UQPX+ZDtX8u3n3o2MUaSYH9uEZVNYiKaRopFgqOUZ5DSvdZCUp0fHN5sPJsBTHvWGosElZv7l5UGtTMhPEs9AbV/0MI0AAalR/x3jzgKaB7FxU+rEYRe7uWbZen1amG7Eq/RuvplsC81FrlN7G+2nltliWOP4ZfLRDR7QBvjKlJvXTJwqVJkZ+TjrqBgGq/LH0IhBCLwae+o4GBPo3Nyt2+NRWNiRd9dgSDFc0v22SUqQ2j+bEkIqqnhzPgJ6WMK54vz" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    UNLIMITED MEDICAL EQUIPMENT INTERNATIONAL
+                                </a>
+                            </td>
+                            <td> 800520763</td>
+                            <td> 495293</td>
+                            <td> 2667 ORCHARD LAKE RD <br> SYLVAN LAKE, MI 48320 USA</td>
+                            <td style="display: none;"> 904</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1OTtxSCKKApm1joFfw5is3ndUduAahVFnwwijNH1zF3WfETZGM9YHT080qdsEErmU6udQGXSXBUl/FNPaPH4EGv1q6dt0UfizanL8BY2mQ6p1xfQzsxXjySK4W2m9K9Sh+Ma0NpwaFg5zBm9fMK3bba/LmU60PgrYMD08kSi19M3S4I6h1O0sxSPByhWCMSeEyQLDjZbaCWYjEt67gI0G1hHe/PWpwPF3vDLtVxqaEyKUZhOEFXOauRH+JNdRHfCnf4rg0CK7koE8MSxYG7oxrpysUrnvLHQFUGLQT9IY05P" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    UPPER PENINSULA HOME HEALTH &amp; HOSPICE'S DURABLE MEDICAL EQUIPMENT  COMPANY, INC.
+                                </a>
+                            </td>
+                            <td> 800515924</td>
+                            <td> 505990</td>
+                            <td> 1414 W FAIR AVE  STE 44 <br> MARQUETTE, MI 49855 USA</td>
+                            <td style="display: none;"> 905</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1DZBPdeOxh5sYIrJ3FzsZd4Wdg4wbBnJiSaxtZfOHU9VrPkz6lnz7St7M1WFjpnDJH+8MPZXTx58XDBalN7k2ICkluk8FUgmfrsnjRRWOKMuhX7QCol26IZe73sjbaAbsRml5VauYz1QXu6A/EOmCmdosjiODdMTJWe7dYRHnBfkNDYBBqxOpWR6AACxomQH78qiuiN9M1Iu1wOYYdShdUbOuP7vA+fkdxiDrhtT+0ipDAZLi5Aei5D0QBJ0azpQbVyC/qiWf9bgJk+WJosHXnk4p223Ts9A9nzqN7Qq/DiY" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    US MEDICAL EQUIPMENT &amp; SUPPLIES INC.
+                                </a>
+                            </td>
+                            <td> 800643593</td>
+                            <td> 22914D</td>
+                            <td> 7471 HICKORY RIDGE <br> YPSILANTI, MI 48197 USA</td>
+                            <td style="display: none;"> 906</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1OlqkUVJK7yEDdB4qU9tS9qabjUT6DV8GWzsQtYCWvXcLcYeile02vdRjkbict+6Fpt+sNjOOEYO/799wbT0/NQpqcfILiYvy2gB7UQfvBssj1+GF/1jYDF31omLCtnlIMCAQgXtnb0BCkQW+GQi/gZOVMtHTyPdGbwHdu7iDsqLmJqLEKSS7ff3P+/FiX3nvppiK+pCZNGKV1QYHr0JNKu9jr2Tfj0SnQUV6Y6sB2HsKwqPJECX713pM3wkNX59aKDT/uOPTgx2aGvtnALmADq4vk8e8m1f48z05NdZzaUC" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    US MEDICAL EQUIPMENT &amp; SUPPLIES, INC.
+                                </a>
+                            </td>
+                            <td> 800751609</td>
+                            <td> 04638F</td>
+                            <td> 486 E DELHI <br> ANN ARBOR, MI 48103 USA</td>
+                            <td style="display: none;"> 907</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1Bx0/Q/wfwm8+H2VcpfrQAh/GcyUG3xsyr60MaonsudL9dKwDtdX8do6mGHhox1hWuGU9JGrFUQ1DdL6ta1zQDIbTsNc/qG1kRz4kJyDTejaiDo8hX2puy1doc6bXe2xenWu/q0Gld5fVq4aa/FUCcIdAxwAm2z3eSfTQv0f8oQUgvFHlT2F7OZRjcvasd+oy1VoASdlNKxsAtVh4q6yJc7BJGAJayyzsDlybpraNwFWnFKfD9iOriYj+2H5v0KD37T2nRkzTKSsiuml2W5/7hCF6DbYDllDOYuVF9iVB1tp" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    USA MEDICAL EQUIPMENT AND SUPPLIES
+                                </a>
+                            </td>
+                            <td> 802294684</td>
+                            <td> </td>
+                            <td> 27177 LAHSER RD STE 206<br> SOUTHFIELD, MI 48034 USA</td>
+                            <td style="display: none;"> 908</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1GwvwmCCYCiSgEX0pNLj80nMk84BzqYR2oRdVJsYkFFJ+7+hhaaF4uHjYXoECXzOn50nBb4FcKFFnP2VaPc5lBdl4BABXT8DYNhUgUg3uFAZMoiKPpZg9dEBRpZtJrQwOY+smlzNJg1RxIgaOiP2+F2IOynXBDBuCjUSKsYpxpBj80Ty+zWR4oMlO8vigr+DPoFSHBXLZpJMMaxVyJ5rvwgu4p/xfR9zz2Hdx6ToxgrRj5fLSgsHtKq/TwGEi4n/GiJ2LaYpzY8tEgbBASCJS7o4gZxYgBMH5064nkkzTGwU" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    UTILITY FOR MEDICAL &amp; DENTAL EQUIPMENT LLC
+                                </a>
+                            </td>
+                            <td> 802970806</td>
+                            <td> </td>
+                            <td> 1123 SOUTHFIELD <br> LINCOLN PARK, MI 48146 USA</td>
+                            <td style="display: none;"> 909</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1PBTaRvk9ex21EziUArO7hgzTYj4I9JuRArfa4o1uPTs+4FijQkKcKtLGFQ3MULaktz6LsmbZsUoTMyak0A24+aMNYbv9LQ0GwubyqoOPBBuEidoXWSw7Oxq/cED1bzoRWHMwAZx0mSbxtyf7f/TzEI+SGJU5sLMnAW1vCGiGkh5FVuCbOhT4cKNUy8hsiEV51qZoMgEeFd2LkbLDVina/4BZdvzhMKGRsuTCfsf1gQoLVSPbFCGwzuvikGWe1MW5r/DDFPleZKadPFHajqHjpwccEU3Qd9Aaw6BvRobOpV9" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    V CARE MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800593685</td>
+                            <td> 36945C</td>
+                            <td> 6658 WHISPERING WOODS DRIVE <br> WEST BLOOMFIELD, MI 48322 USA</td>
+                            <td style="display: none;"> 910</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1Fx6T/mFAcKcuW93flWKuH93wQThlk8FYct9/uhaVlP5TjwdDQQook08sOCSGTz7BCze2OLFbOLc9ulo91+OvSXjlli9oCgaN/nWtimSxTDpf0K0q4wtUDlVIKVIK9lXEhhq3ug5DG+Joklug9K73KiZKzd6MWvDAgdsWeGkTvAS3MXQSljlItXRKC0Y8mRwqIZV1hQC5E38GT2rlSBg+LAEi9ZWvx5lJ0Gxf9YzanAmCW/4/R8C/xxsSFkdpRWqqmqwh9tjW/l2YHcUeKXaieXqh88mq0BShJLACS+dKnGu" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    VAL MEDICAL EQUIPMENT, LLC
+                                </a>
+                            </td>
+                            <td> 801268351</td>
+                            <td> B8630P</td>
+                            <td> 340 TORRINGTON DR <br> CANTON, MI 48188 USA</td>
+                            <td style="display: none;"> 911</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1KCJp8zoWnav9LitUpA25NXnF394UDcsHfpa7hZ7jNH/+Mlvr9fuoso5NEg7IZmHM+QNU/UFMuFl/1Au7whv7DE+MVXbQbfkhxa2DT9MZrci1QAQ93UewsfJREKhTokZDN+/lF88PgriCXd8YWehYxmswOoPOGHMRoz05NTd4NXIRU8JJF604XUfMHmkmrvAz3u3cdiJOziR7yHaGZgR3ClR5XI1VfG1u/OZVcKiqQKKrwHnaJv2/QIcCF+qT2h6edNWiGK+yF9wlh4F4kELiThC+VmRsTUu7EWn4zg9XSyc" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    VAN'S MEDICAL EQUIPMENT OF LAKELAND, LLC
+                                </a>
+                            </td>
+                            <td> 801437684</td>
+                            <td> E0079K</td>
+                            <td> 40600 ANN ARBOR RD E STE 201 <br> PLYMOUTH, MI 48170-4675 USA</td>
+                            <td style="display: none;"> 912</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1PcfcMeRchlaWM/WbyTPjWofLwar3hxwSmp205TY8OGWCu0k6fULt6je2slXPI/BzI3drIg+JqRFwMousaJNJuJQvo60B9ugmsXgROuh6Nwb+a18UELNcnEYoZnCp0uQpFMIRnDjflOWmGk5lp13u93SaCgDCS4Ex1Rm+vOXGqh4WGnHbjJLbE6yFRJ4MB6Z+TfsKfhkyUS4q/7SQAKolWea/DwOO0gdLl+E17GzYfPXeoVgKznfnWZaLZ5/4eqsukoqvcPdke33ZvQyH2AKd38FdW9vZOL90OeM8iJTCsjB" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    VAN'S MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800191507</td>
+                            <td> 185053</td>
+                            <td> 1126 NAPIER AVENUE PO BOX 1446<br> BENTON HARBOR, MI 49022 USA</td>
+                            <td style="display: none;"> 913</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1GrnSxmD+BZtYXruTqlTrUpUfMsy3tlonq8TXOUoOq3Iyl1INwRvf5jDiUlqioyOIvjA2/SIN54mI6hVkZ1QzHhhg7Wm5bQeunvVWeyx3YMq9obK66ZWMoLem3ZWVOwp3Wu5O8cc4bpDKpjUzhsjtJavhcm3ToH2sD4ldyJI48zdASg9bXk0/PNPTgtXuVH9oND5AGctTYbxgTYHzYRa6vBp0tLxvJbB2h2NXFaFZhLO3dhhxcTVyTOtmHlEYPBJ8Od5pmDDSDJkWB5sBFrL/2fHwrH1XF8GLbMT1YYdR1sV" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    VAN'S MEDICAL EQUIPMENT, LLC
+                                </a>
+                            </td>
+                            <td> 801294016</td>
+                            <td> B6386R</td>
+                            <td> 2547 SOUTH M-139 <br> BENTON HARBOR, MI 49022 USA</td>
+                            <td style="display: none;"> 914</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1KCJp8zoWnav9LitUpA25NXnF394UDcsHfpa7hZ7jNH/+Mlvr9fuoso5NEg7IZmHM+QNU/UFMuFl/1Au7whv7DE+MVXbQbfkhxa2DT9MZrci1QAQ93UewsfJREKhTokZDN+/lF88PgriCXd8YWehYxmswOoPOGHMRoz05NTd4NXIRU8JJF604XUfMHmkmrvAz3u3cdiJOziR7yHaGZgR3ClR5XI1VfG1u/OZVcKiqQKKrwHnaJv2/QIcCF+qT2h6edNWiGK+yF9wlh4F4kELiThC+VmRsTUu7EWn4zg9XSyc" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    VAN'S-DASCO HOME MEDICAL EQUIPMENT, LLC
+                                </a>
+                            </td>
+                            <td> 801437684</td>
+                            <td> E0079K</td>
+                            <td> 40600 ANN ARBOR RD E STE 201 <br> PLYMOUTH, MI 48170-4675 USA</td>
+                            <td style="display: none;"> 915</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1KCJp8zoWnav9LitUpA25NXnF394UDcsHfpa7hZ7jNH/+Mlvr9fuoso5NEg7IZmHM+QNU/UFMuFl/1Au7whv7DE+MVXbQbfkhxa2DT9MZrci1QAQ93UewsfJREKhTokZDN+/lF88PgriCXd8YWehYxmswOoPOGHMRoz05NTd4NXIRU8JJF604XUfMHmkmrvAz3u3cdiJOziR7yHaGZgR3ClR5XI1VfG1u/OZVcKiqQKKrwHnaJv2/QIcCF+qT2h6edNWiGK+yF9wlh4F4kELiThC+VmRsTUu7EWn4zg9XSyc" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    VAN’S HOME MEDICAL EQUIPMENT
+                                </a>
+                            </td>
+                            <td> 801437684</td>
+                            <td> E0079K</td>
+                            <td> 40600 ANN ARBOR RD E STE 201 <br> PLYMOUTH, MI 48170-4675 USA</td>
+                            <td style="display: none;"> 916</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1PFXMsGm6DHPZHug2vUfkv8TFwZxm140CR/bsHa84HJlQRfk7VF1+hvXwziLHcGVtlWSCTViWofnKS2vbDEdtiumvdYE3CbyeATkY11nv5Wj5PjBaqjOUfORPjgVS4WRteXmGqUaqRHyA6J5S3oo8C+BwKonF2T4kj9QybWEmfULEeje3jkuT6aAy6KFuIBW7vfWeGmmdPFDB1q/+Vs+TtEf6QTO5FUO1sAcZ3arF9s7obrHUf75B0cNVayl1XYYXFjSJ5hrge1rGkzTWxPMLNgDPSubN1L77RdH18mdefFf" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    VANGUARD MEDICAL EQUIPMENT INCORPORATED
+                                </a>
+                            </td>
+                            <td> 800242388</td>
+                            <td> 234500</td>
+                            <td> 3140 PARKLAND DR. <br> WEST BLOOMFIELD, MI 48033 USA</td>
+                            <td style="display: none;"> 917</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1Oup7FWdzZaoUYkM2K3rJf/Fep4AI/oLjt0GX3eHrOZC5lgFLD8f/89E5IfrbJ6i4jfwkTXQl0dND0b9eFheIwkpttckBqz+F5HOfyvigW5QluZSMDS+zsapzoXRh6JxXRSvJolZqonUvZC3VJAHEosBtwfREf8xXOLFAyrngElBC1d3ysEMYc3+XYtXUXzWUAfWUazf+TqWBXDhnVwCvXGVlXTZj4YaoSqLYfak0hWgmEoXKei/nyM2UPG60hmo9ZTgumep2u7e+Rw0NZe08O+LSgnjwZs6DuC/GOiY58U1" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    VAXEEA MEDICAL EQUIPMENT &amp; SUPPLY CO., L.L.C.
+                                </a>
+                            </td>
+                            <td> 802533264</td>
+                            <td> </td>
+                            <td> P.O. BOX 131611 <br> ANN ARBOR, MI 48113 USA</td>
+                            <td style="display: none;"> 918</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1DOFXDRJBJk8DDqdVt2LLu8+rhh7PINdSrQylxx4CoX0eCsF5TdsMfZZPWxPNI8dd8w22tPEv2QDe84UdyPlNScIh9RBjocXiA/w2YE8ICRHYu0kAdSxv66E+Ju4G8D1o9BgEJ4eg6gIynhOcFCwwZEYWm5MytOXIvhT9fiN/pKHID2k6o98uag9ZlYxf0OBT/RObKR0PjLyd2fu5P2W2oMPD0Myk/eO5BYlh/g4DIGnaDOInIV04wUSeR7fC+4GtKhYT6SiSfU2vMxxeaRgfknpZBt2J1AXB1oiWXX1YLi4" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    VESNA SUMMERS MEDICAL EQUIPMENT LEASING, L.L.C.
+                                </a>
+                            </td>
+                            <td> 801126579</td>
+                            <td> B51924</td>
+                            <td> 22450 SOUTHWYCK CT <br> NOVI, MI 48374 USA</td>
+                            <td style="display: none;"> 919</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1CUsptlx/1IF3YGaGI2LL3bl2ioIZYAwsFuDstPnB8OZYHKvBRie5xYr9jIJjf7y4CRFaC2XihrLQdOqF7K/217DgFZ8Hl2v4lRTyY+ddCcBbW/FO1ZCVb3OXg2EMCVumdCiAnlPu+/FBDl7WlKcU3mtPYwUQ2yPzZjEfHUPIOEifqX6GgOlqz+XajZs6wr0dH2A4hzUSLouNWImP7CJGOhCfWRsSnQcqoZUh/ukUtnwlu1mF4vBbUY8EPR+SekMYuhJWBoB0KGX6/FH91ti7+zn1X07pEUG7KEb4xIkqlCt" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    VETERAN MEDICAL EQUIPMENT AND SUPPLIES INC.
+                                </a>
+                            </td>
+                            <td> 800686629</td>
+                            <td> 00757W</td>
+                            <td> 2973 BRIARWOOD DR <br> TROY, MI 48085 USA</td>
+                            <td style="display: none;"> 920</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1Cy/itmaYjqCsbn89ybTdFJT+CrX1n7366AkVuc6jwdRUS0c7uaUHVP6u8o1Ag17XPNBz6MRmtR2Z8QbOEOwjFazY7hfpJnL8p8VZz/obyFTB10oVRfx7BxGNPaCIzpPxloqrVCJ5fkvNJ3fTqMcKnWc+y0Q958w3BA/criYaL+NpHj9SlyODbLqRrXdfeHRmzXrAPNmF4kVFtYPdYOKwGC9p57DzLnmAg5nhj6ckNZaAwiWsiCIosarHxCQ6ujh+hh7CVaul27LnBkmiw/CITcqejjrlBXtQ2z8zylv0W5v" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    VITA MEDICAL EQUIPMENT AND SUPPLIES LLC
+                                </a>
+                            </td>
+                            <td> 801192904</td>
+                            <td> B6582D</td>
+                            <td> 1677 WOODBURNE DRIVE <br> FLINT, MI 48503 USA</td>
+                            <td style="display: none;"> 921</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1F1nzGkF5dTH4Iz71KxV/irTu0i4lHuxBKLx1BCFTzWXZiY7fRx/bGoAgpiMcUCOxrUN8CriOYQ6HvBJ/WS64ZFU1zFaT4F/sciH8DqoxCKKx28EOapGvZhrkXJJpVfLvLlQIMLxBvL80Mch83JF5+dA8cJBgBQ/IoK/rk+faaza86niAAADRZsGpUkf2PeYRhZJy4DC2WQ8mCpgwvHXWKx2JyyYAG3LjyRkGyPWR0SW0ySnIwxPTPS+KvoFMuPXmycVol4KbG12u05seiraMp/6yjSxxI3bzPyMGmYSQCCT" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    VITAL CARE HOME MEDICAL EQUIPMENT &amp; SERVICE
+                                </a>
+                            </td>
+                            <td> 800804668</td>
+                            <td> 727215</td>
+                            <td> 416 CONNABLE AVENUE <br> PETOSKEY, MI 49770 USA</td>
+                            <td style="display: none;"> 922</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1FctxVG+2x+Nw7gV2rDFcENk95MxNP5pvYiuqxZixyv8UEbdwtJcFbyOW17t9lDx7wB+OXEtNQyCWfKMP7wtLBFBTTS1QA4+i5C7vOqnoQKE0hS7nBjb+WOcQoaK1mX+nlI+hTumpLX8mmKkdduwykqUCIKXPp8/ozKm6V55T2TpPetvzd+A32fURaUZDdAR05IX3li90zaELhRUGcTAxCXGsSE4RG7mX+NI6ummbvIeBJdYN5NninQ80x25j/qQ2lmD4aT615r1HBcFJCZToFBTVB4x9bOCVH3deQyhQBEc" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    VITAL MEDICAL EQUIPMENT &amp; SUPPLIES, INC.
+                                </a>
+                            </td>
+                            <td> 800633942</td>
+                            <td> 26362D</td>
+                            <td> 28165 GREENFIELD RD., STE 214 <br> SOUTHFIELD, MI 48076 USA</td>
+                            <td style="display: none;"> 923</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1DP0AZVs07TEK6jr6FJgqI3d9cIztPAgqs3FYzUbSecDiAEeKyi0LV5x3/38xu31E4tIo9mto8s0cFxUINTmIClwUDJAyyJeH9/7U+mKxKmVGuiqg60BzQtCuCFprVuxNaQbeMuBNwVGi5zHG9CpAbUF81H/Gd3RjsoFbPbBapLcaIqGLFbXGtYPRyxpHjnqT03W2RwWfqHLWCl79dy2o2S4PjItwQyiCsu5dXl6bgWXYUq82WoE+giWhHwBzwE2Db66XSRILvbLA7MZlDjT+K6y/ZTVP/llDw1QP9ZcJ96P" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    VITALCARE HOME MEDICAL EQUIPMENT
+                                </a>
+                            </td>
+                            <td> 800360119</td>
+                            <td> 353698</td>
+                            <td> 416 CONNABLE AVENUE <br> PETOSKEY, MI 49770 USA</td>
+                            <td style="display: none;"> 924</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1DP0AZVs07TEK6jr6FJgqI3d9cIztPAgqs3FYzUbSecDiAEeKyi0LV5x3/38xu31E4tIo9mto8s0cFxUINTmIClwUDJAyyJeH9/7U+mKxKmVGuiqg60BzQtCuCFprVuxNaQbeMuBNwVGi5zHG9CpAbUF81H/Gd3RjsoFbPbBapLcaIqGLFbXGtYPRyxpHjnqT03W2RwWfqHLWCl79dy2o2S4PjItwQyiCsu5dXl6bgWXYUq82WoE+giWhHwBzwE2Db66XSRILvbLA7MZlDjT+K6y/ZTVP/llDw1QP9ZcJ96P" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    VITALCARE HOME MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800360119</td>
+                            <td> 353698</td>
+                            <td> 416 CONNABLE AVENUE <br> PETOSKEY, MI 49770 USA</td>
+                            <td style="display: none;"> 925</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1DgmwYq6bG24Z/2bnicdkRtBTNEmxZnwQ6VWqc//LQeJaUtObRW+XH/qRxiwcTcTmsbB+rEj5Vq+mV47OCA6RUk0VCGdwynn7/8MKYcSam3XU/JocprL3dAYAixMTzCPqdHJXs2ncygZNid5OVhnBibCIUrygCEu+NpHchhQX6r4SlQsLfHIgPOhpzO9RJ3Hzu42SArCAvryaGtBBoSLs1THgwWaRe6KM3gQf+LFQAmmsOi4HqR6TTCtHq88rBrZI8pfrCWoHJ+KmBbTsAqexVbKO0IJrFIr0m5Rv3zYMsxG" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    VNA DURABLE MEDICAL EQUIPMENT
+                                </a>
+                            </td>
+                            <td> 800810254</td>
+                            <td> 718387</td>
+                            <td> 25900 GREENFIELD RD  STE 600 <br> OAK PARK, MI 48237 USA</td>
+                            <td style="display: none;"> 926</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1OEBkk315eqP10wqLVstDRUU4o+3+FH7RaNVWOWkJ6EprFF0LHwvF6AwR98+EXK2PZ6vfEpLwIh42n1mOo/56XXr/0aE9++oyBFVfiy2lNcQ8G7NUcV5SNDrEWfmK5fF1oFGz2yHd9OKy7LQdkeID/f/XHzeYV63tKYeFqq8SQclzQJDbsKFSskmGte9nuK6wUWIKPnonfqI52yWbUy1l6dqcwVdagW5ZIf08Ce/nxkg+uhisIN70utQSOdiVHv4u0TE57RjPlM8ZuX8ZrJ2eqFJWKNrI5ehyBRhSC1Nk8Ks" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    WARREN MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800680158</td>
+                            <td> 00425M</td>
+                            <td> 3981 EAST NINE MILE RD <br> WARREN, MI 48091 USA</td>
+                            <td style="display: none;"> 927</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1I7NdmYXT94GWeuFpZgAce6IovjA7d6ETV11upwTwv4FW+iwp0VAAQaLhavl2sNSaL5co9N5jR0k7mSHg+TyuE+ArGUJoRwViRUeal3DRUrNDsdixvqrzTncE+CVfZL2ajczpYf7YFOIdrc5HzYjCwBxG8BK2kZg1J+Z2WMT1Z89CIT5NyKUXbkvSyKeH7BUWhlHZiouZ4rM4cA/MRO7ir9JVA3/FOOarj2GxEpzjwPoULS5eGFsnJneCdZB0tJ4UyDrTDcc8WyotOcoVR2yemiRn6e/IyC1TlSbY3BX01B2" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    WAYNE MEDICAL EQUIPMENT INC.
+                                </a>
+                            </td>
+                            <td> 800672751</td>
+                            <td> 18157E</td>
+                            <td> 19111 W. TEN MILE RD STE A-48 <br> SOUTHFIELD, MI 48075 USA</td>
+                            <td style="display: none;"> 928</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1L2majzoB+rbaoCt6t87HkIzHH7Jf7nxGlETwo4guADNr4xrevZwNYyxzoifInh3Y2UbBTOO4wV6Ugvf8Csya9aPagjXtkOde7zSPY5mMRH9HeXLQdRYrbWKdIvnx2oxliZgwFwYJyaHJ56w4MGyiKhZ7/qKO6QVgMwbhCiFwkacWdYjkn8t7HeJ6PkP9RymQmaUeh/U3QHf7PPM4r5lmNgiFlPBNIH3jHqCAaNmq0K7SAOSBLO9sok39oRtpgwGCrtM1ykshB+Fok+zIRvmhkjd/DAk5tinfReFXx9H3vE4" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    WEBER MEDICAL EQUIPMENT LLC
+                                </a>
+                            </td>
+                            <td> 801870006</td>
+                            <td> D90582</td>
+                            <td> 888 W BIG BEAVER RD STE 309 <br> TROY, MI 48084 USA</td>
+                            <td style="display: none;"> 929</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1DALFMWPDH9hTjl7WOH1nU4VDiaYvLBZ4uurj6rt+CxSAJJmsmyTiac5tRcbSONzbLcl7kmhHZZsYJofsfzFJKHHnENEMt7Wg2IpjC76PXELiwj0hl9pS10RPfVDf5lUUbfVERSzDha5lmdHVvzIxMDugoZdOMIoRNEuDEqJWpebebAf4fZS3aONIK1z1IPEoeKUXkPXouJO8ll8Ji1/cbv5hatWsvOKCLgjknZvJwr3vUm+1HtSkkaL0J8kJ/9tHFgryKL6lhvUQTr1tqEXw1Smr2VH7MG0uS2TF7fk9XBM" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    WESAN MEDICAL EQUIPMENT COMPANY
+                                </a>
+                            </td>
+                            <td> 800117284</td>
+                            <td> 114253</td>
+                            <td> 2422 HILTON ROAD <br> FERNDALE, MI 48220 USA</td>
+                            <td style="display: none;"> 930</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1EFQq+/kTfT7Eku0APocRMNIcFMvzVWbDNSzxNKW8pyFUnk7DAXuZy1xMt+rtkuARypFqJfU8y0Kxk7Nxdo5blPJSG17l+WOaez7PDM2rYWlP1B+AejU3pE8uddAF6zvuM/EkDwmmPJzYPVj0q73aAmt8VsRZwY+c8n59k9+VsAWJaXYD4VQkCkUMQjCV6JhdJJfjK9yQg5E38W5uljkWjdlADVzVVIm6PkO10YZtKgEiBnF8Hlwn/3MLL0Sh1fQaHMII5a+j9fGmX58kwsZ7CkoVkcptN5VoUGlPbAdrOgX" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    WEST ORCHARD MEDICAL EQUIPMENT INC.
+                                </a>
+                            </td>
+                            <td> 800319284</td>
+                            <td> 315687</td>
+                            <td> 5239 NEW COURT <br> WEST BLOOMFIELD, MI 48323 USA</td>
+                            <td style="display: none;"> 931</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1G0SzO6CX13xF0iLPIEssvnbAnXYI/ZoN0wN7+qbIGJ8SyoJA/CTQ2Iwff1AYNWye4uLLnCip94bQM7IopMK5AqnxIbrnn03l+hiAYKPtU4y3hAhXCXifWLnmTV8x03F9CmPmwWuw34lhqBCWWEcOpanC6wt0qQSS66YDo3mvDONnYs+ARPlgsJiKmZqFm7RtJx16OOAtdIvrR4wOXuMMZXNbSAU0MMKJkqziXi1yX/vtDPS0Rwj6ZJyCwiZmKV6CfVNNrwpdTDzIEYz24c7aZfJj47AljGmXZtCz+WOTyaj" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    WESTLAND MEDICAL EQUIPMENT SUPPLY, INC.
+                                </a>
+                            </td>
+                            <td> 800378343</td>
+                            <td> 368217</td>
+                            <td> 6230 ORCHARD LAKE ROAD,SUITE 294 <br> WEST BLOOMFIELD, MI 48322 USA</td>
+                            <td style="display: none;"> 932</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1DtCrPowa7wwJtOIlvWPfKR556FqzFquH3kH6aA5yfpk28Aj1Xxapclvmbkzb9Bif9+c1k1vM2cAk7FXaVQVk+s4dnBLU249DUFHKnVRHgo+FFLQwUC5bdFRcczlhGiR4FE7/DUUk8Wx6hWgGLrjVkVAw6u1qw4d3ktTitvGJXPhn2yWwRGoT+ey8uHS1ixN4rKPGu4sFwmdMZmu47AfpxRZP9Hb7aeGSb8czv60zkNm0D5SwxfGFspISvDhlYs6bTOmbcI5D5j+GQZbovnQ1CBDSQDuNImVfwdIIzU6sMDm" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    WHARFSIDE MEDICAL EQUIPMENT SALES DIV. OF WHARFSIDE ENTERPRISES, LTD.
+                                </a>
+                            </td>
+                            <td> 800298898</td>
+                            <td> 291406</td>
+                            <td> 9223 E CD AVE <br> RICHLAND, MI 49083 USA</td>
+                            <td style="display: none;"> 933</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1EfGau9DkY+SVKUVmoOjvy5dXhTUV+0vYJ9YL3TBbyza3u+BeUo2fkJbsKhZuEoIv6FJ8ggW7GDhOu3sD2lAr9h3mZNAEU5/u2PJ+rTsuRQXKA4L2PZGA28T2em2+HPK5MzvqJ2JLPcLNjnmI8B6jxwzKU1KsNa+lixU6Z20YuSOQEY+VeWDa+fvvQxvRNiH4OpQaLXw+HJKY0jj18Abur/wYgAv/tCkJ1X2HcfOHRIivGCeLpBBzKsV7X1tDBp2dapVcjfMtOXyS6R9viRjb+7aV5eJAf9eEHubJ+/uP98c" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    WIECHMANN'S MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800624334</td>
+                            <td> 05761D</td>
+                            <td> 1240 S ORR RD <br> HEMLOCK, MI 48626 USA</td>
+                            <td style="display: none;"> 934</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1KnKuPhqvta/Q2eJOeA72TWND4oNuEtzXnC3HuTGC/zuBPc1vRbn2+3roNo5Pa7kLP5SX3AesBslY2UMNH5ng6jbn6555r05gPhmHIRYsEbvtNzikLJvgZOVgo7L3ODoD+9M2cREgAV8UvjwQ8CtdBd22WJHNYxQJ5HGGyICh18Yv/L9W4AXb/AqyhgMCKjnTG+wJBRGCw3z218k1yinx5Voxu4YVwd5zBkaGG0q4jqcnAg1qWh0SmCXDOLy19tM3b+Ri775U0swCuYFkPVVjEfUmvFTW28qXCSGSphau9Ji" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    WILSON MEDICAL EQUIPMENT LLC
+                                </a>
+                            </td>
+                            <td> 801580161</td>
+                            <td> D51993</td>
+                            <td> 1609 WADE DR <br> LAPEER, MI 48446 USA</td>
+                            <td style="display: none;"> 935</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1BmTU6p+3Ta2q4TRr9yoYJKbzvUGsLd1pO3GT7tsY6cyFLU0A+XR0BnuybqQG/ulQv99sBzTIZRgTnXifXN0tvysQ9L8IgZaq4w8UbjfHtlXuJslNLJ9nqmJLj40b5V6J13xSZ59Ihk4JCXuBpqmhMWqK66s/saqJoZvxGJCrQ6bAHCj1Z7qph6SuP7L3IgJjYZ4XuK6Z21cleDiSIjvxp6NRJbF1SQ7x03muQa+rZcYGtkXRovrxGO7Iw3jWOtSwWKncg1jHL3tQCKoZQqixSfCG7ZNJQNDaPvfmzT9JMXw" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    WINDMILL POINTE DURABLE MEDICAL EQUIPMENT
+                                </a>
+                            </td>
+                            <td> 800684686</td>
+                            <td> 00093X</td>
+                            <td> 2820 W MAPLE RD  STE 235 <br> TROY, MI 48084 USA</td>
+                            <td style="display: none;"> 936</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1LXBdC1SbNEN4uxWeO8xWSNl8kstHAZaa5QitGm4n7uUpocpn5Vlq/EsgHFbRh0Iri+ruhJOBC/rBrxNKYTN+mhawoid4yN1NE16iJLyYRGfvKTMkXNGnMA6stC3RnWYyMExET0wg2K6s8BFBbUC1LoQPly5/cSTyeLJEoi5KFlqfGKztUheQrpHHpf2tuPqKN4bvJVdzs6dks2GbTyxmPN/W6xgfN5WLjGN8xHZl/n3Vlz4VDrfHzhv8/ggSQ1Y0uQIFJbrXfVM9z7HptZbA9YlIBjk2LgUxi4dp0KQGDgd" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    WISCONSIN TRANS-MEDICAL EQUIPMENT, LTD.
+                                </a>
+                            </td>
+                            <td> 800995588</td>
+                            <td> 619445</td>
+                            <td> 804 LUDINGTON ST. <br> ESCANABA, MI 49829 USA</td>
+                            <td style="display: none;"> 937</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1EVBbv7/lQiEOByo+4Yx7bs8Yc3WEmXcgLg7yySNhFAOcrHCQNHWLXe8/LFPMGfhdXjBKTZzu/A6i0MUdETdDQksG/VsyBQvbaL/W6YrDyP6+rw3C1LbETDRQUl4PtmntWp27WTVlZdS2p5q81usuXmbR79tNVh78LAiFo4tpyBa3qV+jmJSuBDPDfUrrSMcW5I6hVAkoBCGqHaPOeVeavhWi5v6HGSFF+yRB7t6E/5beomFG1tP9sfeppJq7tIPEu6yb73OrdKe2p23g11skb+njCuOdCuRQSrooMKb6LBv" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    WOODWARD MEDICAL EQUIPMENT GROUP, INC.
+                                </a>
+                            </td>
+                            <td> 800125566</td>
+                            <td> 121469</td>
+                            <td> PO BOX 851 <br> WARREN, MI 480900851 USA</td>
+                            <td style="display: none;"> 938</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1N+T22FmiKCLHmKWikjvc/YfrwLcCd+T4wqF4GXfJ+Pj4EML+kWaDXps1NzpHhIOGvvQIN2l0OuyRssnyzmorP9sQR9yOSsblkRU4RRyO7eBMmgVAJwM8QHlt7luX6pF0tlz5N1cv8PrEGOkxZUe7uJ/+Iu+OHhtAu0RgQQ+dODA4oZBh4B0jGvuhQRYpb19wXuXaPNP2he++znVexxesG4sJH8aqSp4X+Wgh5zZPAy8Kyv8euTSqIXVkj7uU6Ktxhrb2KO3eMQehw68bT4ikgT6liWOq9x1I9mSynFKy0K8" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    WORLD MEDICAL EQUIPMENT CORPORATION
+                                </a>
+                            </td>
+                            <td> 800461860</td>
+                            <td> 449997</td>
+                            <td> 329 N THIRD ST <br> WEST BRANCH, MI 48661 USA</td>
+                            <td style="display: none;"> 939</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1F+7JYP1Dx2/BMB3UBNX84enxIFdTRNPNgHpFiQSg4aNNSiwrQmu5uYnwEEWNYYhItqupaUC9y5cMzN+E0MD7Bw1u+mStANnEFoPHAjyYvZlWJ6NuQ1WV0oEAXJwmRdEeMQAzj4QiyzSnHCyFCXt77g9rlwbwl9cZnKbumRy3pCShYolqKiag7xTuNBkfPgZq8+WIzLfiSCRMwks86ZAkdxHfVNqHkFb+XactAwpQupDvy73WP2GDfftU7yM69aIyIaNO0EhNauH/iUfm892oL53WWUUkoe/SI1dx/vUdNqM" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    XCEL MEDICAL EQUIPMENT CORPORATION
+                                </a>
+                            </td>
+                            <td> 800425246</td>
+                            <td> 406418</td>
+                            <td> SUITE 420C 7001 ORCHARD LAKE ROAD<br> WEST BLOOMFIELD, MI 483223608 USA</td>
+                            <td style="display: none;"> 940</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1FzsVMHiF8KqDsPWQHL9/onwArDAtzS3y0PmETR2DklrbAifDnytwyVmiTpsxk37yDgZ4BXZa9r++/2c9wHKt1YZf9ouDzJgUx5z9bbIxnnsSqqP28HDCeiEokuEHKu+VT81mmCCj9HYbwlq7WdTS4cn7xsxf7oKEC9G7UAReBmMxaW7RsdiXcVOo5+mcQHl7Jtvgd/o5NFM2pMaHhaZYM2uis4v71SnSVGvi4sVGV/1RAVNc/6fNlCDPctQx/HwQH1Z0ICJtGJOl+eTpQnc+EEb565aAXsXk5mgr/BXlWn7" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    XCLUSIVE MEDICAL EQUIPMENT, LLC
+                                </a>
+                            </td>
+                            <td> 801546723</td>
+                            <td> D4200U</td>
+                            <td> 28 NORTH SAGINAW STE 202 <br> PONTIAC, MI 48342 USA</td>
+                            <td style="display: none;"> 941</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1EJLDJ1l4yuqysctq8mRr0v++3Cfsek45ntrSKntLp+FNILEaY6lr6ZIsvuS5CYdcIFZys752S/N9R5XcUECc6caVQvqFZ5DSU+yuxbO6fW9G7zMYBE7vwAiZZWhFZtNFo3E0wykfsiKwjM46V9s60wDx1q597FHYczGE1jFVb4JolGJxiYt7VEvFwMh6HEF+zBC3k4bpwIW9CS6qm6H32M+2RQy3Ag98VDci4mZ7+XK/Pm7ZESIkmnt2B2LEZ4vjS4CM3ewzv3hjp90goZuJNw3nFvCGvrWAZk9UhDjGB9m" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    XPRESS HOME MEDICAL EQUIPMENT SUPPLY, INC.
+                                </a>
+                            </td>
+                            <td> 800608126</td>
+                            <td> 35558C</td>
+                            <td> 3120 CARPENTER ST STE 105 <br> HAMTRAMCK, MI 48212 USA</td>
+                            <td style="display: none;"> 942</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1KiB+ZXi1nwkVfqPwezaaB+JVTcwyqHsOFNB4jK4bBDkajlk5dSgKqnIwPEmR7I7zCmypkNhRI+2BOtH0w+1WxXgB2Hu+OyG+krI7C7OUcqj/aqmh9fk19Z5BI0cfJ8UJtZ3hcskDtBDGyP+07p76PusqWGxfzpgB/6B0r9dl5UxzjxuZIhL+Yn0Ej0BcyZdC43AYICdfvUgc/U4Hw8cCOfrcFngDHSDwyZRnmtcYt/5c6gvbQph8G94WVPUkCSHleg9nl/TD1ntMB1/XzEbiLXV9hVsoPPslANStog68TyE" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    YPSILANTI MEDICAL EQUIPMENT SUPPLY, INC.
+                                </a>
+                            </td>
+                            <td> 800469220</td>
+                            <td> 453051</td>
+                            <td> 309 ECORSE RD. <br> YPSILANTI, MI 48198 USA</td>
+                            <td style="display: none;"> 943</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1IJaiJLn23ll0Eux0Cq291YcaTPVL3tjsFsHa7njroYPEpHeQtggXZP51yEa8Qmgy/3/Svz43Toyvx25+jJH44gazb9W+P6VV/n2IbzK223n1ONyYb0dx6pL056Z/sp/ctyS1zVPCTkyeNFJnkjXWCOpkE3/SYORaK0OGS6TZdZwELe8/LFvXHFnS7O7Vj7/yT9XdQdfAkiKmc5C+aWNiPGp2hOrY69sw1YQk5BL8Uby90cvNw1ErxHa1Vk5j0yo0MFqRGMpKP+WktKbFYeNlPFFbDjWhMhAHH5P3ugcLXTu" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    Z &amp; Z MEDICAL EQUIPMENT INC.
+                                </a>
+                            </td>
+                            <td> 800676192</td>
+                            <td> 41431A</td>
+                            <td> 3650 9 MILE RD <br> WARREN, MI 48091 USA</td>
+                            <td style="display: none;"> 944</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1HAjIg3zBWGk4QxmB457kxvyjZ1fEL4z385DN1jh6WO35HjjAvlgDI0W3QATz8RfY0zRPcxk0O3UpBwWRFbw862n3lsbk+i0cC359nJlRJajK2lO2vQytD/LXd+c/H4BgKHNJDv+4GcyPO61HCg4GUhKA8/mveNrMyN3DaGWiMxGB+JJuq7xwPO1UMbvD8Cu5gOGVOEYdI4x8D21hSHGqpOxoXiX4IZmMqu3IB/UWc+E0mu1hQ2f9FEyHV2VCNwgRImokATWEdif0LVYvSpBBUQJrg7bI6N2f55KVjATYoKq" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    ZAIN MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800579497</td>
+                            <td> 05368C</td>
+                            <td> 24555 SOUTHFIELD STE 104 <br> SOUTHFIELD, MI 48075 USA</td>
+                            <td style="display: none;"> 945</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1Ps4h0zGpB/9eq4u6VsmvhhV/fG5iY4DNvr6uPmHLO4Dw8bM7cUfnVk8dnmxFNBFbnjyM+boBbhEUdExRwE4Mk/8rFuS/fpGfjrWSHvHU/bZOmY32/CyhMoOvFyRsHDfCg9T3YXWJrdRB2CfxDtWqEIa30h8zIPgFhic/MMPy3LtF/+8M80Lmu3QjZ0dJ2eRdj2MzQiLQxcUtD5r04hFmi4rHWdmfOOD5KUn86cDn4vbk1Mpe16o9OfE3udOZzrXUznegz3n52rJjCHYCNowX9dTa/28DWYsw5Z2YWY7pSVm" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    ZANDE HOME MEDICAL EQUIPMENT
+                                </a>
+                            </td>
+                            <td> 800168060</td>
+                            <td> 162296</td>
+                            <td> 820 CAPITAL SW <br> BATTLE CREEK, MI 49015 USA</td>
+                            <td style="display: none;"> 946</td>
+                        </tr>
+                </tbody>
+            </table>
+            <table id="individualData" class="grid" cellspacing="0" cellpadding="6" style="overflow-x: auto; display: none;">
+                <thead>
+                    <tr class="GridHeader GridEven">
+                        <th id="individualNameHeader" style="width: 15%">
+                            <a name="IndividualName" class="GridHeaderColumn" title="None">Name</a>
+                        </th>
+                        <th id="individualTitleHeader" class="gridHeaderCol" style="width: 14%">
+                            <a name="IndividualTitle" class="GridHeaderColumn" title="None">Position</a>
+                        </th>
+                        <th id="individualAddressHeader" class="gridHeaderCol" style="width: 20%">
+                            <a name="IndividualAddr" class="GridHeaderColumn" title="None">Individual's Address</a>
+                        </th>
+                        <th id="individualEntityNameHeader" class="gridHeaderCol" style="width: 25%">
+                            <a name="IndividualEntityName" class="GridHeaderColumn" title="None">Entity Name</a>
+                        </th>
+                        <th id="individualIdNumberHeader" class="gridHeaderCol" style="width: 13%">
+                            <a name="IndividualFEIN" class="GridHeaderColumn" title="None">ID No.</a>
+                        </th>
+                        <th id="individualOldIdNumberHeader" class="gridHeaderCol" style="width: 13%">
+                            <a name="IndividualOldFEIN" class="GridHeaderColumn" title="None">Old ID No.</a>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>26555 JOHN R RD <br> MADISON HEIGHTS, MI 48071 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1CKFCynlVl5edP3Mlvk/nEr4q0yE+K0MtEaC1pNCIf6U3FrkDZSazy/i0Dq/5L0idG24xgwRtxF+DiAeuCxkHYp3DQsjlyJ+CJ8Bb+0EjsQTEAqYACcbvrb5LjfnOestqw6FAjkbQ8pj7RszpFkQdREAQLPwHJdJNShpfahs5x0iE2H9cYYgtMCLdcSVUMPab3Le/HAfP95lCDDq74zgTvhiUJGdeFmVfaDErbRftMsCtXzisBHe9RSe3nTgW6YeSltvhy1SQOxYD82ZcTBy8qYGF3dJrU1/58l2CMdakicW" target="_self">
+                                    UNIVERSAL DURABLE MEDICAL EQUIPMENT, LLC
+                                </a>
+                            </td>
+                            <td> 801364379</td>
+                            <td>D0169M</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>MOHAMMAD NUMAN ALAM 29200 VASSAR STE 530<br> LIVONIA, MI 48152 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1G5CbyruMEeSS307LxDNkqgOAH+99QFVFRtaAoC+cd7spAY0NwmDOVrxjdFJwXSVs2pwXOrgzjUycECSpSUkH9UJqFGAoWXehunPeGpYJRXmMVQLfmxTLxtDgZXt5GQSwXlp2/3kJYlREZIoVNigY3yJ6BkwCyVj2muFCMzpSwP/U7en6HdtVb2a4H+aIilllE2Bd/sxebpiGO70uWVQKuW+w21PW5bg3sesCGZkRjuzAezfo4r36C6Mw7ykWnrDIysS5PovUF6XqWj9AJzW/80E0HQDrXiTa1F/9CFWV8eY" target="_self">
+                                    UNIVERSAL HOME MEDICAL EQUIPMENT &amp; SUPPLIES, LLC
+                                </a>
+                            </td>
+                            <td> 801477302</td>
+                            <td>E12862</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>PO BOX 47546 <br> OAK PARK, MI 48237 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1LyWDMdMg3nrKuNQZ3jNg+Us41JRulSqe/b550fXEk5tZz3eL3Z1nFFgwmv2wVLFOyvWuBXEeYIylt08tfMqvNM35PeoCUQbm50lc71ZsLfs9ZO9RINEWJQqU2qlgk7P5jONCbIXY8qItNKpdRgyyFU2RaM0YRl1vTSs1enX3D4toFNy9MH0KzC5LBWwY57xCUBn+tfM7JiT7zShOhjjUf2Fwd/9fhKywdAtvqRUqsxzJjY7+aFbdJNg0wKcWpBDh6JhdyvjS65VA1aTW4eytU0F/Mgzy654bF0DZAz3h5JV" target="_self">
+                                    UNIVERSAL MEDICAL EQUIPMENT &amp; SUPPLY INC.
+                                </a>
+                            </td>
+                            <td> 800689095</td>
+                            <td>00657U</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>2667 ORCHARD LAKE RD <br> SYLVAN LAKE, MI 48320 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1H5sTZQbvHX6lVcnRtAzP3gTNKGzzTak+HdJbaC+UQPX+ZDtX8u3n3o2MUaSYH9uEZVNYiKaRopFgqOUZ5DSvdZCUp0fHN5sPJsBTHvWGosElZv7l5UGtTMhPEs9AbV/0MI0AAalR/x3jzgKaB7FxU+rEYRe7uWbZen1amG7Eq/RuvplsC81FrlN7G+2nltliWOP4ZfLRDR7QBvjKlJvXTJwqVJkZ+TjrqBgGq/LH0IhBCLwae+o4GBPo3Nyt2+NRWNiRd9dgSDFc0v22SUqQ2j+bEkIqqnhzPgJ6WMK54vz" target="_self">
+                                    UNLIMITED MEDICAL EQUIPMENT INTERNATIONAL
+                                </a>
+                            </td>
+                            <td> 800520763</td>
+                            <td>495293</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>1414 W FAIR AVE  STE 44 <br> MARQUETTE, MI 49855 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1OTtxSCKKApm1joFfw5is3ndUduAahVFnwwijNH1zF3WfETZGM9YHT080qdsEErmU6udQGXSXBUl/FNPaPH4EGv1q6dt0UfizanL8BY2mQ6p1xfQzsxXjySK4W2m9K9Sh+Ma0NpwaFg5zBm9fMK3bba/LmU60PgrYMD08kSi19M3S4I6h1O0sxSPByhWCMSeEyQLDjZbaCWYjEt67gI0G1hHe/PWpwPF3vDLtVxqaEyKUZhOEFXOauRH+JNdRHfCnf4rg0CK7koE8MSxYG7oxrpysUrnvLHQFUGLQT9IY05P" target="_self">
+                                    UPPER PENINSULA HOME HEALTH &amp; HOSPICE'S DURABLE MEDICAL EQUIPMENT  COMPANY, INC.
+                                </a>
+                            </td>
+                            <td> 800515924</td>
+                            <td>505990</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>7471 HICKORY RIDGE <br> YPSILANTI, MI 48197 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1DZBPdeOxh5sYIrJ3FzsZd4Wdg4wbBnJiSaxtZfOHU9VrPkz6lnz7St7M1WFjpnDJH+8MPZXTx58XDBalN7k2ICkluk8FUgmfrsnjRRWOKMuhX7QCol26IZe73sjbaAbsRml5VauYz1QXu6A/EOmCmdosjiODdMTJWe7dYRHnBfkNDYBBqxOpWR6AACxomQH78qiuiN9M1Iu1wOYYdShdUbOuP7vA+fkdxiDrhtT+0ipDAZLi5Aei5D0QBJ0azpQbVyC/qiWf9bgJk+WJosHXnk4p223Ts9A9nzqN7Qq/DiY" target="_self">
+                                    US MEDICAL EQUIPMENT &amp; SUPPLIES INC.
+                                </a>
+                            </td>
+                            <td> 800643593</td>
+                            <td>22914D</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>486 E DELHI <br> ANN ARBOR, MI 48103 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1OlqkUVJK7yEDdB4qU9tS9qabjUT6DV8GWzsQtYCWvXcLcYeile02vdRjkbict+6Fpt+sNjOOEYO/799wbT0/NQpqcfILiYvy2gB7UQfvBssj1+GF/1jYDF31omLCtnlIMCAQgXtnb0BCkQW+GQi/gZOVMtHTyPdGbwHdu7iDsqLmJqLEKSS7ff3P+/FiX3nvppiK+pCZNGKV1QYHr0JNKu9jr2Tfj0SnQUV6Y6sB2HsKwqPJECX713pM3wkNX59aKDT/uOPTgx2aGvtnALmADq4vk8e8m1f48z05NdZzaUC" target="_self">
+                                    US MEDICAL EQUIPMENT &amp; SUPPLIES, INC.
+                                </a>
+                            </td>
+                            <td> 800751609</td>
+                            <td>04638F</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>27177 LAHSER RD STE 206<br> SOUTHFIELD, MI 48034 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1Bx0/Q/wfwm8+H2VcpfrQAh/GcyUG3xsyr60MaonsudL9dKwDtdX8do6mGHhox1hWuGU9JGrFUQ1DdL6ta1zQDIbTsNc/qG1kRz4kJyDTejaiDo8hX2puy1doc6bXe2xenWu/q0Gld5fVq4aa/FUCcIdAxwAm2z3eSfTQv0f8oQUgvFHlT2F7OZRjcvasd+oy1VoASdlNKxsAtVh4q6yJc7BJGAJayyzsDlybpraNwFWnFKfD9iOriYj+2H5v0KD37T2nRkzTKSsiuml2W5/7hCF6DbYDllDOYuVF9iVB1tp" target="_self">
+                                    USA MEDICAL EQUIPMENT AND SUPPLIES
+                                </a>
+                            </td>
+                            <td> 802294684</td>
+                            <td></td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>1123 SOUTHFIELD <br> LINCOLN PARK, MI 48146 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1GwvwmCCYCiSgEX0pNLj80nMk84BzqYR2oRdVJsYkFFJ+7+hhaaF4uHjYXoECXzOn50nBb4FcKFFnP2VaPc5lBdl4BABXT8DYNhUgUg3uFAZMoiKPpZg9dEBRpZtJrQwOY+smlzNJg1RxIgaOiP2+F2IOynXBDBuCjUSKsYpxpBj80Ty+zWR4oMlO8vigr+DPoFSHBXLZpJMMaxVyJ5rvwgu4p/xfR9zz2Hdx6ToxgrRj5fLSgsHtKq/TwGEi4n/GiJ2LaYpzY8tEgbBASCJS7o4gZxYgBMH5064nkkzTGwU" target="_self">
+                                    UTILITY FOR MEDICAL &amp; DENTAL EQUIPMENT LLC
+                                </a>
+                            </td>
+                            <td> 802970806</td>
+                            <td></td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>6658 WHISPERING WOODS DRIVE <br> WEST BLOOMFIELD, MI 48322 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1PBTaRvk9ex21EziUArO7hgzTYj4I9JuRArfa4o1uPTs+4FijQkKcKtLGFQ3MULaktz6LsmbZsUoTMyak0A24+aMNYbv9LQ0GwubyqoOPBBuEidoXWSw7Oxq/cED1bzoRWHMwAZx0mSbxtyf7f/TzEI+SGJU5sLMnAW1vCGiGkh5FVuCbOhT4cKNUy8hsiEV51qZoMgEeFd2LkbLDVina/4BZdvzhMKGRsuTCfsf1gQoLVSPbFCGwzuvikGWe1MW5r/DDFPleZKadPFHajqHjpwccEU3Qd9Aaw6BvRobOpV9" target="_self">
+                                    V CARE MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800593685</td>
+                            <td>36945C</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>340 TORRINGTON DR <br> CANTON, MI 48188 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1Fx6T/mFAcKcuW93flWKuH93wQThlk8FYct9/uhaVlP5TjwdDQQook08sOCSGTz7BCze2OLFbOLc9ulo91+OvSXjlli9oCgaN/nWtimSxTDpf0K0q4wtUDlVIKVIK9lXEhhq3ug5DG+Joklug9K73KiZKzd6MWvDAgdsWeGkTvAS3MXQSljlItXRKC0Y8mRwqIZV1hQC5E38GT2rlSBg+LAEi9ZWvx5lJ0Gxf9YzanAmCW/4/R8C/xxsSFkdpRWqqmqwh9tjW/l2YHcUeKXaieXqh88mq0BShJLACS+dKnGu" target="_self">
+                                    VAL MEDICAL EQUIPMENT, LLC
+                                </a>
+                            </td>
+                            <td> 801268351</td>
+                            <td>B8630P</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>40600 ANN ARBOR RD E STE 201 <br> PLYMOUTH, MI 48170-4675 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1KCJp8zoWnav9LitUpA25NXnF394UDcsHfpa7hZ7jNH/+Mlvr9fuoso5NEg7IZmHM+QNU/UFMuFl/1Au7whv7DE+MVXbQbfkhxa2DT9MZrci1QAQ93UewsfJREKhTokZDN+/lF88PgriCXd8YWehYxmswOoPOGHMRoz05NTd4NXIRU8JJF604XUfMHmkmrvAz3u3cdiJOziR7yHaGZgR3ClR5XI1VfG1u/OZVcKiqQKKrwHnaJv2/QIcCF+qT2h6edNWiGK+yF9wlh4F4kELiThC+VmRsTUu7EWn4zg9XSyc" target="_self">
+                                    VAN'S MEDICAL EQUIPMENT OF LAKELAND, LLC
+                                </a>
+                            </td>
+                            <td> 801437684</td>
+                            <td>E0079K</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>1126 NAPIER AVENUE PO BOX 1446<br> BENTON HARBOR, MI 49022 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1PcfcMeRchlaWM/WbyTPjWofLwar3hxwSmp205TY8OGWCu0k6fULt6je2slXPI/BzI3drIg+JqRFwMousaJNJuJQvo60B9ugmsXgROuh6Nwb+a18UELNcnEYoZnCp0uQpFMIRnDjflOWmGk5lp13u93SaCgDCS4Ex1Rm+vOXGqh4WGnHbjJLbE6yFRJ4MB6Z+TfsKfhkyUS4q/7SQAKolWea/DwOO0gdLl+E17GzYfPXeoVgKznfnWZaLZ5/4eqsukoqvcPdke33ZvQyH2AKd38FdW9vZOL90OeM8iJTCsjB" target="_self">
+                                    VAN'S MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800191507</td>
+                            <td>185053</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>2547 SOUTH M-139 <br> BENTON HARBOR, MI 49022 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1GrnSxmD+BZtYXruTqlTrUpUfMsy3tlonq8TXOUoOq3Iyl1INwRvf5jDiUlqioyOIvjA2/SIN54mI6hVkZ1QzHhhg7Wm5bQeunvVWeyx3YMq9obK66ZWMoLem3ZWVOwp3Wu5O8cc4bpDKpjUzhsjtJavhcm3ToH2sD4ldyJI48zdASg9bXk0/PNPTgtXuVH9oND5AGctTYbxgTYHzYRa6vBp0tLxvJbB2h2NXFaFZhLO3dhhxcTVyTOtmHlEYPBJ8Od5pmDDSDJkWB5sBFrL/2fHwrH1XF8GLbMT1YYdR1sV" target="_self">
+                                    VAN'S MEDICAL EQUIPMENT, LLC
+                                </a>
+                            </td>
+                            <td> 801294016</td>
+                            <td>B6386R</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>40600 ANN ARBOR RD E STE 201 <br> PLYMOUTH, MI 48170-4675 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1KCJp8zoWnav9LitUpA25NXnF394UDcsHfpa7hZ7jNH/+Mlvr9fuoso5NEg7IZmHM+QNU/UFMuFl/1Au7whv7DE+MVXbQbfkhxa2DT9MZrci1QAQ93UewsfJREKhTokZDN+/lF88PgriCXd8YWehYxmswOoPOGHMRoz05NTd4NXIRU8JJF604XUfMHmkmrvAz3u3cdiJOziR7yHaGZgR3ClR5XI1VfG1u/OZVcKiqQKKrwHnaJv2/QIcCF+qT2h6edNWiGK+yF9wlh4F4kELiThC+VmRsTUu7EWn4zg9XSyc" target="_self">
+                                    VAN'S-DASCO HOME MEDICAL EQUIPMENT, LLC
+                                </a>
+                            </td>
+                            <td> 801437684</td>
+                            <td>E0079K</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>40600 ANN ARBOR RD E STE 201 <br> PLYMOUTH, MI 48170-4675 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1KCJp8zoWnav9LitUpA25NXnF394UDcsHfpa7hZ7jNH/+Mlvr9fuoso5NEg7IZmHM+QNU/UFMuFl/1Au7whv7DE+MVXbQbfkhxa2DT9MZrci1QAQ93UewsfJREKhTokZDN+/lF88PgriCXd8YWehYxmswOoPOGHMRoz05NTd4NXIRU8JJF604XUfMHmkmrvAz3u3cdiJOziR7yHaGZgR3ClR5XI1VfG1u/OZVcKiqQKKrwHnaJv2/QIcCF+qT2h6edNWiGK+yF9wlh4F4kELiThC+VmRsTUu7EWn4zg9XSyc" target="_self">
+                                    VAN’S HOME MEDICAL EQUIPMENT
+                                </a>
+                            </td>
+                            <td> 801437684</td>
+                            <td>E0079K</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>3140 PARKLAND DR. <br> WEST BLOOMFIELD, MI 48033 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1PFXMsGm6DHPZHug2vUfkv8TFwZxm140CR/bsHa84HJlQRfk7VF1+hvXwziLHcGVtlWSCTViWofnKS2vbDEdtiumvdYE3CbyeATkY11nv5Wj5PjBaqjOUfORPjgVS4WRteXmGqUaqRHyA6J5S3oo8C+BwKonF2T4kj9QybWEmfULEeje3jkuT6aAy6KFuIBW7vfWeGmmdPFDB1q/+Vs+TtEf6QTO5FUO1sAcZ3arF9s7obrHUf75B0cNVayl1XYYXFjSJ5hrge1rGkzTWxPMLNgDPSubN1L77RdH18mdefFf" target="_self">
+                                    VANGUARD MEDICAL EQUIPMENT INCORPORATED
+                                </a>
+                            </td>
+                            <td> 800242388</td>
+                            <td>234500</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>P.O. BOX 131611 <br> ANN ARBOR, MI 48113 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1Oup7FWdzZaoUYkM2K3rJf/Fep4AI/oLjt0GX3eHrOZC5lgFLD8f/89E5IfrbJ6i4jfwkTXQl0dND0b9eFheIwkpttckBqz+F5HOfyvigW5QluZSMDS+zsapzoXRh6JxXRSvJolZqonUvZC3VJAHEosBtwfREf8xXOLFAyrngElBC1d3ysEMYc3+XYtXUXzWUAfWUazf+TqWBXDhnVwCvXGVlXTZj4YaoSqLYfak0hWgmEoXKei/nyM2UPG60hmo9ZTgumep2u7e+Rw0NZe08O+LSgnjwZs6DuC/GOiY58U1" target="_self">
+                                    VAXEEA MEDICAL EQUIPMENT &amp; SUPPLY CO., L.L.C.
+                                </a>
+                            </td>
+                            <td> 802533264</td>
+                            <td></td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>22450 SOUTHWYCK CT <br> NOVI, MI 48374 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1DOFXDRJBJk8DDqdVt2LLu8+rhh7PINdSrQylxx4CoX0eCsF5TdsMfZZPWxPNI8dd8w22tPEv2QDe84UdyPlNScIh9RBjocXiA/w2YE8ICRHYu0kAdSxv66E+Ju4G8D1o9BgEJ4eg6gIynhOcFCwwZEYWm5MytOXIvhT9fiN/pKHID2k6o98uag9ZlYxf0OBT/RObKR0PjLyd2fu5P2W2oMPD0Myk/eO5BYlh/g4DIGnaDOInIV04wUSeR7fC+4GtKhYT6SiSfU2vMxxeaRgfknpZBt2J1AXB1oiWXX1YLi4" target="_self">
+                                    VESNA SUMMERS MEDICAL EQUIPMENT LEASING, L.L.C.
+                                </a>
+                            </td>
+                            <td> 801126579</td>
+                            <td>B51924</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>2973 BRIARWOOD DR <br> TROY, MI 48085 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1CUsptlx/1IF3YGaGI2LL3bl2ioIZYAwsFuDstPnB8OZYHKvBRie5xYr9jIJjf7y4CRFaC2XihrLQdOqF7K/217DgFZ8Hl2v4lRTyY+ddCcBbW/FO1ZCVb3OXg2EMCVumdCiAnlPu+/FBDl7WlKcU3mtPYwUQ2yPzZjEfHUPIOEifqX6GgOlqz+XajZs6wr0dH2A4hzUSLouNWImP7CJGOhCfWRsSnQcqoZUh/ukUtnwlu1mF4vBbUY8EPR+SekMYuhJWBoB0KGX6/FH91ti7+zn1X07pEUG7KEb4xIkqlCt" target="_self">
+                                    VETERAN MEDICAL EQUIPMENT AND SUPPLIES INC.
+                                </a>
+                            </td>
+                            <td> 800686629</td>
+                            <td>00757W</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>1677 WOODBURNE DRIVE <br> FLINT, MI 48503 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1Cy/itmaYjqCsbn89ybTdFJT+CrX1n7366AkVuc6jwdRUS0c7uaUHVP6u8o1Ag17XPNBz6MRmtR2Z8QbOEOwjFazY7hfpJnL8p8VZz/obyFTB10oVRfx7BxGNPaCIzpPxloqrVCJ5fkvNJ3fTqMcKnWc+y0Q958w3BA/criYaL+NpHj9SlyODbLqRrXdfeHRmzXrAPNmF4kVFtYPdYOKwGC9p57DzLnmAg5nhj6ckNZaAwiWsiCIosarHxCQ6ujh+hh7CVaul27LnBkmiw/CITcqejjrlBXtQ2z8zylv0W5v" target="_self">
+                                    VITA MEDICAL EQUIPMENT AND SUPPLIES LLC
+                                </a>
+                            </td>
+                            <td> 801192904</td>
+                            <td>B6582D</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>416 CONNABLE AVENUE <br> PETOSKEY, MI 49770 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1F1nzGkF5dTH4Iz71KxV/irTu0i4lHuxBKLx1BCFTzWXZiY7fRx/bGoAgpiMcUCOxrUN8CriOYQ6HvBJ/WS64ZFU1zFaT4F/sciH8DqoxCKKx28EOapGvZhrkXJJpVfLvLlQIMLxBvL80Mch83JF5+dA8cJBgBQ/IoK/rk+faaza86niAAADRZsGpUkf2PeYRhZJy4DC2WQ8mCpgwvHXWKx2JyyYAG3LjyRkGyPWR0SW0ySnIwxPTPS+KvoFMuPXmycVol4KbG12u05seiraMp/6yjSxxI3bzPyMGmYSQCCT" target="_self">
+                                    VITAL CARE HOME MEDICAL EQUIPMENT &amp; SERVICE
+                                </a>
+                            </td>
+                            <td> 800804668</td>
+                            <td>727215</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>28165 GREENFIELD RD., STE 214 <br> SOUTHFIELD, MI 48076 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1FctxVG+2x+Nw7gV2rDFcENk95MxNP5pvYiuqxZixyv8UEbdwtJcFbyOW17t9lDx7wB+OXEtNQyCWfKMP7wtLBFBTTS1QA4+i5C7vOqnoQKE0hS7nBjb+WOcQoaK1mX+nlI+hTumpLX8mmKkdduwykqUCIKXPp8/ozKm6V55T2TpPetvzd+A32fURaUZDdAR05IX3li90zaELhRUGcTAxCXGsSE4RG7mX+NI6ummbvIeBJdYN5NninQ80x25j/qQ2lmD4aT615r1HBcFJCZToFBTVB4x9bOCVH3deQyhQBEc" target="_self">
+                                    VITAL MEDICAL EQUIPMENT &amp; SUPPLIES, INC.
+                                </a>
+                            </td>
+                            <td> 800633942</td>
+                            <td>26362D</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>416 CONNABLE AVENUE <br> PETOSKEY, MI 49770 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1DP0AZVs07TEK6jr6FJgqI3d9cIztPAgqs3FYzUbSecDiAEeKyi0LV5x3/38xu31E4tIo9mto8s0cFxUINTmIClwUDJAyyJeH9/7U+mKxKmVGuiqg60BzQtCuCFprVuxNaQbeMuBNwVGi5zHG9CpAbUF81H/Gd3RjsoFbPbBapLcaIqGLFbXGtYPRyxpHjnqT03W2RwWfqHLWCl79dy2o2S4PjItwQyiCsu5dXl6bgWXYUq82WoE+giWhHwBzwE2Db66XSRILvbLA7MZlDjT+K6y/ZTVP/llDw1QP9ZcJ96P" target="_self">
+                                    VITALCARE HOME MEDICAL EQUIPMENT
+                                </a>
+                            </td>
+                            <td> 800360119</td>
+                            <td>353698</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>416 CONNABLE AVENUE <br> PETOSKEY, MI 49770 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1DP0AZVs07TEK6jr6FJgqI3d9cIztPAgqs3FYzUbSecDiAEeKyi0LV5x3/38xu31E4tIo9mto8s0cFxUINTmIClwUDJAyyJeH9/7U+mKxKmVGuiqg60BzQtCuCFprVuxNaQbeMuBNwVGi5zHG9CpAbUF81H/Gd3RjsoFbPbBapLcaIqGLFbXGtYPRyxpHjnqT03W2RwWfqHLWCl79dy2o2S4PjItwQyiCsu5dXl6bgWXYUq82WoE+giWhHwBzwE2Db66XSRILvbLA7MZlDjT+K6y/ZTVP/llDw1QP9ZcJ96P" target="_self">
+                                    VITALCARE HOME MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800360119</td>
+                            <td>353698</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>25900 GREENFIELD RD  STE 600 <br> OAK PARK, MI 48237 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1DgmwYq6bG24Z/2bnicdkRtBTNEmxZnwQ6VWqc//LQeJaUtObRW+XH/qRxiwcTcTmsbB+rEj5Vq+mV47OCA6RUk0VCGdwynn7/8MKYcSam3XU/JocprL3dAYAixMTzCPqdHJXs2ncygZNid5OVhnBibCIUrygCEu+NpHchhQX6r4SlQsLfHIgPOhpzO9RJ3Hzu42SArCAvryaGtBBoSLs1THgwWaRe6KM3gQf+LFQAmmsOi4HqR6TTCtHq88rBrZI8pfrCWoHJ+KmBbTsAqexVbKO0IJrFIr0m5Rv3zYMsxG" target="_self">
+                                    VNA DURABLE MEDICAL EQUIPMENT
+                                </a>
+                            </td>
+                            <td> 800810254</td>
+                            <td>718387</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>3981 EAST NINE MILE RD <br> WARREN, MI 48091 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1OEBkk315eqP10wqLVstDRUU4o+3+FH7RaNVWOWkJ6EprFF0LHwvF6AwR98+EXK2PZ6vfEpLwIh42n1mOo/56XXr/0aE9++oyBFVfiy2lNcQ8G7NUcV5SNDrEWfmK5fF1oFGz2yHd9OKy7LQdkeID/f/XHzeYV63tKYeFqq8SQclzQJDbsKFSskmGte9nuK6wUWIKPnonfqI52yWbUy1l6dqcwVdagW5ZIf08Ce/nxkg+uhisIN70utQSOdiVHv4u0TE57RjPlM8ZuX8ZrJ2eqFJWKNrI5ehyBRhSC1Nk8Ks" target="_self">
+                                    WARREN MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800680158</td>
+                            <td>00425M</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>19111 W. TEN MILE RD STE A-48 <br> SOUTHFIELD, MI 48075 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1I7NdmYXT94GWeuFpZgAce6IovjA7d6ETV11upwTwv4FW+iwp0VAAQaLhavl2sNSaL5co9N5jR0k7mSHg+TyuE+ArGUJoRwViRUeal3DRUrNDsdixvqrzTncE+CVfZL2ajczpYf7YFOIdrc5HzYjCwBxG8BK2kZg1J+Z2WMT1Z89CIT5NyKUXbkvSyKeH7BUWhlHZiouZ4rM4cA/MRO7ir9JVA3/FOOarj2GxEpzjwPoULS5eGFsnJneCdZB0tJ4UyDrTDcc8WyotOcoVR2yemiRn6e/IyC1TlSbY3BX01B2" target="_self">
+                                    WAYNE MEDICAL EQUIPMENT INC.
+                                </a>
+                            </td>
+                            <td> 800672751</td>
+                            <td>18157E</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>888 W BIG BEAVER RD STE 309 <br> TROY, MI 48084 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1L2majzoB+rbaoCt6t87HkIzHH7Jf7nxGlETwo4guADNr4xrevZwNYyxzoifInh3Y2UbBTOO4wV6Ugvf8Csya9aPagjXtkOde7zSPY5mMRH9HeXLQdRYrbWKdIvnx2oxliZgwFwYJyaHJ56w4MGyiKhZ7/qKO6QVgMwbhCiFwkacWdYjkn8t7HeJ6PkP9RymQmaUeh/U3QHf7PPM4r5lmNgiFlPBNIH3jHqCAaNmq0K7SAOSBLO9sok39oRtpgwGCrtM1ykshB+Fok+zIRvmhkjd/DAk5tinfReFXx9H3vE4" target="_self">
+                                    WEBER MEDICAL EQUIPMENT LLC
+                                </a>
+                            </td>
+                            <td> 801870006</td>
+                            <td>D90582</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>2422 HILTON ROAD <br> FERNDALE, MI 48220 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1DALFMWPDH9hTjl7WOH1nU4VDiaYvLBZ4uurj6rt+CxSAJJmsmyTiac5tRcbSONzbLcl7kmhHZZsYJofsfzFJKHHnENEMt7Wg2IpjC76PXELiwj0hl9pS10RPfVDf5lUUbfVERSzDha5lmdHVvzIxMDugoZdOMIoRNEuDEqJWpebebAf4fZS3aONIK1z1IPEoeKUXkPXouJO8ll8Ji1/cbv5hatWsvOKCLgjknZvJwr3vUm+1HtSkkaL0J8kJ/9tHFgryKL6lhvUQTr1tqEXw1Smr2VH7MG0uS2TF7fk9XBM" target="_self">
+                                    WESAN MEDICAL EQUIPMENT COMPANY
+                                </a>
+                            </td>
+                            <td> 800117284</td>
+                            <td>114253</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>5239 NEW COURT <br> WEST BLOOMFIELD, MI 48323 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1EFQq+/kTfT7Eku0APocRMNIcFMvzVWbDNSzxNKW8pyFUnk7DAXuZy1xMt+rtkuARypFqJfU8y0Kxk7Nxdo5blPJSG17l+WOaez7PDM2rYWlP1B+AejU3pE8uddAF6zvuM/EkDwmmPJzYPVj0q73aAmt8VsRZwY+c8n59k9+VsAWJaXYD4VQkCkUMQjCV6JhdJJfjK9yQg5E38W5uljkWjdlADVzVVIm6PkO10YZtKgEiBnF8Hlwn/3MLL0Sh1fQaHMII5a+j9fGmX58kwsZ7CkoVkcptN5VoUGlPbAdrOgX" target="_self">
+                                    WEST ORCHARD MEDICAL EQUIPMENT INC.
+                                </a>
+                            </td>
+                            <td> 800319284</td>
+                            <td>315687</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>6230 ORCHARD LAKE ROAD,SUITE 294 <br> WEST BLOOMFIELD, MI 48322 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1G0SzO6CX13xF0iLPIEssvnbAnXYI/ZoN0wN7+qbIGJ8SyoJA/CTQ2Iwff1AYNWye4uLLnCip94bQM7IopMK5AqnxIbrnn03l+hiAYKPtU4y3hAhXCXifWLnmTV8x03F9CmPmwWuw34lhqBCWWEcOpanC6wt0qQSS66YDo3mvDONnYs+ARPlgsJiKmZqFm7RtJx16OOAtdIvrR4wOXuMMZXNbSAU0MMKJkqziXi1yX/vtDPS0Rwj6ZJyCwiZmKV6CfVNNrwpdTDzIEYz24c7aZfJj47AljGmXZtCz+WOTyaj" target="_self">
+                                    WESTLAND MEDICAL EQUIPMENT SUPPLY, INC.
+                                </a>
+                            </td>
+                            <td> 800378343</td>
+                            <td>368217</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>9223 E CD AVE <br> RICHLAND, MI 49083 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1DtCrPowa7wwJtOIlvWPfKR556FqzFquH3kH6aA5yfpk28Aj1Xxapclvmbkzb9Bif9+c1k1vM2cAk7FXaVQVk+s4dnBLU249DUFHKnVRHgo+FFLQwUC5bdFRcczlhGiR4FE7/DUUk8Wx6hWgGLrjVkVAw6u1qw4d3ktTitvGJXPhn2yWwRGoT+ey8uHS1ixN4rKPGu4sFwmdMZmu47AfpxRZP9Hb7aeGSb8czv60zkNm0D5SwxfGFspISvDhlYs6bTOmbcI5D5j+GQZbovnQ1CBDSQDuNImVfwdIIzU6sMDm" target="_self">
+                                    WHARFSIDE MEDICAL EQUIPMENT SALES DIV. OF WHARFSIDE ENTERPRISES, LTD.
+                                </a>
+                            </td>
+                            <td> 800298898</td>
+                            <td>291406</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>1240 S ORR RD <br> HEMLOCK, MI 48626 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1EfGau9DkY+SVKUVmoOjvy5dXhTUV+0vYJ9YL3TBbyza3u+BeUo2fkJbsKhZuEoIv6FJ8ggW7GDhOu3sD2lAr9h3mZNAEU5/u2PJ+rTsuRQXKA4L2PZGA28T2em2+HPK5MzvqJ2JLPcLNjnmI8B6jxwzKU1KsNa+lixU6Z20YuSOQEY+VeWDa+fvvQxvRNiH4OpQaLXw+HJKY0jj18Abur/wYgAv/tCkJ1X2HcfOHRIivGCeLpBBzKsV7X1tDBp2dapVcjfMtOXyS6R9viRjb+7aV5eJAf9eEHubJ+/uP98c" target="_self">
+                                    WIECHMANN'S MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800624334</td>
+                            <td>05761D</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>1609 WADE DR <br> LAPEER, MI 48446 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1KnKuPhqvta/Q2eJOeA72TWND4oNuEtzXnC3HuTGC/zuBPc1vRbn2+3roNo5Pa7kLP5SX3AesBslY2UMNH5ng6jbn6555r05gPhmHIRYsEbvtNzikLJvgZOVgo7L3ODoD+9M2cREgAV8UvjwQ8CtdBd22WJHNYxQJ5HGGyICh18Yv/L9W4AXb/AqyhgMCKjnTG+wJBRGCw3z218k1yinx5Voxu4YVwd5zBkaGG0q4jqcnAg1qWh0SmCXDOLy19tM3b+Ri775U0swCuYFkPVVjEfUmvFTW28qXCSGSphau9Ji" target="_self">
+                                    WILSON MEDICAL EQUIPMENT LLC
+                                </a>
+                            </td>
+                            <td> 801580161</td>
+                            <td>D51993</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>2820 W MAPLE RD  STE 235 <br> TROY, MI 48084 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1BmTU6p+3Ta2q4TRr9yoYJKbzvUGsLd1pO3GT7tsY6cyFLU0A+XR0BnuybqQG/ulQv99sBzTIZRgTnXifXN0tvysQ9L8IgZaq4w8UbjfHtlXuJslNLJ9nqmJLj40b5V6J13xSZ59Ihk4JCXuBpqmhMWqK66s/saqJoZvxGJCrQ6bAHCj1Z7qph6SuP7L3IgJjYZ4XuK6Z21cleDiSIjvxp6NRJbF1SQ7x03muQa+rZcYGtkXRovrxGO7Iw3jWOtSwWKncg1jHL3tQCKoZQqixSfCG7ZNJQNDaPvfmzT9JMXw" target="_self">
+                                    WINDMILL POINTE DURABLE MEDICAL EQUIPMENT
+                                </a>
+                            </td>
+                            <td> 800684686</td>
+                            <td>00093X</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>804 LUDINGTON ST. <br> ESCANABA, MI 49829 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1LXBdC1SbNEN4uxWeO8xWSNl8kstHAZaa5QitGm4n7uUpocpn5Vlq/EsgHFbRh0Iri+ruhJOBC/rBrxNKYTN+mhawoid4yN1NE16iJLyYRGfvKTMkXNGnMA6stC3RnWYyMExET0wg2K6s8BFBbUC1LoQPly5/cSTyeLJEoi5KFlqfGKztUheQrpHHpf2tuPqKN4bvJVdzs6dks2GbTyxmPN/W6xgfN5WLjGN8xHZl/n3Vlz4VDrfHzhv8/ggSQ1Y0uQIFJbrXfVM9z7HptZbA9YlIBjk2LgUxi4dp0KQGDgd" target="_self">
+                                    WISCONSIN TRANS-MEDICAL EQUIPMENT, LTD.
+                                </a>
+                            </td>
+                            <td> 800995588</td>
+                            <td>619445</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>PO BOX 851 <br> WARREN, MI 480900851 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1EVBbv7/lQiEOByo+4Yx7bs8Yc3WEmXcgLg7yySNhFAOcrHCQNHWLXe8/LFPMGfhdXjBKTZzu/A6i0MUdETdDQksG/VsyBQvbaL/W6YrDyP6+rw3C1LbETDRQUl4PtmntWp27WTVlZdS2p5q81usuXmbR79tNVh78LAiFo4tpyBa3qV+jmJSuBDPDfUrrSMcW5I6hVAkoBCGqHaPOeVeavhWi5v6HGSFF+yRB7t6E/5beomFG1tP9sfeppJq7tIPEu6yb73OrdKe2p23g11skb+njCuOdCuRQSrooMKb6LBv" target="_self">
+                                    WOODWARD MEDICAL EQUIPMENT GROUP, INC.
+                                </a>
+                            </td>
+                            <td> 800125566</td>
+                            <td>121469</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>329 N THIRD ST <br> WEST BRANCH, MI 48661 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1N+T22FmiKCLHmKWikjvc/YfrwLcCd+T4wqF4GXfJ+Pj4EML+kWaDXps1NzpHhIOGvvQIN2l0OuyRssnyzmorP9sQR9yOSsblkRU4RRyO7eBMmgVAJwM8QHlt7luX6pF0tlz5N1cv8PrEGOkxZUe7uJ/+Iu+OHhtAu0RgQQ+dODA4oZBh4B0jGvuhQRYpb19wXuXaPNP2he++znVexxesG4sJH8aqSp4X+Wgh5zZPAy8Kyv8euTSqIXVkj7uU6Ktxhrb2KO3eMQehw68bT4ikgT6liWOq9x1I9mSynFKy0K8" target="_self">
+                                    WORLD MEDICAL EQUIPMENT CORPORATION
+                                </a>
+                            </td>
+                            <td> 800461860</td>
+                            <td>449997</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>SUITE 420C 7001 ORCHARD LAKE ROAD<br> WEST BLOOMFIELD, MI 483223608 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1F+7JYP1Dx2/BMB3UBNX84enxIFdTRNPNgHpFiQSg4aNNSiwrQmu5uYnwEEWNYYhItqupaUC9y5cMzN+E0MD7Bw1u+mStANnEFoPHAjyYvZlWJ6NuQ1WV0oEAXJwmRdEeMQAzj4QiyzSnHCyFCXt77g9rlwbwl9cZnKbumRy3pCShYolqKiag7xTuNBkfPgZq8+WIzLfiSCRMwks86ZAkdxHfVNqHkFb+XactAwpQupDvy73WP2GDfftU7yM69aIyIaNO0EhNauH/iUfm892oL53WWUUkoe/SI1dx/vUdNqM" target="_self">
+                                    XCEL MEDICAL EQUIPMENT CORPORATION
+                                </a>
+                            </td>
+                            <td> 800425246</td>
+                            <td>406418</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>28 NORTH SAGINAW STE 202 <br> PONTIAC, MI 48342 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1FzsVMHiF8KqDsPWQHL9/onwArDAtzS3y0PmETR2DklrbAifDnytwyVmiTpsxk37yDgZ4BXZa9r++/2c9wHKt1YZf9ouDzJgUx5z9bbIxnnsSqqP28HDCeiEokuEHKu+VT81mmCCj9HYbwlq7WdTS4cn7xsxf7oKEC9G7UAReBmMxaW7RsdiXcVOo5+mcQHl7Jtvgd/o5NFM2pMaHhaZYM2uis4v71SnSVGvi4sVGV/1RAVNc/6fNlCDPctQx/HwQH1Z0ICJtGJOl+eTpQnc+EEb565aAXsXk5mgr/BXlWn7" target="_self">
+                                    XCLUSIVE MEDICAL EQUIPMENT, LLC
+                                </a>
+                            </td>
+                            <td> 801546723</td>
+                            <td>D4200U</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>3120 CARPENTER ST STE 105 <br> HAMTRAMCK, MI 48212 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1EJLDJ1l4yuqysctq8mRr0v++3Cfsek45ntrSKntLp+FNILEaY6lr6ZIsvuS5CYdcIFZys752S/N9R5XcUECc6caVQvqFZ5DSU+yuxbO6fW9G7zMYBE7vwAiZZWhFZtNFo3E0wykfsiKwjM46V9s60wDx1q597FHYczGE1jFVb4JolGJxiYt7VEvFwMh6HEF+zBC3k4bpwIW9CS6qm6H32M+2RQy3Ag98VDci4mZ7+XK/Pm7ZESIkmnt2B2LEZ4vjS4CM3ewzv3hjp90goZuJNw3nFvCGvrWAZk9UhDjGB9m" target="_self">
+                                    XPRESS HOME MEDICAL EQUIPMENT SUPPLY, INC.
+                                </a>
+                            </td>
+                            <td> 800608126</td>
+                            <td>35558C</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>309 ECORSE RD. <br> YPSILANTI, MI 48198 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1KiB+ZXi1nwkVfqPwezaaB+JVTcwyqHsOFNB4jK4bBDkajlk5dSgKqnIwPEmR7I7zCmypkNhRI+2BOtH0w+1WxXgB2Hu+OyG+krI7C7OUcqj/aqmh9fk19Z5BI0cfJ8UJtZ3hcskDtBDGyP+07p76PusqWGxfzpgB/6B0r9dl5UxzjxuZIhL+Yn0Ej0BcyZdC43AYICdfvUgc/U4Hw8cCOfrcFngDHSDwyZRnmtcYt/5c6gvbQph8G94WVPUkCSHleg9nl/TD1ntMB1/XzEbiLXV9hVsoPPslANStog68TyE" target="_self">
+                                    YPSILANTI MEDICAL EQUIPMENT SUPPLY, INC.
+                                </a>
+                            </td>
+                            <td> 800469220</td>
+                            <td>453051</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>3650 9 MILE RD <br> WARREN, MI 48091 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1IJaiJLn23ll0Eux0Cq291YcaTPVL3tjsFsHa7njroYPEpHeQtggXZP51yEa8Qmgy/3/Svz43Toyvx25+jJH44gazb9W+P6VV/n2IbzK223n1ONyYb0dx6pL056Z/sp/ctyS1zVPCTkyeNFJnkjXWCOpkE3/SYORaK0OGS6TZdZwELe8/LFvXHFnS7O7Vj7/yT9XdQdfAkiKmc5C+aWNiPGp2hOrY69sw1YQk5BL8Uby90cvNw1ErxHa1Vk5j0yo0MFqRGMpKP+WktKbFYeNlPFFbDjWhMhAHH5P3ugcLXTu" target="_self">
+                                    Z &amp; Z MEDICAL EQUIPMENT INC.
+                                </a>
+                            </td>
+                            <td> 800676192</td>
+                            <td>41431A</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>24555 SOUTHFIELD STE 104 <br> SOUTHFIELD, MI 48075 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1HAjIg3zBWGk4QxmB457kxvyjZ1fEL4z385DN1jh6WO35HjjAvlgDI0W3QATz8RfY0zRPcxk0O3UpBwWRFbw862n3lsbk+i0cC359nJlRJajK2lO2vQytD/LXd+c/H4BgKHNJDv+4GcyPO61HCg4GUhKA8/mveNrMyN3DaGWiMxGB+JJuq7xwPO1UMbvD8Cu5gOGVOEYdI4x8D21hSHGqpOxoXiX4IZmMqu3IB/UWc+E0mu1hQ2f9FEyHV2VCNwgRImokATWEdif0LVYvSpBBUQJrg7bI6N2f55KVjATYoKq" target="_self">
+                                    ZAIN MEDICAL EQUIPMENT, INC.
+                                </a>
+                            </td>
+                            <td> 800579497</td>
+                            <td>05368C</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>820 CAPITAL SW <br> BATTLE CREEK, MI 49015 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1Ps4h0zGpB/9eq4u6VsmvhhV/fG5iY4DNvr6uPmHLO4Dw8bM7cUfnVk8dnmxFNBFbnjyM+boBbhEUdExRwE4Mk/8rFuS/fpGfjrWSHvHU/bZOmY32/CyhMoOvFyRsHDfCg9T3YXWJrdRB2CfxDtWqEIa30h8zIPgFhic/MMPy3LtF/+8M80Lmu3QjZ0dJ2eRdj2MzQiLQxcUtD5r04hFmi4rHWdmfOOD5KUn86cDn4vbk1Mpe16o9OfE3udOZzrXUznegz3n52rJjCHYCNowX9dTa/28DWYsw5Z2YWY7pSVm" target="_self">
+                                    ZANDE HOME MEDICAL EQUIPMENT
+                                </a>
+                            </td>
+                            <td> 800168060</td>
+                            <td>162296</td>
+                        </tr>
+                </tbody>
+            </table>
+            <div id="navigator">
+                            <a href="#" class="gridPager" id="pager" rel="1" onclick="GetSearchResultsData(1 - 1);">1</a>
+                            <a href="#" class="gridPager" id="pager" rel="2" onclick="GetSearchResultsData(2 - 1);">2</a>
+                            <a href="#" class="gridPager" id="pager" rel="3" onclick="GetSearchResultsData(3 - 1);">3</a>
+                            <a href="#" class="gridPager" id="pager" rel="4" onclick="GetSearchResultsData(4 - 1);">4</a>
+                            <a href="#" class="gridPager" id="pager" rel="5" onclick="GetSearchResultsData(5 - 1);">5</a>
+                            <a href="#" class="gridPager" id="pager" rel="6" onclick="GetSearchResultsData(6 - 1);">6</a>
+                            <a href="#" class="gridPager" id="pager" rel="7" onclick="GetSearchResultsData(7 - 1);">7</a>
+                            <a href="#" class="gridPager" id="pager" rel="8" onclick="GetSearchResultsData(8 - 1);">8</a>
+                            <a href="#" class="gridPager" id="pager" rel="9" onclick="GetSearchResultsData(9 - 1);">9</a>
+                            <a href="#" class="gridPager" id="pager" rel="10" onclick="GetSearchResultsData(10 - 1);" style="text-decoration: none;">10</a>
+            </div>
+        </div>
+    <div align="center" style="height: 50px;">
+        <br>
+        <a class="linkButton" id="newSearch" name="RedirectSearch" href="../../SearchApi/Search/Search">New Search</a>
+    </div>
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+            </div>
+            <footer class="footer" role="contentinfo">
+                <div class="footerNav" id="agencylinks">
+                    <ul>
+                        <li><a href="http://www.michigan.gov/lara/0,4601,7-154--357923--,00.html">LARA FOIA Process</a></li>
+                        <li><a href="http://www.michigan.gov/openmichigan/0,4648,7-266-58520---,00.html">Transparency</a></li>
+                        <li><a href="http://www.michigan.gov/orr">Office of Regulatory Reinvention</a></li>
+                        <li><a href="http://www.michigan.gov/statewebsites">State Web Sites</a></li>
+                    </ul>
+                </div>
+                <div class="footerNav" id="policylinks">
+                    <ul>
+                        <li><a href="http://www.michigan.gov/">Michigan.gov Home</a></li>
+                        <li><a href="http://www.michigan.gov/adaform">ADA</a></li>
+                        <li><a href="http://www.michigan.gov/minewswire">Michigan News</a></li>
+                        <li><a href="http://www.michigan.gov/lara/0,4601,7-154--281460--,00.html">Policies</a></li>
+                    </ul>
+                </div>
+                <p class="copyright">Copyright 2023 State of Michigan</p>
+            </footer>
+
+        </div>
+    </div>
+
+
+</body></html>

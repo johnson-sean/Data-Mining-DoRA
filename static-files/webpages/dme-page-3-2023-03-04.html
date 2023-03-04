@@ -1,0 +1,718 @@
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head>
+                   <meta charset="utf-8">
+                   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                   <title>Corporations Division - Search for a business entity</title>
+                   <link href="/SearchApi/Content/css?v=KiO0qS_xVc0isaa8VdvXtEaEbxUiZyETqr7uIZP95MY1" rel="stylesheet">
+
+                   <script src="/SearchApi/bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1"></script>
+
+                   <script src="/SearchApi/bundles/jquery?v=8Oos0avDZyPg-cbyVzvkIfERIE1DGSe3sRQdCSYrgEQ1"></script>
+
+                   <script src="/SearchApi/bundles/bootstrap?v=lescQEuG5u4jd-GcVDBcbpUOSyTDIg0Kk9zHDX55GCw1"></script>
+
+                   <script src="/SearchApi/bundles/search?v=Pe4y4Xm5__Mskq2I3NY-8GCWQ2MSXUAtR--8nCR__dE1"></script>
+
+                   
+
+                   
+                   <script type="text/javascript">
+                   </script>
+               </head>
+<body id="body" class="body">
+    <div id="skip" role="banner">
+        <a href="#wrapper" class="link">skip to main content</a>
+    </div>
+    <div id="outer" class="container">
+        <div class="navbar-header" role="navigation">
+            <div id="lblADAnavigation" style="display: none">navigation</div>
+            <div id="lblADAnavigationLaraHome" style="display: none">LARA Home</div>
+            <div id="lblADAnavigationContactLARA" style="display: none">Contact LARA</div>
+            <div id="lblADAnavigationOnlineServices" style="display: none">Online Services</div>
+            <div id="lblADAnavigationNews" style="display: none">News</div>
+            <div id="lblADAnavigationMIgov" style="display: none">MI.gov</div>
+            <div class="navbar-header" role="navigation">
+                <div class="navbar">
+                    <ul class="nav">
+                        <li><a href="http://www.michigan.gov/lara" target="_blank" aria-labelledby="lblADAnavigation lblADAnavigationLaraHome" tabindex="0">LARA Home</a></li>
+                        <li><a href="http://www.michigan.gov/lara/0,4601,7-154-76106-42245--,00.html" target="_blank" aria-labelledby="lblADAnavigation lblADAnavigationContactLARA" tabindex="0">Contact LARA</a></li>
+                        <li><a href="http://www.michigan.gov/lara/0,4601,7-154--22352--,00.html" target="_blank" aria-labelledby="lblADAnavigation lblADAnavigationOnlineServices" tabindex="0">Online Services</a></li>
+                        <li><a href="http://www.michigan.gov/lara/0,4601,7-154-10573_11472---,00.html" target="_blank" aria-labelledby="lblADAnavigation lblADAnavigationNews" tabindex="0">News</a></li>
+                        <li><a title="Michigan's Official Web Site" id="miGovHome" href="http://www.michigan.gov/som" target="_blank" aria-labelledby="lblADAnavigation lblADAnavigationMIgov" tabindex="0">MI.gov</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="siteBanner" role="banner">
+            <a class="siteBanner" accesskey="1" href="http://www.michigan.gov/lara" target="_blank">
+                <img width="100%" alt="LARA - MI Department of Licensing and Regulatory Affairs" src="/SearchApi/Images/LaraBanner.jpg">
+            </a>
+        </div>
+        <div id="wrapper">
+            <div>
+                
+
+
+
+<br>
+
+<div id="broadcastMessages" style="margin-left: 15px; margin-right: 15px; display: none;">
+    <div>
+            <div id="broadcastMessages" class="TableBroadCastMessage100" cellspacing="0" cellpadding="4">
+
+                <div class="redBroadCastMessage">
+                    It may take up to 10 business days for the Corporations Division to review a document submitted with standard service. Expedited service may be requested for an additional fee when completing an online form.;
+                </div>
+                                            </div>
+</div>
+
+
+</div>
+<div id="loader"></div>
+<form defaultbutton="SearchSubmit" action="/SearchApi/Search/Search/GetSearchResults" id="SearchForm" method="post"><div id="searchform" class="form-horizontal" role="presentation" tabindex="0" style="display: none;">
+    <div class="form-group p1 searchHeaderRow">
+        <div class="col-sm-9">
+            <h2 style="margin-left: 0pt">
+                Search for a business entity
+            </h2>
+        </div>
+        <div class="col-sm-3">
+            <h2>
+                <a href="https://cofs.lara.state.mi.us/corpweb/HelpPages/BusinessEntitySearchHelp.aspx" class="helpLink" target="_blank">FAQ or Help</a>
+            </h2>
+        </div>
+    </div>
+    <div style="display: none;">
+        <input type="text" id="hiddenPageNumber" value="0">
+        <input type="text" id="hiddenSortColumn">
+        <input type="text" id="hiddenSortDirection" value="None">
+        <input type="text" id="hiddenSearchType" value="E">
+        <input type="text" id="hiddenSearchValue">
+    </div>
+    <div id="loadingPanel" class="loader" style="display: none;"></div>
+    <div class="form-group p1 searchRow">
+        <div class="col-sm-12">
+            <input id="searchByEntityName" name="searchTypeRadio" title="EntityName" type="radio" value="E">
+            <label for="searchEntityNameRadio">Search by Entity Name</label>
+        </div>
+    </div>
+    <div class="form-group row p1 searchControlRow fontNormal">
+        <div class="col-sm-2">
+            <label id="EntityNameValidation" name="validationMessage" title="EntityName" class="fontNormal errorMessage width100" style="display: none;">Required: You must enter an entity name.</label>
+            <label id="lblEntityName" for="txtEntityName" class="fontNormal width100">Entity name:</label>
+        </div>
+        <div class="col-sm-6">
+            <input class="searchTextbox width100" id="txtEntityName" name="EntityName" onkeyup="javascript: selectSearchType(this);" onmousedown="javascript: selectSearchType(this);" title="EntityName" type="text" value="">
+        </div>
+        <div class="col-sm-4">
+            <label for="ddlEntitySearchType" aria-label="Search Type for Entity Name" class="fontNormal">Search type:</label>
+            <select class="searchDropdown" id="ddlEntitySearchType" name="SearchMethod" title="EntityName"><option value="B">Begins With</option>
+<option value="M">Exact Match</option>
+<option value="F">Keyword</option>
+<option value="S">Soundex</option>
+</select>
+        </div>
+    </div>
+    
+    <div class="form-group p1 searchRow">
+        <div class="col-sm-12">
+            <input id="searchByIndividualName" name="searchTypeRadio" title="IndividualName" type="radio" value="I">
+            <label for="searchIndividualNameRadio">Search by an Individual Name</label>
+        </div>
+    </div>
+    <div class="form-group row p1 searchControlRow fontNormal">
+        <div class="col-sm-2">
+            <label id="IndividualNameValidation" name="validationMessage" title="IndividualName" class="fontNormal errorMessage width100" style="display: none;">Required: You must enter a individual name.</label>
+            <label id="lblIndividualName" for="txtIndividualName" class="fontNormal width100">Individual name:</label>
+        </div>
+        <div class="col-sm-6">
+            <input class="searchTextbox width100" id="txtIndividualName" name="IndividualName" onkeyup="javascript: selectSearchType(this);" onmousedown="javascript: selectSearchType(this);" title="IndividualName" type="text" value="">
+        </div>
+        <div class="col-sm-4">
+            <label for="ddlIndividualSearchType" aria-label="Search Type for Individual Name" class="fontNormal">Search type:</label>
+            <select class="searchDropdown" id="ddlIndividualSearchType" name="SearchMethod" title="IndividualName"><option value="B">Begins With</option>
+<option value="M">Exact Match</option>
+<option value="F">Keyword</option>
+<option value="S">Soundex</option>
+</select>
+        </div>
+    </div>
+
+    <div class="form-group p1 searchRow">
+        <div class="col-sm-12">
+            <input id="searchByIdNumber" name="searchTypeRadio" title="EntityId" type="radio" value="N">
+            <label id="lblIdentificationNumber" for="searchIdNumberRadio">Search by Identification Number</label>
+        </div>
+    </div>
+    <div class="form-group row p1 searchControlRow fontNormal">
+        <div class="col-sm-2">
+            <label id="EntityIdValidation" name="validationMessage" title="EntityId" class="fontNormal errorMessage width100" style="display: none;">The ID number must be 6 or 9 digits in length.</label>
+            <label for="txtIdentificationNumber" aria-label="ID Number Must be 6 or 9 characters" class="fontNormal width100">ID number:</label>
+        </div>
+        <div class="col-sm-10">
+            <input class="searchTextbox" id="txtIdentificationNumber" name="EntityId" onkeyup="javascript: selectSearchType(this);" onmousedown="javascript: selectSearchType(this);" title="EntityId" type="text" value="" maxlength="9">
+        </div>
+    </div>
+
+    <div class="form-group p1 searchRow">
+        <div class="col-sm-12">
+            <input id="searchByFilingNumber" name="searchTypeRadio" title="FilingNumber" type="radio" value="F">
+            <label id="lblFilingNumber" for="searchFilingNumber">Search by Filing Number</label>
+        </div>
+    </div>
+    <div class="form-group row p1 searchControlRow fontNormal">
+        <div class="col-sm-2">
+            <label id="FilingNumberValidation" name="validationMessage" title="FilingNumber" class="fontNormal errorMessage width100" style="display: none;">Required: You must enter a filing number.</label>
+            <label for="txtFilingNumber" class="fontNormal width100">Filing number:</label>
+        </div>
+        <div class="col-sm-10">
+            <input class="searchTextbox" id="txtFilingNumber" name="FilingNumber" onkeyup="javascript: selectSearchType(this);" onmousedown="javascript: selectSearchType(this);" title="FilingNumber" type="text" value="">
+        </div>
+    </div>
+
+    <div class="form-group p1 searchRow">
+        <div class="col-sm-12">
+            <label for="pagesizeSelection">Display number of items to view:</label>
+            <select class="searchDropdown" id="pagesizeSelection" name="PageSize"><option value="25">25 Pages</option>
+<option value="50">50 Pages</option>
+<option value="100">100 Pages</option>
+</select> per page
+        </div>
+    </div>
+
+    <div class="form-group" id="errorSummary" style="display: none;">
+        <div class="col-sm-12">
+            <label id="errorMessage" class="fontNormal errorMessage">
+                * No records found; try a new search using different criteria
+            </label>
+        </div>
+    </div>
+
+    <div class="form-group submit-button-row">
+        <div class="col-sm-12">
+            <input type="button" class="linkButton" name="Clear" onclick="ClearForm();" value="Clear search fields">
+            <input type="button" class="linkButton" name="Search" id="SearchSubmit" onclick="GetSearchResultsData(0);" value="Search">
+        </div>
+    </div>
+</div>
+</form><div id="gridData">
+    
+<div id="searchResultsContainer" style="vertical-align: top;">
+<div id="searchResultsContainer" style="vertical-align: top;">
+        <h2 style="vertical-align: top;height:50px;margin-top: 0px;">Business Entity Results</h2>
+        <div class="form-group p1 marginBottom30">
+            <div class="col-sm-4">
+                <label id="TotalRecords">Number of Records: 217</label>
+            </div>
+            <div class="col-sm-6">
+                    <label id="TotalPages">Number of Pages: 3</label>
+            </div>
+            <div class="col-sm-2">
+                <input type="button" class="linkButton" name="printResults" value="Print Results" onclick="printSearchResults();">
+            </div>
+        </div>
+        <div style="margin-left: 20px;margin-right: 20px;margin-top:25px;border: 1pt solid gray;">
+            <table id="entityData" class="grid width100" cellspacing="0" cellpadding="6">
+                <thead>
+                    <tr class="GridHeader GridEven">
+                        <th id="searchNameHeader" name="SearchName" style="width: 5%;display: none;">
+                            Search Name
+                        </th>
+                        <th id="entityNameHeader" style="width: 35%;">
+                            <a name="EntityName" class="GridHeaderColumn" title="None">Entity Name</a>
+                        </th>
+                        <th id="entityIdHeader" name="FEIN" style="width: 15%">
+                            <a name="FEIN" class="GridHeaderColumn" title="None">ID Number</a>
+                        </th>
+                        <th id="oldIdHeader" name="OldFEIN" style="width: 15%">
+                            <a name="OldFEIN" class="GridHeaderColumn" title="None">Old ID Number</a>
+                        </th>
+                        <th id="addressHeader" name="Addr1" style="width: 30%">
+                            <a name="Addr1" class="GridHeaderColumn" title="None">Address</a>
+                        </th>
+                        <th id="rowNumberHeader" style="width: 5%;display: none;">RowNumber</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1FLEsIOmH9g3rmf3536hbABjzvDFLvA95pq4BBJFIayirNtpTiXvsVwV3H0zshdVFv0ZZ7cZdwMl2sqI0JVLKaLeMCfgkWoceReZJanZgLJf7GjATgHI4VJkowd3E5HYyB85RZOacgK1EB5JqX4+nB1DvAmOSk81naOl13n8gqWLET0XToPrfnmD1bw0rHffbQZxGBSsQcXIqRnWskDq7DNaIZmWy/TWLu/OCBkhnpTcUTfv44DCda2Htm2wBMFwz0ckCkTYASbsNyDeiC8yne+eOpDnWN8e3HPWH/nXJXJs" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    SUNNY DME LLC
+                                </a>
+                            </td>
+                            <td> 802874603</td>
+                            <td> </td>
+                            <td> 2222 W. GRAND RIVER AVE STE A <br> OKEMOS, MI 48864 USA</td>
+                            <td style="display: none;"> 201</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1Gi/OYNKJTEq2LJer7NOjWpV11I14QgQbDsd7gtWb27xVaHS3GHncwtI0i0QtMAJ6aAh6ITi1hGTEWx/9xdEhUPD+4c7jXjTjlqHobEuU5BWcFZjWfu0Jdl/i+9wCrgJQEAU4DvkCWGBq9bKMfSsmZcu/L+SXLI+qFGRWoCi7onssFTKyXWxoXGiaiH83gGzw/AN/so1SKoLDa7ytQcCTBO+7ZlS8L/iJ5rSYqftzio9KsMXsevjSQwFBb+Sf0NZmbTempoIBerIYWoefSMHUQyHmXfluVkbf2tsOpQgYKkz" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    THE DME SOURCE, LLC
+                                </a>
+                            </td>
+                            <td> 801419497</td>
+                            <td> D20629</td>
+                            <td> 30150 TELEGRAPH RD. SUITE 185<br> BINGHAM FARMS, MI 48025 USA</td>
+                            <td style="display: none;"> 202</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1CG3ZFlhvSsDxtwR6O0riSLbWQaofjmiLjw4ax8pmS3Mij7j25Z7ZqC0kY0AHZztNTJz/FUlTjhaC65c4ZqNBqwzE/57Sy2YC7LNrPf1nFlD5lTis65NUpLiDdEmtecMK3RxApk+v0WQ1hZUSaL946bQ8P22B3RRD56dKkbe0626krT/9+4S2/QjosFqS1/z1Rr47JxhYD+Etbpbe9EZsfKzz/+z57HJM6nbTrUMA7V1R2lSKUe+cmBsgExQSRlSGDY5w5X1wDJ5ouoqEdivDsjQ7WmuNgg/B2J/KlreF/IP" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    THE HOME DME
+                                </a>
+                            </td>
+                            <td> 800697450</td>
+                            <td> 01231G</td>
+                            <td> 2131 SILVERWOOD DR PO BOX 475<br> PRUDENVILLE, MI 48651 USA</td>
+                            <td style="display: none;"> 203</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1CG3ZFlhvSsDxtwR6O0riSLbWQaofjmiLjw4ax8pmS3Mij7j25Z7ZqC0kY0AHZztNTJz/FUlTjhaC65c4ZqNBqwzE/57Sy2YC7LNrPf1nFlD5lTis65NUpLiDdEmtecMK3RxApk+v0WQ1hZUSaL946bQ8P22B3RRD56dKkbe0626krT/9+4S2/QjosFqS1/z1Rr47JxhYD+Etbpbe9EZsfKzz/+z57HJM6nbTrUMA7V1R2lSKUe+cmBsgExQSRlSGDY5w5X1wDJ5ouoqEdivDsjQ7WmuNgg/B2J/KlreF/IP" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    THE HOME DME COMPANY
+                                </a>
+                            </td>
+                            <td> 800697450</td>
+                            <td> 01231G</td>
+                            <td> 2131 SILVERWOOD DR PO BOX 475<br> PRUDENVILLE, MI 48651 USA</td>
+                            <td style="display: none;"> 204</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1MKPip+G/rKW7tkXbqc3yiDMdjDWhuwVONXj5IWg3aKmGgqzCfYlJcY4f6PWXexJBnZHHHxdUm81Ov5jjzNUBQkjxK8bGkzDdY4kbWinO2d0EfmMokB2QqIMiQp7iXyOG+ImCzgbNGIdEv1cHjrC+SLFNAIEBr6tRTOeHPUNFiq89E1PogisXoeR60KLkMdq8eg0+RV6MgAZ3ZOajg8gobKZvjSaTkwOXMnBd6EpAQD5zA2G6ON3G8wV20vrX0AD61MmOCN//Y3XNjkX4mtkDBJI4zbvOtRAzZmw2aisUoQO" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    THE HOME DME COMPANY
+                                </a>
+                            </td>
+                            <td> 800672997</td>
+                            <td> 09520E</td>
+                            <td> 2150 W 11 MI RD STE 100 <br> SOUTHFIELD, MI 48076 USA</td>
+                            <td style="display: none;"> 205</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1H75ei3C1r7v3vEztnhvYamMjiz0lXxnXfQ86zNmzu6kfnJtPlytf3wKrFG0qkztonuhMJ8UTHEWLUQHyEGTLPP3xa/iLjSAVWD3lbtYnT13EDClvA7E/vC2k5pguDKU8cqcxJqs3jLnuW9mbgmgrWRZx7ulBmfMtcDgZJnqlAbzpcV+UOvWxpfUsb0APNmkpSAuo2F7xv9puYcbSEfRlW4YMxcykan+zH53Hp8imuJBwOZKAZJv3KnNR6bKlyTVg5lZS5WYkMdP72LM80CSiHF8fHnAURTEq3OWf2sIyMw3" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    THE HOME DME COMPANY
+                                </a>
+                            </td>
+                            <td> 801873320</td>
+                            <td> D9218X</td>
+                            <td> 40600 ANN ARBOR RD E STE 201 <br> PLYMOUTH, MI 48170 USA</td>
+                            <td style="display: none;"> 206</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1JvKQcEsZTPf0qPFD5YOE5TyFiP4h6bKt6KZk32tifQnNkhim++gSHNtM7lzggCPwPmANykoBz/iFmjAeflUeuARHxeuXw+Bvi9Mg+9FBi6EymK4gx/nYs+8zgItIkjrIdJZfKbw51+filM8kUcIVjUOfMF9UnYI+4VxJzf3QRyqrL9y+NhYZ4puEmW+2wDHEIQmIsAX3pS8y14hLcrKhlu45rCSdNxATvujkqfnfE5Y8JGzmmdVCOsnOCsUzYwzirPZ6uVfxuNcOm8WZnj2KEUngF2l+0w6D9TibdINrpxm" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    THI ADVANTAGE DME, LLC
+                                </a>
+                            </td>
+                            <td> 801859075</td>
+                            <td> B9414F</td>
+                            <td> 229 BROOKWOOD DR STE 14 <br> SOUTH LYON, MI 48178 USA</td>
+                            <td style="display: none;"> 207</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1LFEHCYs15Glu8DsqeIIV26o7AeYhpwuc3jS5yBbTaP8NToB60PQxcVRl16MqYwbCe2fSjctnfVD66ZHxWU+c7/9kXq0GWPcMGP+mltbjOAqrpQI0qjYfJt9bWFic9rUDRW2hbtMMT0cj64INHexjagD9sK7Aj8EZhv07QQh6oqsFVf3HSeQ2jbhOlq46k0Xa7HUgrBxK0tq4b50nBFBUpKloB0HUd6iwrw2D47cj/OA7Z5kV0lvvCWyh17v9imXoFDVwR8AyJnprCR4DGOWAXN2Y3GeQ3GoDzfm9xEWRvlT" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    THOMAS DME L.L.C.
+                                </a>
+                            </td>
+                            <td> 801553254</td>
+                            <td> D4369M</td>
+                            <td> 1050 W UNIVERSITY DR <br> ROCHESTER, MI 48307 USA</td>
+                            <td style="display: none;"> 208</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1JK/l7POaDzaP8iX8eLVacNEvAcmg6aAVb0Jjk6zZZyddc7KoRSO3JKMfXURRNBLCeImbDWzUPcuBAm1R+ri5gXzpK6d64novK4wd12jSAXOU05iIV/c+8ho4cihp7MdG3hp5lKPE1pmkCLz+fZP1speoCCGcYlimy4i+D9JGUMxd7Wj8W8CV4LnAGL2EnklT9G8Izc8PuLJY+ElBwrJSRX5YlVw5z1XTZKxIYzRIJKq7ZS3ICaoOqE9e6Uymhavivj9taSkanAZ5mgJVYuq0MgmZ3jZHhSj7QYGgDn6xT+I" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    TLC DME, LLC
+                                </a>
+                            </td>
+                            <td> 802386789</td>
+                            <td> </td>
+                            <td> P.O BOX 702460 19855 OUTER DR<br> PLYMOUTH, MI 48170 USA</td>
+                            <td style="display: none;"> 209</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1AFZ1WNMuXkQNX/oXpptAgt0cFEhhwFMosVmmaKPyOdK3/72tBbPJiTNbw3o0+Ek3fcFlNXzsz9vmdIjufwxOpyG3jy/JgDiLcc1K+yQdIjWwBiXchlNL0FY9Q2L0sxTG4R73OLpFr0TeIZDx2GocT52vEeZxOAHmMpK4xjUP6ySfcc8T2XWMpSra0utPJhqj2j3Ms69bbjQprlwq2mrl87ApSxGLg7cpjIzJ4kc4rIanQuFakMdmXT54dVt9qOgJeN1i1cM2b40bvxgZI6BoECy8FvmA+UNfdhix/Tc3f07" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    TOTAL KNEE ACCELERATED RECOVERY DME, LLC
+                                </a>
+                            </td>
+                            <td> 801749410</td>
+                            <td> E4974Y</td>
+                            <td> 32800 FRANKLIN RD STE C <br> FRANKLIN, MI 48025 USA</td>
+                            <td style="display: none;"> 210</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1I+ONeIJMI27zKraoEsFADxVJLSxG+YGYnZAXxlRhfZMcdmdtDeMe8qrpnyoeKpZ58MAD5zd5oAKwe41y+GyvxxCUUrWv3kK093YGnFc3ipelRUjngQCSKsIjovFVPY0K3v2v/PLMDPEhz6q/DAvPY/gB/TdEfqmFQpk4XtHRN/fUXO1Kux1LBbQ89M2TRTjdmOiSdMhfCF2PkqHbi3J8an+S4aSM23THetELKf8p+pubpyQxlopsDmmueXQSIisWm6oLSr1S1aABR03LVl1OKYUDVUVi81j4kjmT/F+F3pE" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    TRI-COUNTY DME, INC.
+                                </a>
+                            </td>
+                            <td> 800591956</td>
+                            <td> 25403C</td>
+                            <td> PO BOX 623 <br> SOUTHFIELD, MI 480370623 USA</td>
+                            <td style="display: none;"> 211</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1NWtUvtQp5IVF+ciq1Ecf+5AyR5bQW5Fl90et81lH+gaOgZr6m7DNuobgy0zgD4dT1VsaNTMNs+JaPXcC3gG1XBCqd1w7B0YrSt/9pAvce4qtzhzhcjHIvdoxw791AQK9BAzdffFL2HA8mVc39m9ccFrKSvar/GXl/plHI8PfTZw38cXJ9k3tzhINDnmdYBXCs1j153ddbAHsqVlYU8fRckWk+ozLcUNCOtqC1nmClBlJfgZ41hBN3bQs0HDsu55X5IeRU0q1ZHOiHS7593boeUvm8R1MzfLfmS1MIyWvCp2" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    UNITED DME &amp; SUPPLIES LLC
+                                </a>
+                            </td>
+                            <td> 802125359</td>
+                            <td> F2740W</td>
+                            <td> 711 MERIDAN <br> DEARBORN, MI 48124 USA</td>
+                            <td style="display: none;"> 212</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1J4ukNQARIHun00TI2kUjvBLQSRsrZTJ6pcB9IupJwRXV54W0s1uEK77Q5KxyeaUrlDAb99TEXhthzshTDvbKwvxyPexuicyL9OEsS8/I2Rc71FGN+dPVaYOSmWCLOrArb8ldlIKt56FAsPwCq5fLWflcjuBCuRk6R1Id9Vqpfg2hU8Uyg/Wcxbux/GC1Nec/vnJ8gBGSvoFL9Yip6QPYm0oiQ9JQ4ry0/e6ReFWiMXpEniBYW06woQb0HIv035TYIF31/+JwrW86pJnLWJeBMkJmvNIzhFpfS4jo7Plcrdy" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    UNITED DME &amp; SUPPLIES, INC.
+                                </a>
+                            </td>
+                            <td> 800694666</td>
+                            <td> 01050T</td>
+                            <td> 6481 N ROCHESTER RD STE 300G <br> ROCHESTER HILLS, MI 48306 USA</td>
+                            <td style="display: none;"> 213</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1Co6mjQ+ZUDp+Q86PQfO/cD+iOMzPwE1wb5KUG1ex+ey61HjdUZmgWVDAEzibiRf6P123aMLeuaECfjlCR6YIWRAtY67IicbUX8svb1vu0VtXfKFEBnScow0wWhLIHz4pzmZ3aKR3cMOfwJ6b3AZ2Esf5ow+ssl3+ufWxSkGj23eHe/304/RgM0mf+uQ+4Bdnn0g+yJuPO57Ae2GjjJRKhIAgeFmmGbpgNjfntpOXfvQ8M/NPasnRD/ruv0qQ0acIIhUEnwz5Eb2NfDOYNOuEdBxmSRKWHPcSNAMDTcyEb0W" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    WHEELS IN MOTION D.M.E. SALES, INC.
+                                </a>
+                            </td>
+                            <td> 800546863</td>
+                            <td> 520798</td>
+                            <td> 12079 CHURCH ST PO BOX 21<br> BIRCH RUN, MI 48415 USA</td>
+                            <td style="display: none;"> 214</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1FuSBk6LrSdCXjY64idO6WXgzz843pHkt/8lNpsm1j2ekOvvN2DdPFEatywW+7V6XMJinbFacVStaNGDWYafRIHRtJkWHce19qlCUFUzG3EbVDYBIjxC5lm/jRmgsVHsPa9SY+PExOtZ73liABIsDX/EEkTDCt4tXZyAmmebH7GauY8ZJMFERenUPrjY/L3Nb8Gw2odT75aD7axrtdJVxY4IkoHFu7y45RbJZf8cXzHSZOwxlaS+Nzuidzqq+eQnaqlGZ03Bw4wnAhXHFJBIjDnYNwt4LcvKyg7v576FLn3u" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    WHEELS IN MOTION DME SALES &amp; SERVICE, LLC
+                                </a>
+                            </td>
+                            <td> 801239196</td>
+                            <td> B8608K</td>
+                            <td> PO BOX 21 <br> BIRCH RUN, MI 48415 USA</td>
+                            <td style="display: none;"> 215</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1H5alaTiciaSQQkIdsZ410fVQ5v/NkC1FPqMKPwOoERTntyZarZjOLCL8cLmY/EJbfweAyscP1O4hW8WNwH9pscL7bWI88vUlPxB8aAY0YwtAwq584mp2AP6pCApM/2L9HLN6pY2h6kh6bUj/M92F0D7NSHnS7NTC5STmvSCSi80tuqUdD+vINLAR/ZFiyYVs8mu+MG32HR80DcOXX3JNAhJPd0XWBQ8MjzBgrfd9HGMAaJOFcZZh0hZnUloASoK879oD23oA0RLkGD503uBOYtvbl5r1TQZkNBjxeVzg+l2" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    WOODS D.M.E.
+                                </a>
+                            </td>
+                            <td> 800334191</td>
+                            <td> 321813</td>
+                            <td> 16311 MACK AVE <br> DETROIT, MI 48224 USA</td>
+                            <td style="display: none;"> 216</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td style="display: none;"></td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1C02l08v1rDrJAtpq64ZGCSrC4OWq1BOwMB/L1dJaV1+uozQOjy4mkEYkFEVVE//vT0nIb9vLlgxHgt59geGMqcEWoP11jhn+XGLVAPnHi7HNYgVi0BEXNJAOZLNrCCnWmsJ5ZakjRmOczsXMtwtsYUHldSPR3IUhOVQM5U6Ma7HA1MnwJjXYhZ3qx+h/9+CLXXforq1vv+cHexA9I1BvPjVNkFXkCpO1yyQBIVDmjFriVbdXOt7Mcl44huepHvYkIIqlQfk7JL5Or2Hdy3OInpdDobf+nNCpq0sxv+vj4oL" target="_self" style="max-width:35%;word-wrap:break-word; word-break:break-word;">
+                                    XAVIER HOME HEALTH DME, LLC
+                                </a>
+                            </td>
+                            <td> 801199116</td>
+                            <td> B6285C</td>
+                            <td> 12072 LEVERNE DR <br> REDFORD, MI 48239 USA</td>
+                            <td style="display: none;"> 217</td>
+                        </tr>
+                </tbody>
+            </table>
+            <table id="individualData" class="grid" cellspacing="0" cellpadding="6" style="overflow-x: auto; display: none;">
+                <thead>
+                    <tr class="GridHeader GridEven">
+                        <th id="individualNameHeader" style="width: 15%">
+                            <a name="IndividualName" class="GridHeaderColumn" title="None">Name</a>
+                        </th>
+                        <th id="individualTitleHeader" class="gridHeaderCol" style="width: 14%">
+                            <a name="IndividualTitle" class="GridHeaderColumn" title="None">Position</a>
+                        </th>
+                        <th id="individualAddressHeader" class="gridHeaderCol" style="width: 20%">
+                            <a name="IndividualAddr" class="GridHeaderColumn" title="None">Individual's Address</a>
+                        </th>
+                        <th id="individualEntityNameHeader" class="gridHeaderCol" style="width: 25%">
+                            <a name="IndividualEntityName" class="GridHeaderColumn" title="None">Entity Name</a>
+                        </th>
+                        <th id="individualIdNumberHeader" class="gridHeaderCol" style="width: 13%">
+                            <a name="IndividualFEIN" class="GridHeaderColumn" title="None">ID No.</a>
+                        </th>
+                        <th id="individualOldIdNumberHeader" class="gridHeaderCol" style="width: 13%">
+                            <a name="IndividualOldFEIN" class="GridHeaderColumn" title="None">Old ID No.</a>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>2222 W. GRAND RIVER AVE STE A <br> OKEMOS, MI 48864 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1FLEsIOmH9g3rmf3536hbABjzvDFLvA95pq4BBJFIayirNtpTiXvsVwV3H0zshdVFv0ZZ7cZdwMl2sqI0JVLKaLeMCfgkWoceReZJanZgLJf7GjATgHI4VJkowd3E5HYyB85RZOacgK1EB5JqX4+nB1DvAmOSk81naOl13n8gqWLET0XToPrfnmD1bw0rHffbQZxGBSsQcXIqRnWskDq7DNaIZmWy/TWLu/OCBkhnpTcUTfv44DCda2Htm2wBMFwz0ckCkTYASbsNyDeiC8yne+eOpDnWN8e3HPWH/nXJXJs" target="_self">
+                                    SUNNY DME LLC
+                                </a>
+                            </td>
+                            <td> 802874603</td>
+                            <td></td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>30150 TELEGRAPH RD. SUITE 185<br> BINGHAM FARMS, MI 48025 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1Gi/OYNKJTEq2LJer7NOjWpV11I14QgQbDsd7gtWb27xVaHS3GHncwtI0i0QtMAJ6aAh6ITi1hGTEWx/9xdEhUPD+4c7jXjTjlqHobEuU5BWcFZjWfu0Jdl/i+9wCrgJQEAU4DvkCWGBq9bKMfSsmZcu/L+SXLI+qFGRWoCi7onssFTKyXWxoXGiaiH83gGzw/AN/so1SKoLDa7ytQcCTBO+7ZlS8L/iJ5rSYqftzio9KsMXsevjSQwFBb+Sf0NZmbTempoIBerIYWoefSMHUQyHmXfluVkbf2tsOpQgYKkz" target="_self">
+                                    THE DME SOURCE, LLC
+                                </a>
+                            </td>
+                            <td> 801419497</td>
+                            <td>D20629</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>2131 SILVERWOOD DR PO BOX 475<br> PRUDENVILLE, MI 48651 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1CG3ZFlhvSsDxtwR6O0riSLbWQaofjmiLjw4ax8pmS3Mij7j25Z7ZqC0kY0AHZztNTJz/FUlTjhaC65c4ZqNBqwzE/57Sy2YC7LNrPf1nFlD5lTis65NUpLiDdEmtecMK3RxApk+v0WQ1hZUSaL946bQ8P22B3RRD56dKkbe0626krT/9+4S2/QjosFqS1/z1Rr47JxhYD+Etbpbe9EZsfKzz/+z57HJM6nbTrUMA7V1R2lSKUe+cmBsgExQSRlSGDY5w5X1wDJ5ouoqEdivDsjQ7WmuNgg/B2J/KlreF/IP" target="_self">
+                                    THE HOME DME
+                                </a>
+                            </td>
+                            <td> 800697450</td>
+                            <td>01231G</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>2131 SILVERWOOD DR PO BOX 475<br> PRUDENVILLE, MI 48651 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1CG3ZFlhvSsDxtwR6O0riSLbWQaofjmiLjw4ax8pmS3Mij7j25Z7ZqC0kY0AHZztNTJz/FUlTjhaC65c4ZqNBqwzE/57Sy2YC7LNrPf1nFlD5lTis65NUpLiDdEmtecMK3RxApk+v0WQ1hZUSaL946bQ8P22B3RRD56dKkbe0626krT/9+4S2/QjosFqS1/z1Rr47JxhYD+Etbpbe9EZsfKzz/+z57HJM6nbTrUMA7V1R2lSKUe+cmBsgExQSRlSGDY5w5X1wDJ5ouoqEdivDsjQ7WmuNgg/B2J/KlreF/IP" target="_self">
+                                    THE HOME DME COMPANY
+                                </a>
+                            </td>
+                            <td> 800697450</td>
+                            <td>01231G</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>2150 W 11 MI RD STE 100 <br> SOUTHFIELD, MI 48076 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1MKPip+G/rKW7tkXbqc3yiDMdjDWhuwVONXj5IWg3aKmGgqzCfYlJcY4f6PWXexJBnZHHHxdUm81Ov5jjzNUBQkjxK8bGkzDdY4kbWinO2d0EfmMokB2QqIMiQp7iXyOG+ImCzgbNGIdEv1cHjrC+SLFNAIEBr6tRTOeHPUNFiq89E1PogisXoeR60KLkMdq8eg0+RV6MgAZ3ZOajg8gobKZvjSaTkwOXMnBd6EpAQD5zA2G6ON3G8wV20vrX0AD61MmOCN//Y3XNjkX4mtkDBJI4zbvOtRAzZmw2aisUoQO" target="_self">
+                                    THE HOME DME COMPANY
+                                </a>
+                            </td>
+                            <td> 800672997</td>
+                            <td>09520E</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>40600 ANN ARBOR RD E STE 201 <br> PLYMOUTH, MI 48170 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1H75ei3C1r7v3vEztnhvYamMjiz0lXxnXfQ86zNmzu6kfnJtPlytf3wKrFG0qkztonuhMJ8UTHEWLUQHyEGTLPP3xa/iLjSAVWD3lbtYnT13EDClvA7E/vC2k5pguDKU8cqcxJqs3jLnuW9mbgmgrWRZx7ulBmfMtcDgZJnqlAbzpcV+UOvWxpfUsb0APNmkpSAuo2F7xv9puYcbSEfRlW4YMxcykan+zH53Hp8imuJBwOZKAZJv3KnNR6bKlyTVg5lZS5WYkMdP72LM80CSiHF8fHnAURTEq3OWf2sIyMw3" target="_self">
+                                    THE HOME DME COMPANY
+                                </a>
+                            </td>
+                            <td> 801873320</td>
+                            <td>D9218X</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>229 BROOKWOOD DR STE 14 <br> SOUTH LYON, MI 48178 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1JvKQcEsZTPf0qPFD5YOE5TyFiP4h6bKt6KZk32tifQnNkhim++gSHNtM7lzggCPwPmANykoBz/iFmjAeflUeuARHxeuXw+Bvi9Mg+9FBi6EymK4gx/nYs+8zgItIkjrIdJZfKbw51+filM8kUcIVjUOfMF9UnYI+4VxJzf3QRyqrL9y+NhYZ4puEmW+2wDHEIQmIsAX3pS8y14hLcrKhlu45rCSdNxATvujkqfnfE5Y8JGzmmdVCOsnOCsUzYwzirPZ6uVfxuNcOm8WZnj2KEUngF2l+0w6D9TibdINrpxm" target="_self">
+                                    THI ADVANTAGE DME, LLC
+                                </a>
+                            </td>
+                            <td> 801859075</td>
+                            <td>B9414F</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>1050 W UNIVERSITY DR <br> ROCHESTER, MI 48307 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1LFEHCYs15Glu8DsqeIIV26o7AeYhpwuc3jS5yBbTaP8NToB60PQxcVRl16MqYwbCe2fSjctnfVD66ZHxWU+c7/9kXq0GWPcMGP+mltbjOAqrpQI0qjYfJt9bWFic9rUDRW2hbtMMT0cj64INHexjagD9sK7Aj8EZhv07QQh6oqsFVf3HSeQ2jbhOlq46k0Xa7HUgrBxK0tq4b50nBFBUpKloB0HUd6iwrw2D47cj/OA7Z5kV0lvvCWyh17v9imXoFDVwR8AyJnprCR4DGOWAXN2Y3GeQ3GoDzfm9xEWRvlT" target="_self">
+                                    THOMAS DME L.L.C.
+                                </a>
+                            </td>
+                            <td> 801553254</td>
+                            <td>D4369M</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>P.O BOX 702460 19855 OUTER DR<br> PLYMOUTH, MI 48170 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1JK/l7POaDzaP8iX8eLVacNEvAcmg6aAVb0Jjk6zZZyddc7KoRSO3JKMfXURRNBLCeImbDWzUPcuBAm1R+ri5gXzpK6d64novK4wd12jSAXOU05iIV/c+8ho4cihp7MdG3hp5lKPE1pmkCLz+fZP1speoCCGcYlimy4i+D9JGUMxd7Wj8W8CV4LnAGL2EnklT9G8Izc8PuLJY+ElBwrJSRX5YlVw5z1XTZKxIYzRIJKq7ZS3ICaoOqE9e6Uymhavivj9taSkanAZ5mgJVYuq0MgmZ3jZHhSj7QYGgDn6xT+I" target="_self">
+                                    TLC DME, LLC
+                                </a>
+                            </td>
+                            <td> 802386789</td>
+                            <td></td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>32800 FRANKLIN RD STE C <br> FRANKLIN, MI 48025 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1AFZ1WNMuXkQNX/oXpptAgt0cFEhhwFMosVmmaKPyOdK3/72tBbPJiTNbw3o0+Ek3fcFlNXzsz9vmdIjufwxOpyG3jy/JgDiLcc1K+yQdIjWwBiXchlNL0FY9Q2L0sxTG4R73OLpFr0TeIZDx2GocT52vEeZxOAHmMpK4xjUP6ySfcc8T2XWMpSra0utPJhqj2j3Ms69bbjQprlwq2mrl87ApSxGLg7cpjIzJ4kc4rIanQuFakMdmXT54dVt9qOgJeN1i1cM2b40bvxgZI6BoECy8FvmA+UNfdhix/Tc3f07" target="_self">
+                                    TOTAL KNEE ACCELERATED RECOVERY DME, LLC
+                                </a>
+                            </td>
+                            <td> 801749410</td>
+                            <td>E4974Y</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>PO BOX 623 <br> SOUTHFIELD, MI 480370623 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1I+ONeIJMI27zKraoEsFADxVJLSxG+YGYnZAXxlRhfZMcdmdtDeMe8qrpnyoeKpZ58MAD5zd5oAKwe41y+GyvxxCUUrWv3kK093YGnFc3ipelRUjngQCSKsIjovFVPY0K3v2v/PLMDPEhz6q/DAvPY/gB/TdEfqmFQpk4XtHRN/fUXO1Kux1LBbQ89M2TRTjdmOiSdMhfCF2PkqHbi3J8an+S4aSM23THetELKf8p+pubpyQxlopsDmmueXQSIisWm6oLSr1S1aABR03LVl1OKYUDVUVi81j4kjmT/F+F3pE" target="_self">
+                                    TRI-COUNTY DME, INC.
+                                </a>
+                            </td>
+                            <td> 800591956</td>
+                            <td>25403C</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>711 MERIDAN <br> DEARBORN, MI 48124 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1NWtUvtQp5IVF+ciq1Ecf+5AyR5bQW5Fl90et81lH+gaOgZr6m7DNuobgy0zgD4dT1VsaNTMNs+JaPXcC3gG1XBCqd1w7B0YrSt/9pAvce4qtzhzhcjHIvdoxw791AQK9BAzdffFL2HA8mVc39m9ccFrKSvar/GXl/plHI8PfTZw38cXJ9k3tzhINDnmdYBXCs1j153ddbAHsqVlYU8fRckWk+ozLcUNCOtqC1nmClBlJfgZ41hBN3bQs0HDsu55X5IeRU0q1ZHOiHS7593boeUvm8R1MzfLfmS1MIyWvCp2" target="_self">
+                                    UNITED DME &amp; SUPPLIES LLC
+                                </a>
+                            </td>
+                            <td> 802125359</td>
+                            <td>F2740W</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>6481 N ROCHESTER RD STE 300G <br> ROCHESTER HILLS, MI 48306 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1J4ukNQARIHun00TI2kUjvBLQSRsrZTJ6pcB9IupJwRXV54W0s1uEK77Q5KxyeaUrlDAb99TEXhthzshTDvbKwvxyPexuicyL9OEsS8/I2Rc71FGN+dPVaYOSmWCLOrArb8ldlIKt56FAsPwCq5fLWflcjuBCuRk6R1Id9Vqpfg2hU8Uyg/Wcxbux/GC1Nec/vnJ8gBGSvoFL9Yip6QPYm0oiQ9JQ4ry0/e6ReFWiMXpEniBYW06woQb0HIv035TYIF31/+JwrW86pJnLWJeBMkJmvNIzhFpfS4jo7Plcrdy" target="_self">
+                                    UNITED DME &amp; SUPPLIES, INC.
+                                </a>
+                            </td>
+                            <td> 800694666</td>
+                            <td>01050T</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>12079 CHURCH ST PO BOX 21<br> BIRCH RUN, MI 48415 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1Co6mjQ+ZUDp+Q86PQfO/cD+iOMzPwE1wb5KUG1ex+ey61HjdUZmgWVDAEzibiRf6P123aMLeuaECfjlCR6YIWRAtY67IicbUX8svb1vu0VtXfKFEBnScow0wWhLIHz4pzmZ3aKR3cMOfwJ6b3AZ2Esf5ow+ssl3+ufWxSkGj23eHe/304/RgM0mf+uQ+4Bdnn0g+yJuPO57Ae2GjjJRKhIAgeFmmGbpgNjfntpOXfvQ8M/NPasnRD/ruv0qQ0acIIhUEnwz5Eb2NfDOYNOuEdBxmSRKWHPcSNAMDTcyEb0W" target="_self">
+                                    WHEELS IN MOTION D.M.E. SALES, INC.
+                                </a>
+                            </td>
+                            <td> 800546863</td>
+                            <td>520798</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>PO BOX 21 <br> BIRCH RUN, MI 48415 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1FuSBk6LrSdCXjY64idO6WXgzz843pHkt/8lNpsm1j2ekOvvN2DdPFEatywW+7V6XMJinbFacVStaNGDWYafRIHRtJkWHce19qlCUFUzG3EbVDYBIjxC5lm/jRmgsVHsPa9SY+PExOtZ73liABIsDX/EEkTDCt4tXZyAmmebH7GauY8ZJMFERenUPrjY/L3Nb8Gw2odT75aD7axrtdJVxY4IkoHFu7y45RbJZf8cXzHSZOwxlaS+Nzuidzqq+eQnaqlGZ03Bw4wnAhXHFJBIjDnYNwt4LcvKyg7v576FLn3u" target="_self">
+                                    WHEELS IN MOTION DME SALES &amp; SERVICE, LLC
+                                </a>
+                            </td>
+                            <td> 801239196</td>
+                            <td>B8608K</td>
+                        </tr>
+                        <tr class="GridRow GridEven">
+                            <td></td>
+                            <td></td>
+                            <td>16311 MACK AVE <br> DETROIT, MI 48224 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1H5alaTiciaSQQkIdsZ410fVQ5v/NkC1FPqMKPwOoERTntyZarZjOLCL8cLmY/EJbfweAyscP1O4hW8WNwH9pscL7bWI88vUlPxB8aAY0YwtAwq584mp2AP6pCApM/2L9HLN6pY2h6kh6bUj/M92F0D7NSHnS7NTC5STmvSCSi80tuqUdD+vINLAR/ZFiyYVs8mu+MG32HR80DcOXX3JNAhJPd0XWBQ8MjzBgrfd9HGMAaJOFcZZh0hZnUloASoK879oD23oA0RLkGD503uBOYtvbl5r1TQZkNBjxeVzg+l2" target="_self">
+                                    WOODS D.M.E.
+                                </a>
+                            </td>
+                            <td> 800334191</td>
+                            <td>321813</td>
+                        </tr>
+                        <tr class="GridRow GridOdd">
+                            <td></td>
+                            <td></td>
+                            <td>12072 LEVERNE DR <br> REDFORD, MI 48239 USA</td>
+                            <td>
+                                <a class="link" href="https://cofs.lara.state.mi.us/CorpWeb/CorpSearch/CorpSummary.aspx?token=nBxILn58HwVtv4JMRDwTm1cWblopjmzIgq3FCQzRMH7Z0mRAdeXC1C02l08v1rDrJAtpq64ZGCSrC4OWq1BOwMB/L1dJaV1+uozQOjy4mkEYkFEVVE//vT0nIb9vLlgxHgt59geGMqcEWoP11jhn+XGLVAPnHi7HNYgVi0BEXNJAOZLNrCCnWmsJ5ZakjRmOczsXMtwtsYUHldSPR3IUhOVQM5U6Ma7HA1MnwJjXYhZ3qx+h/9+CLXXforq1vv+cHexA9I1BvPjVNkFXkCpO1yyQBIVDmjFriVbdXOt7Mcl44huepHvYkIIqlQfk7JL5Or2Hdy3OInpdDobf+nNCpq0sxv+vj4oL" target="_self">
+                                    XAVIER HOME HEALTH DME, LLC
+                                </a>
+                            </td>
+                            <td> 801199116</td>
+                            <td>B6285C</td>
+                        </tr>
+                </tbody>
+            </table>
+            <div id="navigator">
+                            <a href="#" class="gridPager" id="pager" rel="1" onclick="GetSearchResultsData(1 - 1);">1</a>
+                            <a href="#" class="gridPager" id="pager" rel="2" onclick="GetSearchResultsData(2 - 1);">2</a>
+                            <a href="#" class="gridPager" id="pager" rel="3" onclick="GetSearchResultsData(3 - 1);" style="text-decoration: none;">3</a>
+            </div>
+        </div>
+    <div align="center" style="height: 50px;">
+        <br>
+        <a class="linkButton" id="newSearch" name="RedirectSearch" href="../../SearchApi/Search/Search">New Search</a>
+    </div>
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+            </div>
+            <footer class="footer" role="contentinfo">
+                <div class="footerNav" id="agencylinks">
+                    <ul>
+                        <li><a href="http://www.michigan.gov/lara/0,4601,7-154--357923--,00.html">LARA FOIA Process</a></li>
+                        <li><a href="http://www.michigan.gov/openmichigan/0,4648,7-266-58520---,00.html">Transparency</a></li>
+                        <li><a href="http://www.michigan.gov/orr">Office of Regulatory Reinvention</a></li>
+                        <li><a href="http://www.michigan.gov/statewebsites">State Web Sites</a></li>
+                    </ul>
+                </div>
+                <div class="footerNav" id="policylinks">
+                    <ul>
+                        <li><a href="http://www.michigan.gov/">Michigan.gov Home</a></li>
+                        <li><a href="http://www.michigan.gov/adaform">ADA</a></li>
+                        <li><a href="http://www.michigan.gov/minewswire">Michigan News</a></li>
+                        <li><a href="http://www.michigan.gov/lara/0,4601,7-154--281460--,00.html">Policies</a></li>
+                    </ul>
+                </div>
+                <p class="copyright">Copyright 2023 State of Michigan</p>
+            </footer>
+
+        </div>
+    </div>
+
+
+</body></html>
